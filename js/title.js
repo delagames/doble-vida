@@ -6,7 +6,7 @@ import { text, wrap, lineHeight } from './text.js';
 import { button, panel } from './draw.js';
 import { S, hayPartida, cargar, reiniciar, borrar, nocheTerminada } from './state.js';
 import { G } from './game.js';
-import { miga, muestraRastro } from './diag.js';
+import { miga } from './diag.js';
 import { audio } from './audio.js';
 import { apagarImagen, pintaAmbiente } from './ambiente.js';
 import { DIR, drawSprite, preload } from './sprites.js';
@@ -65,7 +65,6 @@ export class Title {
     miga('creando noche');
     const noche = new NightRunner(S.stop);
     miga('noche creada');
-    muestraRastro(6000);
     G.setScene(noche);
   }
 

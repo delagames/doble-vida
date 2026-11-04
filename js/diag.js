@@ -19,9 +19,8 @@ window.addEventListener('unhandledrejection', (ev) => avisaError(ev.reason));
 
 // ?diag: rastro de lo que hace el juego, guardado al momento para que sobreviva a un cierre de pestaña.
 const DIAG = new URLSearchParams(location.search).has('diag');
-const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
-const ACTIVO = DIAG || IOS;
-let visible = DIAG;
+const ACTIVO = DIAG;
+const visible = DIAG;
 const CLAVE = 'doble-vida.migas';
 let migas = [];
 let panel = null;
@@ -46,18 +45,9 @@ export function miga(t) {
   pinta();
 }
 
-/** En iPhone el rastro sale solo unos segundos al empezar la noche, sin hacer nada más. */
-export function muestraRastro(ms) {
-  if (!IOS || DIAG) return;
-  visible = true;
-  setTimeout(() => { visible = false; pinta(); }, ms);
-}
-
 export function vigilaDiag(estado) {
   if (!ACTIVO) return;
   try { migas = (JSON.parse(localStorage.getItem(CLAVE)) ?? []).slice(-6).map((m) => `ANTES ${m}`); } catch { migas = []; }
-  // Si la última vez se cortó a mitad de arrancar (pestaña caída), se enseña al volver.
-  if (migas.length && !migas.some((m) => m.includes('enter hecho'))) visible = true;
   miga('página cargada');
   setInterval(() => pinta(estado()), 500);
 }
