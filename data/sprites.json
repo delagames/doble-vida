@@ -1,0 +1,230 @@
+{
+ "0067": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0094": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry"
+  ]
+ },
+ "0571": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0630": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0068": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal"
+  ]
+ },
+ "0428": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0282": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0281": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0407": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0478": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0122": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal"
+  ]
+ },
+ "0058": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0059": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ },
+ "0124": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal"
+  ]
+ },
+ "0052": {
+  "anims": {
+   "Idle": "Idle",
+   "Walk": "Walk"
+  },
+  "retratos": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Sad",
+   "Surprised",
+   "Angry",
+   "Worried",
+   "Sigh",
+   "Stunned"
+  ]
+ }
+}

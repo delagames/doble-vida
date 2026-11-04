@@ -1,0 +1,58 @@
+{
+  "bebidas": {
+    "cerveza": { "nombre": "CERVEZA", "color": "amarillo_mural" },
+    "ipa": { "nombre": "IPA", "color": "verde_ipa" },
+    "chupito": { "nombre": "CHUPITO", "color": "rojo_extintor" },
+    "jagercerveza": { "nombre": "JÄGER CON CERVEZA", "color": "jager" },
+    "jagerbomb": { "nombre": "JÄGER BOMB", "color": "naranja_farola" }
+  },
+  "palabras": {
+    "manolo": { "cerveza": "MACHO", "ipa": "MACHOKE", "chupito": "¡CHOK!", "jagercerveza": "MACHO MACHO", "jagerbomb": "¡MACHOKE!" },
+    "zorro": { "cerveza": "ZOROARK", "ipa": "ARK", "chupito": "¡ZORO!", "jagercerveza": "ZORO ZORO", "jagerbomb": "¡ZOROARK!" },
+    "buitre": { "cerveza": "BUZZ", "ipa": "BUZZ BUZZ", "chupito": "¡MANDI!", "jagercerveza": "MANDIBUZZ", "jagerbomb": "¡BUZZ!" },
+    "gengar": { "cerveza": "GEN", "ipa": "GENGAR", "chupito": "¡GAR!", "jagercerveza": "GEN GEN", "jagerbomb": "¡GENGAR!" },
+    "camarera": { "cerveza": "LOP", "ipa": "LOPUNNY", "chupito": "¡PUN!", "jagercerveza": "LOP LOP", "jagerbomb": "¡LOPUNNY!" },
+    "sandrita": { "cerveza": "KIR", "ipa": "KIRLIA", "chupito": "¡LIA!", "jagercerveza": "KIR KIR", "jagerbomb": "¡KIRLIA!" },
+    "amiga1": { "cerveza": "ROSE", "ipa": "ROSERADE", "chupito": "¡RADE!", "jagercerveza": "ROSE ROSE", "jagerbomb": "¡ROSERADE!" },
+    "amiga2": { "cerveza": "FROS", "ipa": "FROSLASS", "chupito": "¡LASS!", "jagercerveza": "FROS FROS", "jagerbomb": "¡FROSLASS!" }
+  },
+  "camarera": {
+    "copas": [
+      {
+        "id": "camarera-c1",
+        "bebida": "ipa",
+        "tipo": "copa",
+        "pie": "Me ha guardado una copa. Había más gente.",
+        "realPie": "Sobró de la mesa de al lado."
+      },
+      {
+        "id": "camarera-c2",
+        "bebida": "chupito",
+        "tipo": "chupito",
+        "pie": "Me invita a su casa. Lo ha dicho alto.",
+        "realPie": "Invitaba la casa. El bar."
+      },
+      {
+        "id": "camarera-c3",
+        "bebida": "jagercerveza",
+        "tipo": "copa",
+        "pie": "Se había equivocado conmigo. Soy más.",
+        "realPie": "Se equivocó de pedido."
+      }
+    ],
+    "sinBlanca": {
+      "id": "camarera-sin",
+      "bebida": "cerveza",
+      "tipo": "copa",
+      "pie": "Ya le han hablado de mí.",
+      "realPie": "La pagó Manolo."
+    },
+    "excusas": [
+      "JUANJO LE EXPLICA QUE NO PUEDE, QUE TIENE PROMOS",
+      "JUANJO LE EXPLICA LO QUE ES EL ELO. ELLA YA SE HA IDO",
+      "JUANJO LE EXPLICA QUE NO ES POR ELLA, QUE ES POR EL PARCHE",
+      "JUANJO LE ENSEÑA UN PERRO. ELLA SIGUE SIRVIENDO",
+      "JUANJO LE PIDE DUO. ELLA CREE QUE ES UNA BEBIDA"
+    ]
+  }
+}

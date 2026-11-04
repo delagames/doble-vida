@@ -1,0 +1,18 @@
+{
+  "name": "Doble Vida",
+  "short_name": "Doble Vida",
+  "description": "Una noche en Málaga. Juanjo dice que está jugando a las rankeds.",
+  "lang": "es-ES",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "portrait",
+  "background_color": "#1F1634",
+  "theme_color": "#1F1634",
+  "icons": [
+    { "src": "assets/logo/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/logo/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

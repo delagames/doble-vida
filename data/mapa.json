@@ -1,0 +1,61 @@
+{
+  "pie": "EL COCHE VA SOLO · TOCA PARA LLEGAR YA",
+  "mar": [[0, 346], [46, 350], [84, 352], [104, 342], [122, 326], [130, 312], [152, 306], [188, 306], [204, 318], [270, 330], [270, 384], [0, 384]],
+  "tierra": [
+    { "color": "jager", "borde": "carbon", "p": [[204, 196], [238, 186], [264, 214], [254, 250], [222, 262], [198, 246]] },
+    { "color": "arena", "borde": "carbon", "p": [[210, 319], [270, 329], [270, 338], [212, 327]] },
+    { "color": "gris", "borde": "carbon", "p": [[204, 318], [210, 320], [172, 374], [167, 371]] },
+    { "color": "gris", "borde": "carbon", "p": [[150, 306], [155, 306], [150, 332], [145, 332]] }
+  ],
+  "calles": [
+    { "color": "noche_clara", "grosor": 1, "p": [[0, 70], [100, 62], [200, 70], [270, 60]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[30, 26], [34, 150], [40, 300]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[70, 26], [66, 240], [70, 340]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[0, 140], [100, 130], [150, 120], [200, 130], [270, 120]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[0, 220], [100, 210]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[140, 26], [136, 130]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[206, 26], [206, 130], [192, 190]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[112, 196], [152, 150], [192, 190], [196, 276]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[118, 234], [176, 226]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[120, 260], [120, 200]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[140, 276], [140, 170]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[180, 276], [176, 170]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[116, 212], [190, 206]] },
+    { "color": "noche_clara", "grosor": 1, "p": [[120, 180], [186, 186]] },
+    { "color": "morado", "grosor": 3, "p": [[0, 292], [100, 284], [162, 284], [212, 296], [270, 298]] },
+    { "color": "amarillo_mural", "grosor": 2, "p": [[162, 284], [170, 232]] }
+  ],
+  "rio": [[116, 26], [106, 90], [103, 160], [102, 230], [96, 300], [90, 348]],
+  "etiquetas": [
+    { "txt": "GUADALMEDINA", "x": 14, "y": 108, "color": "azul_claro" },
+    { "txt": "LA TRINIDAD", "x": 8, "y": 196 },
+    { "txt": "EL PERCHEL", "x": 34, "y": 300 },
+    { "txt": "CENTRO", "x": 128, "y": 164, "color": "rosa_claro" },
+    { "txt": "C. LARIOS", "x": 110, "y": 236, "color": "amarillo_mural" },
+    { "txt": "ALAMEDA", "x": 112, "y": 288 },
+    { "txt": "GIBRALFARO", "x": 200, "y": 220, "color": "marfil" },
+    { "txt": "PUERTO", "x": 156, "y": 320, "color": "azul_claro" },
+    { "txt": "MALAGUETA", "x": 206, "y": 342, "color": "arena" },
+    { "txt": "MEDITERRÁNEO", "x": 12, "y": 364, "color": "azul_claro" }
+  ],
+  "ruta": [
+    { "id": "casa", "txt": "CASA", "x": 26, "y": 318, "dx": 6, "dy": 2 },
+    { "x": 26, "y": 280 },
+    { "id": "chino", "txt": "CHINO", "x": 54, "y": 278, "dx": 6, "dy": -10 },
+    { "x": 54, "y": 232 },
+    { "id": "manolo", "txt": "MANOLO", "x": 74, "y": 176, "dx": -40, "dy": -11 },
+    { "x": 103, "y": 150 },
+    { "x": 124, "y": 128 },
+    { "id": "gengar", "txt": "GENGAR", "x": 136, "y": 90, "dx": -18, "dy": -12 },
+    { "x": 180, "y": 86 },
+    { "id": "zorro", "txt": "ZORRO", "x": 214, "y": 126, "dx": 7, "dy": -4 },
+    { "x": 196, "y": 168 },
+    { "x": 190, "y": 240 },
+    { "x": 196, "y": 280 },
+    { "x": 214, "y": 296 },
+    { "id": "buitre", "txt": "BUITRE", "x": 244, "y": 298, "dx": -18, "dy": -13 },
+    { "x": 214, "y": 296 },
+    { "x": 170, "y": 286 },
+    { "id": "centro", "txt": "APARCAO", "x": 150, "y": 262, "dx": -46, "dy": -4 }
+  ]
+}

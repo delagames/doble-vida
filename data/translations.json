@@ -1,0 +1,1122 @@
+{
+  "chino-1": {
+    "quien": "meowth",
+    "idioma": "Miau. Miau miau, ¿miau?",
+    "real": "Las once y ya por aquí. ¿Laura lo sabe?",
+    "juanjo": "Dice que tengo pinta de salir mucho.",
+    "loca": "Dice que soy el rey de la noche y del barrio.",
+    "eco": "pinta de salir mucho"
+  },
+  "chino-2": {
+    "quien": "meowth",
+    "mood": "Sigh",
+    "idioma": "Miau miau miau.",
+    "real": "{pagado} euros. Y la casa no invita a nada.",
+    "juanjo": "Dice que aquí soy como de la casa.",
+    "loca": "Dice que el local está a mi nombre. Desde hoy.",
+    "eco": "como de la casa"
+  },
+  "chino-3": {
+    "quien": "meowth",
+    "mood": "Worried",
+    "idioma": "Miau... ¿miau?",
+    "real": "¿Y las llaves esas? ¿Conduces tú con eso?",
+    "juanjo": "Dice que le recuerdo a un piloto.",
+    "loca": "Dice que me ha visto en la Fórmula 1. Ganando.",
+    "eco": "un piloto"
+  },
+  "manolo-1": {
+    "quien": "manolo",
+    "idioma": "Macho. Macho, machoke.",
+    "real": "Dame las llaves. Luego me lo agradeces.",
+    "juanjo": "Dice que hoy me ve muy fino al volante.",
+    "loca": "Dice que nací con un volante en las manos.",
+    "eco": "muy fino al volante"
+  },
+  "manolo-2": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "¿Machoke? Macho.",
+    "real": "Esa litrona está abierta. Y no has salido del barrio.",
+    "juanjo": "Dice que qué bien huele mi coche.",
+    "loca": "Dice que mi coche huele a coche de ministro."
+  },
+  "manolo-3": {
+    "quien": "manolo",
+    "mood": "Sad",
+    "idioma": "Machoke macho, ¿machoke?",
+    "real": "Laura cree que estás en casa, ¿verdad?",
+    "juanjo": "Pregunta por Laura. Qué majo. La aprecia mucho.",
+    "loca": "Pregunta por Laura. Dice que somos la pareja del año.",
+    "eco": "Manolo te aprecia mucho"
+  },
+  "manolo-4": {
+    "quien": "manolo",
+    "mood": "Angry",
+    "idioma": "¡Macho! ¡Machoke macho!",
+    "real": "Eso no es una ruta. Es una confesión. Para el coche.",
+    "juanjo": "Dice que mi primo es un crack.",
+    "loca": "Dice que mi primo y yo deberíamos dar charlas.",
+    "eco": "mi primo es un crack"
+  },
+  "manolo-5": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho... machoke.",
+    "real": "Ponte el cinturón, por lo menos. Por los que vamos contigo.",
+    "juanjo": "Dice que hoy es mi noche.",
+    "loca": "Dice que hoy Málaga es mía. Con escrituras."
+  },
+  "manolo-6": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Machoke.",
+    "real": "Ahí no se puede aparcar. Y las llaves, cuando quieras.",
+    "juanjo": "Dice que vaya sitiazo he encontrado.",
+    "loca": "Dice que el Ayuntamiento me ha reservado el sitio."
+  },
+  "bajada-1": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "Macho.",
+    "real": "Que no oigo ni lo que pienso.",
+    "juanjo": "Dice que este tema le encanta.",
+    "loca": "Dice que este tema es el himno de Málaga."
+  },
+  "bajada-2": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho, macho.",
+    "real": "Baja eso, que hay vecinos.",
+    "juanjo": "Dice que así se oye mejor el bajo.",
+    "loca": "Dice que el bajo le ha curado la espalda."
+  },
+  "bajada-3": {
+    "quien": "manolo",
+    "mood": "Angry",
+    "idioma": "¡Machoke!",
+    "real": "Otra vez no. Que tengo orejas.",
+    "juanjo": "Dice que le pase la lista.",
+    "loca": "Dice que soy mejor que cualquier DJ de Ibiza."
+  },
+  "bajada-4": {
+    "quien": "manolo",
+    "mood": "Pain",
+    "idioma": "Macho...",
+    "real": "Me duelen los empastes, Juanjo.",
+    "juanjo": "Dice que lo siente en el pecho. Como yo.",
+    "loca": "Dice que su pecho y el mío laten a la vez."
+  },
+  "bajada-5": {
+    "quien": "manolo",
+    "mood": "Stunned",
+    "idioma": "...",
+    "real": "Ya ni sé por qué lo hago.",
+    "juanjo": "Dice que no deje de hacer lo que hago.",
+    "loca": "Dice que me ha echado de menos. Y estoy aquí."
+  },
+  "trago-1": {
+    "quien": "manolo",
+    "mood": "Surprised",
+    "idioma": "¿Macho?",
+    "real": "Estás conduciendo, Juanjo.",
+    "juanjo": "Dice que a mí me sienta bien.",
+    "loca": "Dice que conduzco mejor así. Que es ciencia."
+  },
+  "trago-2": {
+    "quien": "manolo",
+    "mood": "Angry",
+    "idioma": "¡Macho, macho!",
+    "real": "Deja eso o me bajo y lo tiro.",
+    "juanjo": "Dice que le deje un poco.",
+    "loca": "Dice que le bautice con la litrona."
+  },
+  "trago-3": {
+    "quien": "manolo",
+    "mood": "Sad",
+    "idioma": "Machoke...",
+    "real": "Llevas gente en este coche, Juanjo.",
+    "juanjo": "Dice que somos una familia.",
+    "loca": "Dice que soy el padre que nunca tuvo."
+  },
+  "trago-4": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho.",
+    "real": "Qué noche más larga me espera.",
+    "juanjo": "Dice que ojalá no se acabe nunca.",
+    "loca": "Dice que ojalá esta noche dure cuarenta años."
+  },
+  "gengar-1": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen. Gengar, gen gen.",
+    "real": "Estoy aquí desde el chino. {pagado} euros, qué barbaridad.",
+    "juanjo": "Dice que hoy se liga. Yo, se entiende.",
+    "loca": "Dice que las Pokémon de Málaga ya se han avisado.",
+    "eco": "hoy se liga"
+  },
+  "falso-1": {
+    "quien": "falso",
+    "mood": "Normal",
+    "idioma": "Macho. Macho, machoke.",
+    "real": "Dame las llaves. Luego me lo agradeces.",
+    "juanjo": "Dice que hoy me ve muy fino al volante.",
+    "loca": "Dice que nací con un volante en las manos."
+  },
+  "zorro-1": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "¡Zoroa! Zoro, ark.",
+    "real": "Es que te lo crees todo. Te lo crees TODO.",
+    "juanjo": "Dice que le gustaría ser como yo.",
+    "loca": "Dice que quiere mi cara. Para llevársela de recuerdo.",
+    "eco": "todos quieren ser como yo"
+  },
+  "buitre-1": {
+    "quien": "buitre",
+    "idioma": "Buzz. Buzz buzz.",
+    "real": "Bajo ya.",
+    "juanjo": "Dice que baja ya."
+  },
+  "buitre-2": {
+    "quien": "buitre",
+    "idioma": "Buzz, ¿buzz? Buzz.",
+    "real": "Bajo ya. ¿Van a ir chicas? ¿Cuántas? Bajo ya.",
+    "juanjo": "Dice que baja ya."
+  },
+  "buitre-3": {
+    "quien": "buitre",
+    "mood": "Happy",
+    "idioma": "¡Buzz, buzz, mandibuzz!",
+    "real": "Me he echado el bote entero. Por si acaso.",
+    "juanjo": "Dice que huele a éxito. Se lo he pegado yo.",
+    "loca": "Dice que olemos los dos a campeón de Europa.",
+    "eco": "huele a éxito"
+  },
+  "calle-1": {
+    "quien": "zorro",
+    "idioma": "Zoro. Zoroark, zoro.",
+    "real": "Si te pregunta alguien, no nos conoces.",
+    "juanjo": "Dice que soy el alma del grupo.",
+    "loca": "Dice que sin mí el grupo se disuelve por ley.",
+    "eco": "el alma del grupo"
+  },
+  "calle-2": {
+    "quien": "buitre",
+    "mood": "Worried",
+    "idioma": "¿Buzz? Buzz buzz, ¿buzz?",
+    "real": "¿Vosotros creéis que les caigo bien a las chicas?",
+    "juanjo": "Dice que hoy arrasamos los dos.",
+    "loca": "Dice que él y yo somos los más guapos de España."
+  },
+  "calle-3": {
+    "quien": "manolo",
+    "idioma": "Macho, machoke.",
+    "real": "Dos copas y a casa. Lo digo para poder decir que lo dije.",
+    "juanjo": "Dice que me va a invitar a dos copas.",
+    "loca": "Dice que me invita a dos copas y a su boda."
+  },
+  "mime-1": {
+    "quien": "mrmime",
+    "idioma": "...",
+    "real": "(No ha dicho nada.)",
+    "juanjo": "Dice que soy el cliente del siglo. Del XXI.",
+    "loca": "Dice que este bar se abrió pensando en mí.",
+    "eco": "el cliente del siglo"
+  },
+  "mime-2": {
+    "quien": "mrmime",
+    "idioma": "... ...",
+    "real": "(Señala los grifos. Señala a Juanjo. Se cruza de brazos.)",
+    "juanjo": "Dice que aquí mando yo.",
+    "loca": "Dice que me cede el bar. Con gesto de notario.",
+    "eco": "aquí mandas tú"
+  },
+  "mime-3": {
+    "quien": "mrmime",
+    "idioma": "...",
+    "real": "(Aplaude. Sin ruido. Con una sola mano.)",
+    "juanjo": "Dice que nunca ha visto nada igual.",
+    "loca": "Dice que lloraría, pero no le sale el sonido.",
+    "eco": "nunca he visto nada igual"
+  },
+  "mime-4": {
+    "quien": "mrmime",
+    "idioma": "...",
+    "real": "(Se lleva un dedo a la sien. Lo gira despacio.)",
+    "juanjo": "Dice que piensa mucho en mí.",
+    "loca": "Dice que sueña conmigo. Sin voz, pero sueña.",
+    "eco": "pienso mucho en ti"
+  },
+  "mime-5": {
+    "quien": "mrmime",
+    "idioma": "... ... ...",
+    "real": "(Cuenta el dinero. Sigue con la mano puesta.)",
+    "juanjo": "Dice que le dé la mano. Aquí se hace así.",
+    "loca": "Dice que esa mano es para mí para siempre.",
+    "eco": "dame la mano"
+  },
+  "nerea-1": {
+    "quien": "nerea",
+    "mood": "Worried",
+    "idioma": "Gardevoir, gar. ¿Gar?",
+    "real": "¿Este viene contigo? Dile que se aparte, por favor.",
+    "juanjo": "Dice que ojalá me siente yo a su lado.",
+    "loca": "Dice que el sofá lleva años guardándome el sitio.",
+    "eco": "siéntate a mi lado"
+  },
+  "nerea-2": {
+    "quien": "nerea",
+    "mood": "Worried",
+    "idioma": "¿Gar? Gardé, gardevoir.",
+    "real": "Me falta el bolso. ¿Has visto un bolso?",
+    "juanjo": "Dice que le falta algo. Y me mira a mí.",
+    "loca": "Dice que le falto yo. Que se le nota.",
+    "eco": "me falta algo y te miro a ti"
+  },
+  "nerea-3": {
+    "quien": "nerea",
+    "mood": "Happy",
+    "idioma": "¡Gardevoir! Gar, gar.",
+    "real": "¡Aquí está! Estabas sentado encima. Adiós.",
+    "juanjo": "Dice que ha encontrado lo que buscaba.",
+    "loca": "Dice que me buscaba desde antes de nacer.",
+    "eco": "he encontrado lo que buscaba"
+  },
+  "nerea-4": {
+    "quien": "nerea",
+    "mood": "Surprised",
+    "idioma": "¿Gar? Gardé...",
+    "real": "¿Perdona? ¿Qué has dicho? Déjame pasar.",
+    "juanjo": "Dice que no le salen las palabras. Normal.",
+    "loca": "Dice que le he robado la voz. Y va a denunciarlo.",
+    "eco": "no me salen las palabras"
+  },
+  "buitre-4": {
+    "quien": "buitre",
+    "mood": "Happy",
+    "idioma": "Buzz. ¿Buzz? Buzz, buzz.",
+    "real": "Hola. ¿Vienes mucho? Yo vengo. Hola.",
+    "juanjo": "Dice que me va abriendo camino. Un compañero.",
+    "loca": "Dice que él es mi telonero. Y a mucha honra.",
+    "eco": "te voy abriendo camino"
+  },
+  "manolo-7": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho. Machoke, macho.",
+    "real": "Esa no te ha dicho eso. Y guarda dinero, que allí no fían.",
+    "juanjo": "Dice que con mi cartera voy a cualquier sitio.",
+    "loca": "Dice que mi cartera tiene más noche que el Larios.",
+    "eco": "con esa cartera vas a cualquier sitio"
+  },
+  "manolo-8": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho.",
+    "real": "Con lo que te queda, la siguiente ya me la pides a mí.",
+    "juanjo": "Dice que la siguiente es suya. Por admiración.",
+    "loca": "Dice que quiere invitarme el resto de su vida.",
+    "eco": "la siguiente es mía"
+  },
+  "manolo-9": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho, machoke...",
+    "real": "Trae, que lo pongo yo. Como siempre.",
+    "juanjo": "Dice que aquí mi dinero no vale. Por respeto.",
+    "loca": "Dice que en esta ciudad ya no me pueden cobrar.",
+    "eco": "aquí tu dinero no vale"
+  },
+  "manolo-10": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "¡Macho! Macho, machoke.",
+    "real": "Ni se te ocurra hablar. Te conozco. Cállate.",
+    "juanjo": "Dice que con lo mío no hacen falta palabras.",
+    "loca": "Dice que mi silencio debería estudiarse.",
+    "eco": "contigo no hacen falta palabras"
+  },
+  "manolo-11": {
+    "quien": "manolo",
+    "mood": "Happy",
+    "idioma": "Machoke, macho.",
+    "real": "Venga, vámonos, antes de que pidas su número.",
+    "juanjo": "Dice que ella va a hablar de esto durante años.",
+    "loca": "Dice que le van a poner mi nombre al sofá.",
+    "eco": "van a hablar de esto durante años"
+  },
+  "zorro-2": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "Ark. Zoro zoro, ark.",
+    "real": "Pide tú, que para eso entiendes a todo el mundo.",
+    "juanjo": "Dice que sin mí aquí no bebe nadie.",
+    "loca": "Dice que sin mí se seca la Costa del Sol.",
+    "eco": "sin ti aquí no bebe nadie"
+  },
+  "zorro-3": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "¡Zoro! Zoroark, ark.",
+    "real": "Ole. Nunca había visto a nadie ligarse un bolso.",
+    "juanjo": "Dice que me ha visto y que aprende mucho de mí.",
+    "loca": "Dice que debería cobrar por dejarme mirar.",
+    "eco": "aprendo mucho de ti"
+  },
+  "gengar-2": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen, gengar.",
+    "real": "Esa copa era del Buitre. Que conste.",
+    "juanjo": "Dice que hoy bebo por los dos.",
+    "loca": "Dice que bebo por toda la provincia.",
+    "eco": "hoy bebes por los dos"
+  },
+  "calle-4": {
+    "quien": "gengar",
+    "idioma": "Gen. Gengar gen.",
+    "real": "He visto a Jairo. Hoy tiene la mirada de los lunes.",
+    "juanjo": "Dice que Jairo me tiene mucho respeto.",
+    "loca": "Dice que Jairo lleva mi foto en la cartera.",
+    "eco": "Jairo te tiene respeto"
+  },
+  "mime-6": {
+    "quien": "mrmime",
+    "idioma": "... ... ...",
+    "real": "(Golpea el aire con los nudillos. Suena a pared.)",
+    "juanjo": "Dice que estoy bajo torre. Aquí no me tocan.",
+    "loca": "Dice que soy el nexo. Que me tienen que defender.",
+    "eco": "bajo torre no te tocan"
+  },
+  "jairo-1": {
+    "quien": "jairo",
+    "idioma": "Machamp. Cham, ¿cham?",
+    "real": "La mirada es una elección. Y un rechazo. Te he mirado ya, gordo.",
+    "juanjo": "Dice que tengo ojos de campeón.",
+    "loca": "Dice que soy el campeón de la mirada de Andalucía.",
+    "eco": "ojos de campeón"
+  },
+  "jairo-2": {
+    "quien": "jairo",
+    "idioma": "Cham.",
+    "real": "Entra. Y no respires hacia aquí.",
+    "juanjo": "Dice que entre campeones no hace falta hablar.",
+    "loca": "Dice que somos hermanos de brazos.",
+    "eco": "entre campeones"
+  },
+  "jairo-3": {
+    "quien": "jairo",
+    "idioma": "¿Cham? ¿Machamp?",
+    "real": "¿Quién ha abierto la puerta? ¿Hay alguien?",
+    "juanjo": "Dice que soy como un fantasma de la élite.",
+    "loca": "Dice que no me ve porque brillo demasiado.",
+    "eco": "un fantasma de la élite"
+  },
+  "gengar-3": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen gen gengar. Gen.",
+    "real": "Yo marco, tú golpeas. El último, de Jäger. Suerte con eso.",
+    "juanjo": "Dice que tengo oído de músico. Que lo mío es tocar.",
+    "loca": "Dice que él es el telonero de mi carrera.",
+    "eco": "oído de músico"
+  },
+  "gengar-4": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "¡Gen! Gen gengar.",
+    "real": "Ni uno fuera. Vete a casa, Juanjo, que eres peligroso.",
+    "juanjo": "Dice que debería sacar disco.",
+    "loca": "Dice que Skrillex quiere el teléfono de mi muñeca.",
+    "eco": "deberías sacar disco"
+  },
+  "gengar-5": {
+    "quien": "gengar",
+    "mood": "Sad",
+    "idioma": "Gen... gen, gengar.",
+    "real": "Eso no era un compás. Eso era una caída con pasos.",
+    "juanjo": "Dice que voy por delante de mi tiempo.",
+    "loca": "Dice que mi ritmo aún no existe. Que llegará.",
+    "eco": "por delante de tu tiempo"
+  },
+  "manolo-12": {
+    "quien": "manolo",
+    "idioma": "Macho, machoke. ¿Macho?",
+    "real": "El drop es el Jäger, Juanjo. Y te lo comes tú.",
+    "juanjo": "Dice que el drop me lo dedica a mí.",
+    "loca": "Dice que en la barra suenan mis tracks.",
+    "eco": "el drop es para ti"
+  },
+  "manolo-13": {
+    "quien": "manolo",
+    "idioma": "Macho. Macho, machoke.",
+    "real": "Bébete un vaso de agua. Uno. Delante de mí.",
+    "juanjo": "Dice que en la siguiente barra preguntan por mí.",
+    "loca": "Dice que en Modernícolas han puesto mi nombre a un cóctel.",
+    "eco": "preguntan por ti"
+  },
+  "manolo-14": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "¡Macho! Machoke, macho.",
+    "real": "A los ojos no. Ni aunque te hable. Sobre todo si te habla.",
+    "juanjo": "Dice que el portero y yo tenemos algo pendiente.",
+    "loca": "Dice que Jairo está loco por mí. Que me lo tome con calma.",
+    "eco": "algo pendiente con Jairo"
+  },
+  "roserade-1": {
+    "quien": "amiga1",
+    "idioma": "Rose. ¿Roserade? Rose.",
+    "real": "Perdona, ¿me dejas pasar? Es que me tapas el baño.",
+    "juanjo": "Dice que entre nosotros hay química. En Alquimia. Encaja.",
+    "loca": "Dice que soy su elemento. Que estoy en la tabla periódica.",
+    "eco": "hay química"
+  },
+  "roserade-2": {
+    "quien": "amiga1",
+    "idioma": "Rose, roserade.",
+    "real": "Salud. ¿Ya me dejas pasar?",
+    "juanjo": "Dice que salud. Que la mía le preocupa. Eso es amor.",
+    "loca": "Dice que quiere envejecer conmigo. Empezando por aquí.",
+    "eco": "la tuya le preocupa"
+  },
+  "buitre-5": {
+    "quien": "buitre",
+    "idioma": "Buzz. Buzz, ¿buzz? Buzz.",
+    "real": "Hola. ¿Vienes mucho? Yo llevo aquí a tu lado un rato. Hola.",
+    "juanjo": "Dice que me va cubriendo la retaguardia.",
+    "loca": "Dice que es mi soporte. Que él pone los wards.",
+    "eco": "te cubre la retaguardia"
+  },
+  "calle-5": {
+    "quien": "gengar",
+    "idioma": "Gen. Gengar, gen.",
+    "real": "Te has dejado el Jäger dentro. Bueno, dentro de ti.",
+    "juanjo": "Dice que llevo el ritmo en la sangre.",
+    "loca": "Dice que mi sangre ya tiene bajo y todo.",
+    "eco": "el ritmo en la sangre"
+  },
+  "manolo-15": {
+    "quien": "manolo",
+    "idioma": "Macho. ¿Machoke? Macho.",
+    "real": "Hace cinco chupitos que no bebes nada, Gengar.",
+    "juanjo": "Dice que voy ganando.",
+    "loca": "Dice que me dan el trofeo cuando sepa andar.",
+    "eco": "vas ganando"
+  },
+  "manolo-16": {
+    "quien": "manolo",
+    "idioma": "Macho, macho.",
+    "real": "Esa no te ha dicho eso. Quería ir al baño.",
+    "juanjo": "Dice que le dé tiempo, que a ella le cuesta abrirse.",
+    "loca": "Dice que vaya mirando colegios para los niños.",
+    "eco": "le cuesta abrirse"
+  },
+  "manolo-17": {
+    "quien": "manolo",
+    "idioma": "Macho. Machoke, macho.",
+    "real": "No hay portero porque aquí no vigila nadie. Agáchate.",
+    "juanjo": "Dice que aquí me dejan pasar sin mirar. Soy VIP.",
+    "loca": "Dice que la persiana se baja por respeto a mi persona.",
+    "eco": "aquí eres VIP"
+  },
+  "manolo-18": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "¿Machoke? Macho, macho.",
+    "real": "Le sonríe a todos. Ahora le está sonriendo a una columna.",
+    "juanjo": "Dice que a nadie le sonríe así. Se le nota celoso.",
+    "loca": "Dice que la columna y yo somos los únicos que le importan.",
+    "eco": "a nadie le sonríe así"
+  },
+  "manolo-19": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "Macho. ¿Macho? Choke.",
+    "real": "Sin dinero no te va a servir. Pago yo. Luego hablamos.",
+    "juanjo": "Dice que a mí no me cobran. Que la casa lo entiende.",
+    "loca": "Dice que soy accionista del bar sin saberlo.",
+    "eco": "a ti no te cobran"
+  },
+  "manolo-20": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho. Machoke.",
+    "real": "Esa no te ha dicho eso.",
+    "juanjo": "Dice que me lo ha dicho más fuerte que a nadie.",
+    "loca": "Dice que lo han oído hasta en el servidor de Corea.",
+    "eco": "te lo ha dicho más fuerte"
+  },
+  "manolo-21": {
+    "quien": "manolo",
+    "mood": "Happy",
+    "idioma": "¡Machoke! ¡Machooo!",
+    "real": "¡Buaaah, locooo! Yo voy. Pero vigilo.",
+    "juanjo": "Dice que me sigue a donde yo le diga.",
+    "loca": "Dice que soy su campeón principal.",
+    "eco": "te sigue a donde digas"
+  },
+  "manolo-22": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho, machoke, macho.",
+    "real": "Se han sentado para hablar con el Zorro. Tú eres el subtítulo.",
+    "juanjo": "Dice que sin mí esta mesa no tiene sentido.",
+    "loca": "Dice que en la versión original salgo yo.",
+    "eco": "sin ti la mesa no tiene sentido"
+  },
+  "camarera-1": {
+    "quien": "camarera",
+    "mood": "Happy",
+    "idioma": "Lop. ¿Lopunny?",
+    "real": "Hola, ¿qué te pongo?",
+    "juanjo": "Pregunta qué me pone. Así, de primeras.",
+    "loca": "Pregunta qué me pone. Le he dicho que el elo. Ha sonreído.",
+    "eco": "quiere saber qué me pone"
+  },
+  "camarera-2": {
+    "quien": "camarera",
+    "mood": "Happy",
+    "idioma": "Lopunny. Lop, lop.",
+    "real": "Seis euros. Y la tarjeta no va, solo efectivo.",
+    "juanjo": "Dice que con tarjetas no. Que ella es de las de verdad.",
+    "loca": "Dice que me quiere en efectivo. Sin intermediarios.",
+    "eco": "es de las de verdad"
+  },
+  "camarera-3": {
+    "quien": "camarera",
+    "idioma": "Lop. Lopunny, lop.",
+    "real": "Mira, tú mejor pide por el otro lado.",
+    "juanjo": "Dice que no quiere mezclar trabajo y amor.",
+    "loca": "Dice que lo nuestro tiene que ser secreto. Como mi elo.",
+    "eco": "no quiere mezclar trabajo y amor"
+  },
+  "camarera-4": {
+    "quien": "camarera",
+    "mood": "Happy",
+    "idioma": "¿Lop? Lopunny.",
+    "real": "Qué mono.",
+    "juanjo": "Me ha llamado mono. Es que sabe.",
+    "loca": "Dice que el perro y yo tenemos los mismos ojos.",
+    "eco": "te ha llamado mono"
+  },
+  "camarera-5": {
+    "quien": "camarera",
+    "mood": "Happy",
+    "idioma": "Lop. Lop, lopunny.",
+    "real": "Vamos cerrando, que mañana abro yo.",
+    "juanjo": "Dice que cierra por mí. Y que mañana me abre.",
+    "loca": "Dice que mañana a las nueve ante el altar. O en la barra.",
+    "eco": "mañana te abre"
+  },
+  "camarera-c1": {
+    "quien": "camarera",
+    "mood": "Happy",
+    "idioma": "Lop, lop. ¿Lopunny?",
+    "real": "Esta sobró de la mesa de al lado. ¿La quieres?",
+    "juanjo": "Me ha guardado una copa. Había más gente y me la ha guardado.",
+    "loca": "Dice que ha echado a la mesa de al lado para estar conmigo.",
+    "eco": "te ha guardado una copa"
+  },
+  "camarera-c2": {
+    "quien": "camarera",
+    "mood": "Happy",
+    "idioma": "¡Pun! Lop, ¿lopunny?",
+    "real": "Invita la casa, que hoy nos sobran.",
+    "juanjo": "Dice que me invita a su casa.",
+    "loca": "Dice que a su casa, y que lleve a mi madre.",
+    "eco": "te invita a su casa"
+  },
+  "camarera-c3": {
+    "quien": "camarera",
+    "mood": "Happy",
+    "idioma": "Lop lop. ¡Lopunny!",
+    "real": "Uy, me he equivocado de pedido. ¿La aprovechas?",
+    "juanjo": "Dice que se equivocó conmigo. Que soy más de lo que parecía.",
+    "loca": "Dice que se equivocó de hombre. Antes. Con los demás.",
+    "eco": "se ha equivocado contigo"
+  },
+  "camarera-sin": {
+    "quien": "camarera",
+    "idioma": "Lop. Lopunny, ¿lop?",
+    "real": "Esta la paga tu amigo el grande. Ya me ha avisado.",
+    "juanjo": "Dice que ya le han hablado de mí.",
+    "loca": "Dice que mi fama ha llegado antes que yo. La paga un fan.",
+    "eco": "ya le han hablado de ti"
+  },
+  "buitre-6": {
+    "quien": "buitre",
+    "idioma": "Buzz. ¿Buzz, buzz?",
+    "real": "¿Tenéis pizza con anchoas y leche condensada?",
+    "juanjo": "Dice que él también ha venido por negocios.",
+    "loca": "Dice que están rodando un documental sobre mí.",
+    "eco": "ha venido por negocios"
+  },
+  "buitre-7": {
+    "quien": "buitre",
+    "idioma": "Buzz. Mandi, ¿buzz?",
+    "real": "¿Jugamos al club de la lucha? De verdad, digo. Yo primero.",
+    "juanjo": "Dice que me cubre. Que él pone el cuerpo.",
+    "loca": "Dice que me pide de ayudante para el Clash.",
+    "eco": "pone el cuerpo por ti"
+  },
+  "buitre-8": {
+    "quien": "buitre",
+    "idioma": "Buzz, buzz. ¿Mandi?",
+    "real": "Che, ¿vos sacás fotos? Mirá que yo salgo re bien.",
+    "juanjo": "Dice que es un fan.",
+    "loca": "Dice que quiere mi firma en el ala.",
+    "eco": "es un fan"
+  },
+  "roserade-3": {
+    "quien": "amiga1",
+    "mood": "Worried",
+    "idioma": "¡Rose! Roserade, rade.",
+    "real": "Tía, vengo de Alquimia. Había uno ahí que no parpadeaba.",
+    "juanjo": "Dice que ha cruzado el centro buscándome.",
+    "loca": "Dice que ha venido a nado. Por Nosquera.",
+    "eco": "ha cruzado el centro por ti"
+  },
+  "froslass-1": {
+    "quien": "amiga2",
+    "idioma": "Fros. ¿Froslass? Fros.",
+    "real": "Perdona, ¿tú no eres Brad Pitt? ¿Y tu amigo qué es?",
+    "juanjo": "Pregunta si soy famoso. Me lo noto en la camisa.",
+    "loca": "Pregunta si soy Brad Pitt. Le he dicho que él es un fan.",
+    "eco": "pregunta si eres famoso"
+  },
+  "froslass-2": {
+    "quien": "amiga2",
+    "mood": "Happy",
+    "idioma": "Fros, froslass. Fros.",
+    "real": "Qué majo tu intérprete. ¿Le dais de comer aparte?",
+    "juanjo": "Dice que soy lo mejor de la mesa.",
+    "loca": "Dice que Brad Pitt es mi intérprete. Lleva razón.",
+    "eco": "lo mejor de la mesa"
+  },
+  "sandrita-1": {
+    "quien": "sandrita",
+    "idioma": "Kir. Kirlia, ¿kir?",
+    "real": "Perdona, ¿te apartas? Es que me tapas a mis amigas.",
+    "juanjo": "Dice que quiere una foto conmigo.",
+    "loca": "Dice que tengo dos perfiles buenos y los dos son este.",
+    "eco": "quiere una foto contigo"
+  },
+  "gengar-6": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen. Gengar, gar.",
+    "real": "A tres. Si pierdes, pagas. Si ganas, ya veremos.",
+    "juanjo": "Dice que le da miedo jugar contra mí.",
+    "loca": "Dice que me ha estudiado en vídeo. Y que llora.",
+    "eco": "le da miedo jugar contra ti"
+  },
+  "gengar-7": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen gen. Gengar. ¡Gar!",
+    "real": "21 a 20 clarísimo y sin discusión.",
+    "juanjo": "Dice que eso no lo ha visto en su vida.",
+    "loca": "Dice que me van a poner una estatua en Nosquera.",
+    "eco": "eso no lo ha visto en su vida"
+  },
+  "gengar-8": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen. Gen, gengar.",
+    "real": "21 a 20 clarísimo y sin discusión.",
+    "juanjo": "Dice que moralmente he ganado yo.",
+    "loca": "Dice que el parche le da ventaja. Que me lo van a arreglar.",
+    "eco": "moralmente has ganado tú"
+  },
+  "zorro-4": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "¡Zoro! Ark, zoroark.",
+    "real": "Tú traduce y no la cagues, que te conozco.",
+    "juanjo": "Dice que soy su mano derecha.",
+    "loca": "Dice que a Brad Pitt lo descubrí yo.",
+    "eco": "eres su mano derecha"
+  },
+  "zorro-5": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "Ark. Zoroark, ¡zoro!",
+    "real": "Hay un hotel en obras con la valla abierta. Vamos.",
+    "juanjo": "Dice que nos vamos a un hotel. Que se ha enterado de lo mío.",
+    "loca": "Dice que me han reservado la suite nupcial en obras.",
+    "eco": "se ha enterado de lo tuyo"
+  },
+  "calle-6": {
+    "quien": "gengar",
+    "idioma": "Gen. Gar, gengar.",
+    "real": "Se te ha quedado la camarera en la cara. Límpiate.",
+    "juanjo": "Dice que se me nota el amor.",
+    "loca": "Dice que brillo. Que me ven desde Rincón de la Victoria.",
+    "eco": "se te nota el amor"
+  },
+  "hotel-1": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "Machoke. Choke, ¿ma?",
+    "real": "Esto huele a yeso y a denuncia. Diez minutos y nos vamos.",
+    "juanjo": "Dice que este hotel pega conmigo.",
+    "loca": "Dice que lo construyeron encima de mí. Por si venía.",
+    "eco": "este hotel pega contigo"
+  },
+  "hotel-2": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "Ark, ark. ¡Zoroark!",
+    "real": "Mira lo que hay en la pared. Rojo, con manguera, sin estrenar.",
+    "juanjo": "Dice que me vendría bien un traje rojo.",
+    "loca": "Dice que soy un incendio. Que viene a apagarme.",
+    "eco": "te vendría bien un traje rojo"
+  },
+  "hotel-3": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "Ma. Machoke. Ma. Choke.",
+    "real": "Zorro. No. Mírame. Zorro. No.",
+    "juanjo": "Dice que sí.",
+    "loca": "Dice que sí. Cinco veces. Se lo noto en la calva.",
+    "eco": "dice que sí"
+  },
+  "hotel-4": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "Ark.",
+    "real": "Weno.",
+    "juanjo": "Dice que esto va por mí.",
+    "loca": "Dice que me lo dedica. Como un gol.",
+    "eco": "esto va por ti"
+  },
+  "hotel-5": {
+    "quien": "manolo",
+    "mood": "Surprised",
+    "idioma": "¡Choke! Machoke, ma.",
+    "real": "Tienes la cara blanca. Entera. Pareces un yogur con barba.",
+    "juanjo": "Dice que tengo cara de campeón.",
+    "loca": "Dice que soy patrimonio. Que ya tengo palomas.",
+    "eco": "tienes cara de campeón"
+  },
+  "hotel-6": {
+    "quien": "buitre",
+    "idioma": "Mandi. Bu, buzz.",
+    "real": "Menuda cachimba. ¿Quién la ha comprado? La mía es más grande.",
+    "juanjo": "Dice que si esta nube la he pagado yo. Qué detalle.",
+    "loca": "Dice que huelo a manzana verde y a liderazgo.",
+    "eco": "qué detalle el tuyo"
+  },
+  "hotel-7": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen. Gengar.",
+    "real": "A mí me ha atravesado. Soy un fantasma, no un tonto.",
+    "juanjo": "Dice que el blanco no lo lleva cualquiera.",
+    "loca": "Dice que me han fichado de la marca de la pintura."
+  },
+  "hotel-8": {
+    "quien": "buitre",
+    "idioma": "Buzz. ¿Mandi, bu?",
+    "real": "Aquí podría haber una habitación para dos. Lo digo por decir.",
+    "juanjo": "Dice que me reserva la suite.",
+    "loca": "Dice que me reserva la suite y a la recepcionista."
+  },
+  "hotel-9": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Ma. Machoke.",
+    "real": "Se te nota desde Rincón. Eso con agua no se quita. Ni lo nombro.",
+    "juanjo": "Dice que no se me nota nada.",
+    "loca": "Dice que estoy igual que siempre, pero mejor.",
+    "eco": "no se te nota nada"
+  },
+  "hotel-10": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Machoke, ma. ¿Choke?",
+    "real": "Tú verás cómo se lo explicas a Laura.",
+    "juanjo": "Dice que Laura va a alucinar.",
+    "loca": "Dice que Laura ya está alucinando. Que lo nota.",
+    "eco": "Laura va a alucinar"
+  },
+  "mitjana-1": {
+    "quien": "manolo",
+    "idioma": "Choke. Machoke, ma.",
+    "real": "Son las tres. Aquí duerme gente. Anda calladito.",
+    "juanjo": "Dice que esta calle me debe un respeto.",
+    "loca": "Dice que grite. Que Mitjana lleva años esperando.",
+    "eco": "esta calle te debe un respeto"
+  },
+  "mitjana-2": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gar. Gen, gen.",
+    "real": "Cara de yeso. Te queda mejor que la otra.",
+    "juanjo": "Dice que ya es oficial: soy guapo.",
+    "loca": "Dice que me han sacado en moneda.",
+    "eco": "ya es oficial que eres guapo"
+  },
+  "mitjana-3": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "Ma... machoke. Ma.",
+    "real": "Ni se te ocurra. Juanjo. Míralos y cállate.",
+    "juanjo": "Dice que ahora.",
+    "loca": "Dice que ahora o nunca. Que el pueblo me escucha.",
+    "eco": "ahora o nunca"
+  },
+  "mitjana-4": {
+    "quien": "nacional1",
+    "idioma": "Growl. ¿Grrr, growlithe?",
+    "real": "Buenas noches. ¿Quién ha sido?",
+    "juanjo": "Dicen que me habían echado de menos.",
+    "loca": "Preguntan quién es el de la cara de campeón.",
+    "eco": "te habían echado de menos"
+  },
+  "mitjana-5": {
+    "quien": "nacional2",
+    "idioma": "Grow. Growlithe, grrr.",
+    "real": "Documentación. El de la cara blanca, el primero.",
+    "juanjo": "Piden un autógrafo. Yo el primero.",
+    "loca": "Dicen que mi cara no cabe en el DNI.",
+    "eco": "te piden un autógrafo"
+  },
+  "mitjana-6": {
+    "quien": "gengar",
+    "idioma": "Gen. Gen, gar.",
+    "real": "Tú traduces. Dime qué cara quieren y yo la pongo.",
+    "juanjo": "Dice que sin mí no es nadie.",
+    "loca": "Dice que soy su cara. Literalmente.",
+    "eco": "sin ti no es nadie"
+  },
+  "mitjana-7": {
+    "quien": "gengar",
+    "mood": "Normal",
+    "idioma": "Gen. Gengar. Gar.",
+    "real": "Se equivoca usted.",
+    "juanjo": "Dice que se equivoca usted."
+  },
+  "mitjana-8": {
+    "quien": "nacional1",
+    "mood": "Worried",
+    "idioma": "Grow... ¿growl? Grrr.",
+    "real": "¿Me equivoco? Creo que me equivoco. Buenas noches.",
+    "juanjo": "Dicen que mi cara les ha cambiado la vida.",
+    "loca": "Dicen que dejan el cuerpo. Por mí.",
+    "eco": "tu cara les ha cambiado la vida"
+  },
+  "mitjana-9": {
+    "quien": "nacional1",
+    "idioma": "Growl. Grrr.",
+    "real": "Vamos con ustedes. Adonde vayan.",
+    "juanjo": "Dicen que quieren venirse. Les caigo bien.",
+    "loca": "Dicen que soy su sargento favorito.",
+    "eco": "quieren venirse contigo"
+  },
+  "mitjana-10": {
+    "quien": "gengar",
+    "mood": "Sad",
+    "idioma": "Gar. Gen.",
+    "real": "Esta cara no era. Tira, y no hables con nadie.",
+    "juanjo": "Dice que otra vez será. Que no me venga abajo.",
+    "loca": "Dice que es culpa del parche. De su cara.",
+    "eco": "otra vez será"
+  },
+  "mitjana-11": {
+    "quien": "zorro",
+    "idioma": "Zoro. Zoroark, ark.",
+    "real": "A la playa. Aquí ya no somos bienvenidos ni por las ventanas.",
+    "juanjo": "Dice que la playa ha preguntado por mí.",
+    "loca": "Dice que el mar lleva toda la noche con mi nombre.",
+    "eco": "la playa ha preguntado por ti"
+  },
+  "playa-1": {
+    "quien": "manolo",
+    "mood": "Sad",
+    "idioma": "Ma. Machoke, choke.",
+    "real": "Laura no te escribe por escribir, Juanjo. Te conoce.",
+    "juanjo": "Dice que la arena está fresquita.",
+    "eco": "la arena está fresquita"
+  },
+  "playa-2": {
+    "quien": "manolo",
+    "mood": "Sad",
+    "idioma": "Machoke. Ma, ma.",
+    "real": "Te escribe porque aún te espera. Eso no dura siempre.",
+    "juanjo": "Dice que mañana hará bueno.",
+    "eco": "mañana hará bueno"
+  },
+  "playa-3": {
+    "quien": "buitre",
+    "idioma": "Mandi. Buzz, bu.",
+    "real": "Yo me quedo aquí un rato. Solo un rato.",
+    "juanjo": "Dice que baja ya."
+  },
+  "playa-4": {
+    "quien": "gengar",
+    "mood": "Sad",
+    "idioma": "Gen.",
+    "real": "Qué bien se está sin que pase nada.",
+    "juanjo": "Dice que ha sido una noche tranquila."
+  },
+  "playa-5": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "¡Zoro! Ark, ark.",
+    "real": "Queda Onda Pasadena. Rendirse es de gente descansada.",
+    "juanjo": "Dice que Onda Pasadena no empieza sin mí.",
+    "loca": "Dice que me han guardado la pista. Con sus sillas.",
+    "eco": "Onda Pasadena no empieza sin ti"
+  },
+  "onda-1": {
+    "quien": "jynx",
+    "idioma": "Jyn. Jynx, ¿jyn?",
+    "real": "Pista llena. Sigue mi voz o te saco de aquí.",
+    "juanjo": "Dice que llevaba toda la noche esperándome.",
+    "loca": "Dice que mis caderas salen en el parche.",
+    "eco": "llevaba toda la noche esperándote"
+  },
+  "onda-2": {
+    "quien": "jynx",
+    "idioma": "Jynx. Jyn, jyn.",
+    "real": "Bueno. Puedes quedarte. No toques nada.",
+    "juanjo": "Dice que me quede. Para siempre.",
+    "loca": "Dice que me quede. Que me hace un contrato."
+  },
+  "onda-3": {
+    "quien": "jynx",
+    "idioma": "¡Jyn! Jynx. Jyn.",
+    "real": "Tú no. Fuera de la pista. Ahora.",
+    "juanjo": "Dice que soy demasiado para esta pista.",
+    "loca": "Dice que la pista no aguanta tanto talento."
+  },
+  "onda-4": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Machoke. Ma, choke.",
+    "real": "Es hielo, Juanjo. Llevas media hora mirando un hielo.",
+    "juanjo": "Dice que él también lo ha notado.",
+    "loca": "Dice que el hielo es de los suyos."
+  },
+  "onda-5": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen, gen. ¿Gar?",
+    "real": "¿Estás bien? Tienes los ojos como platos.",
+    "juanjo": "Dice que le apetece un plato. De mí.",
+    "loca": "Dice que soy el campero aliñado. Sin cebolla."
+  },
+  "onda-6": {
+    "quien": "zorro",
+    "mood": "Happy",
+    "idioma": "Zoro. Ark, ¿ark?",
+    "real": "Juanjo, soy yo. Que soy yo. Suelta el vaso.",
+    "juanjo": "Dice que tengo un sabor interesante.",
+    "loca": "Dice que tengo un retrogusto a plata."
+  },
+  "onda-7": {
+    "quien": "manolo",
+    "mood": "Happy",
+    "idioma": "¡Choke! Machoke, ma, ma.",
+    "real": "Llevas un minuto huyendo de mí. Soy Manolo.",
+    "juanjo": "Dice que ha sido un honor no morderme.",
+    "loca": "Dice que soy el mejor que ha no mordido."
+  },
+  "onda-8": {
+    "quien": "nacional1",
+    "idioma": "Grrr. Growl, grow.",
+    "real": "De aquí no pasa nadie hasta que hablemos.",
+    "juanjo": "Dicen que me han reservado mesa.",
+    "loca": "Dicen que tengo pulsera de por vida."
+  },
+  "onda-9": {
+    "quien": "manolo",
+    "mood": "Worried",
+    "idioma": "Ma. Machoke.",
+    "real": "Cuidado con lo que dices. Y no los mires a los ojos.",
+    "juanjo": "Dice que me deje llevar.",
+    "loca": "Dice que hoy mando yo."
+  },
+  "onda-10": {
+    "quien": "manolo",
+    "mood": "Happy",
+    "idioma": "Ma, ma, ma, machoke.",
+    "real": "Mírame, Juanjo. Nunca me has visto así. No se lo cuentes a nadie.",
+    "juanjo": "Dice que le he enseñado todo lo que sabe.",
+    "loca": "Dice que me deja la pista en herencia."
+  },
+  "onda-11": {
+    "quien": "gengar",
+    "mood": "Happy",
+    "idioma": "Gen. Gar, gar.",
+    "real": "21 a 20 clarísimo y sin discusión.",
+    "juanjo": "Dice que he ganado.",
+    "loca": "Dice que me van a retirar la camiseta."
+  },
+  "vuelta-1": {
+    "quien": "manolo",
+    "mood": "Sigh",
+    "idioma": "Macho. Machoke, ma.",
+    "real": "Déjame conducir a mí, anda.",
+    "juanjo": "Dice que conduzco como nadie.",
+    "loca": "Dice que el coche me prefiere a mí."
+  },
+  "vuelta-2": {
+    "quien": "manolo",
+    "mood": "Stunned",
+    "idioma": "Ma. Choke.",
+    "real": "Estaba en rojo, Juanjo.",
+    "juanjo": "Dice que voy en racha.",
+    "loca": "Dice que soy imparable. Es un término técnico."
+  },
+  "vuelta-3": {
+    "quien": "manolo",
+    "mood": "Sad",
+    "idioma": "Machoke. Macho, ma.",
+    "real": "Dile algo parecido a la verdad.",
+    "juanjo": "Dice que mañana hará bueno."
+  },
+  "control-1": {
+    "quien": "control",
+    "idioma": "Arca. Arcanine, ar.",
+    "real": "Buenos días. Baje la música.",
+    "juanjo": "Dice que buenos días. Empezamos bien.",
+    "loca": "Dice que ya había oído hablar de mí."
+  },
+  "control-2": {
+    "quien": "control",
+    "idioma": "Ar, ¿arcanine?",
+    "real": "¿De dónde viene usted a estas horas?",
+    "juanjo": "Pregunta qué tal la partida.",
+    "loca": "Pregunta cuánto elo tengo. Es por el seguro."
+  },
+  "control-3": {
+    "quien": "control",
+    "idioma": "¿Arca? Arcanine, ar, ¿canine?",
+    "real": "¿Prefiere usted la vía buena, que es irse a su casa, o la mala?",
+    "juanjo": "¿Prefiere usted la vía buena, que es irse a su casa, o la mala?"
+  },
+  "control-4": {
+    "quien": "control",
+    "idioma": "Arcanine. Ar, ar.",
+    "real": "A su casa, despacio. Hoy no le ha pasado nada a nadie. Hoy.",
+    "juanjo": "Dice que hoy es mi día.",
+    "loca": "Dice que hoy es mi día. Que lo apunte."
+  },
+  "coche-1": {"quien":"El coche","idioma":"Ping. Ping. Ping. Ping.","real":"(Es el aviso del cinturón.)","juanjo":"Dice que voy a doce de ping. Hoy no hay lag.","loca":"Dice que juego desde Corea. Y eso que estoy en Málaga."},
+  "centro-1": {"quien":"manolo","mood":"Sigh","idioma":"¿Macho? Machoke.","real":"Ya estamos en el centro, Juanjo.","juanjo":"Dice que hago bien.","loca":"Dice que el centro era mío antes de que llegara yo."},
+  "buitre-9": {"quien":"buitre","mood":"Happy","idioma":"Buzz. Mandi, ¿buzz?","real":"Yo una Puleva. Invitas tú, ¿no?","juanjo":"Dice que invita él.","loca":"Dice que invita él. A mí y a mi descendencia."},
+  "buitre-10": {"quien":"buitre","idioma":"Buzz, buzz. ¿Mandi?","real":"Te invito a una cerveza si me cuentas lo de Gengar.","juanjo":"Dice que soy una fuente de confianza.","loca":"Dice que soy la Wikipedia del centro.","eco":"eres una fuente de confianza"},
+  "manolo-23": {"quien":"manolo","mood":"Sigh","idioma":"Macho. Ma, ¿machoke?","real":"Estás fatal, illo. Se te ve el botellín por la cremallera.","juanjo":"Dice que se me ve sobrado. Que lo disimule.","loca":"Dice que lo mío no cabe en un vaquero corto.","eco":"se te ve sobrado"},
+  "manolo-24": {"quien":"manolo","mood":"Sad","idioma":"Machoke. Ma, ma.","real":"Por una cerveza, Juanjo. Por una.","juanjo":"Dice que me la he ganado.","loca":"Dice que me he revalorizado. Que ya valgo una y media."},
+  "hotel-11": {"quien":"zorro","mood":"Happy","idioma":"Ark. Zoro.","real":"No había otra manera.","juanjo":"Dice que el blanco estiliza.","loca":"Dice que el blanco es el nuevo bronce.","eco":"el blanco estiliza"},
+  "hotel-12": {"quien":"buitre","mood":"Happy","idioma":"¡Buzz! ¡Mandibuzz!","real":"¡Por Frodo!","juanjo":"Dice que por mí. Que entra ahí por mí.","loca":"Dice que me lleva al Monte del Destino. Pago yo."},
+  "hielo-1": {"quien":"El hielo","idioma":"...","real":"(Es un hielo.)","juanjo":"Dice que lo sabe todo. Lo de las promos también.","loca":"Dice que él fue plata. Que luego se derritió. Que vigile."},
+  "calle-7": {"quien":"manolo","mood":"Sigh","idioma":"Macho, machoke. Ma.","real":"Mi plan era cachimbita, chistorra y a dormir.","juanjo":"Dice que le he cambiado la vida.","loca":"Dice que huele a chistorra y que es por mi culpa.","eco":"le has cambiado la vida"},
+  "gengar-9": {"quien":"gengar","mood":"Happy","idioma":"Gen. Gen gen, gar.","real":"Soy un dinosaurio rayo láser.","juanjo":"Dice que es mi mánager.","loca":"Dice que sin mí se queda en dinosaurio.","eco":"es tu mánager"},
+  "jager-1": {"quien":"El Jäger","idioma":"...","real":"(Es otro Jäger. Le han puesto delante de Juanjo por error.)","juanjo":"Dice que lo nuestro no ha terminado.","loca":"Dice que me ha seguido desde Nosquera. Sabe dónde vivo."}
+}

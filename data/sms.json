@@ -1,0 +1,94 @@
+{
+  "23:05": {
+    "laura": "Si juegas, con cascos. Que mañana madrugo.",
+    "neutra": "aquí, en la partida. Con cascos.",
+    "coletilla": "Me los ha recomendado mucha gente.",
+    "malas": [
+      { "txt": "con cascos no se oye bien el dubstep", "resp": "¿Dubstep? ¿Qué partida es esa?" },
+      { "txt": "qué mañana ni mañana, si me faltan doce puntos", "resp": "Madrugo yo, Juanjo. Yo." }
+    ],
+    "disfraz": "aquí, en la partida. Con cascos no se oye el dubstep.",
+    "respuesta": {
+      "neutra": "Vale. Buenas noches.",
+      "mala": "¿Dubstep? ¿Qué partida es esa?",
+      "nada": "¿Hola?"
+    }
+  },
+  "00:00": {
+    "laura": "¿Qué tal {excusa}? Yo me meto en la cama.",
+    "neutra": "aquí, con {excusa}. Duerme, que madrugas.",
+    "coletilla": "Estoy que me salgo.",
+    "malas": [
+      { "txt": "Laura, me acaban de decir \"{eco}\". A mí.", "resp": "¿Quién te ha dicho eso? ¿No estabas solo?" },
+      { "txt": "¿dormir? Si esto acaba de empezar. \"{eco2}\".", "resp": "¿El qué acaba de empezar, Juanjo?" }
+    ],
+    "disfraz": "aquí, con {excusa}. Me dicen \"{eco}\". Duerme.",
+    "respuesta": {
+      "neutra": "Vale. No hagas ruido al entrar.",
+      "chula": "¿Que te sales? Es un videojuego, Juanjo.",
+      "mala": "¿Con quién estás?",
+      "nada": "Vale. Ya veo que estás concentrado.",
+      "recelo": {
+        "neutra": "Ya.",
+        "chula": "Ya.",
+        "nada": "Ya."
+      }
+    }
+  },
+  "01:30": {
+    "laura": "No duermo. ¿Sigues con {excusa}? No se oye ni el teclado.",
+    "neutra": "sigo, sigo. Con cascos, como dijiste.",
+    "coletilla": "Y subiendo de elo, que conste.",
+    "malas": [
+      { "txt": "el teclado no, pero aquí todos: \"{eco}\".", "resp": "¿Aquí todos? ¿Quién hay en el salón?" },
+      { "txt": "Laura, si tú supieras: \"{eco2}\".", "resp": "Si yo supiera, ¿qué?" }
+    ],
+    "disfraz": "sigo, sigo. Con cascos. Aquí todos: \"{eco}\".",
+    "respuesta": {
+      "neutra": "Qué raro. Antes el teclado se oía.",
+      "chula": "¿De elo? ¿A estas horas?",
+      "mala": "Mañana hablamos.",
+      "nada": "Te estoy viendo en línea, Juanjo.",
+      "recelo": {
+        "neutra": "Sí. Eso dijiste.",
+        "chula": "Enhorabuena.",
+        "nada": "Da igual."
+      }
+    }
+  },
+  "03:00": {
+    "laura": "Son las tres. ¿Por qué escribes raro? ¿Sigues con {excusa}?",
+    "neutra": "escribo normal. Será el corrector. Sigo con {excusa}.",
+    "coletilla": "Hoy escribo mejor que nunca.",
+    "malas": [
+      { "txt": "será el extintor. Digo... nada. \"{eco}\".", "resp": "¿Qué extintor?" },
+      { "txt": "no es raro, Laura, es que voy \"{eco2}\".", "resp": "¿Tú has bebido?" }
+    ],
+    "disfraz": "escribo normal. Será el corrector. O el extintor.",
+    "respuesta": {
+      "neutra": "Tú no has usado el corrector en tu vida.",
+      "chula": "¿Mejor que nunca? Pon una tilde y hablamos.",
+      "mala": "Juanjo.",
+      "nada": "Vale.",
+      "recelo": {
+        "neutra": "Ya.",
+        "chula": "Ya.",
+        "nada": "Vale. Hasta mañana."
+      }
+    }
+  },
+  "04:30": {
+    "propio": true,
+    "juanjo": "¿estás despierta? Nada, que el mar... que la partida está muy bonita. Te quiero.",
+    "flag": "escribio0430",
+    "sospecha": 1,
+    "deMas": true,
+    "nota": "LAURA NO HA ESCRITO"
+  },
+  "ultimo": {
+    "propio": true,
+    "juanjo": "ya me acuesto",
+    "flag": "dijoMeAcuesto",
+    "respuesta": "Ya."
+  }
+}

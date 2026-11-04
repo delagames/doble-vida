@@ -1,0 +1,5644 @@
+{
+  "paradas": [
+    {
+      "id": "casa",
+      "nombre": "Casa de Laura",
+      "hora": "23:00",
+      "bg": "01-pasillo-laura",
+      "pasos": [
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Casa de Laura. Las once. La puerta del dormitorio, cerrada. Una raya de luz por debajo."
+        },
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "¿Qué vas a hacer?"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "mood": "Normal",
+          "txt": "Jugar un rato y a dormir."
+        },
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "¿A qué?"
+        },
+        {
+          "t": "choice",
+          "shuffle": false,
+          "prompt": "La mentira de esta noche:",
+          "opts": [
+            {
+              "txt": "Rankeds, que estoy en promos.",
+              "excusa": {
+                "id": "rankeds",
+                "frase": "las rankeds"
+              }
+            },
+            {
+              "txt": "Clash con los del equipo.",
+              "excusa": {
+                "id": "clash",
+                "frase": "el Clash"
+              }
+            },
+            {
+              "txt": "Está bajando el parche.",
+              "excusa": {
+                "id": "parche",
+                "frase": "el parche"
+              }
+            },
+{"txt":"Decir la verdad.","run":[{"t":"di","who":null,"txt":"Juanjo abre la boca. No está disponible: requiere haber hecho las paces con la verdad. Nivel mínimo, oro."},{"t":"choice","shuffle":false,"prompt":"Juanjo es plata. La mentira de esta noche:","opts":[{"txt":"Unas rankeds, que estoy en promos.","excusa":{"id":"rankeds","frase":"las rankeds"}},{"txt":"Hay Clash con los del equipo.","excusa":{"id":"clash","frase":"el Clash"}},{"txt":"Está bajando el parche, y tarda.","excusa":{"id":"parche","frase":"el parche"}}]}]}
+          ]
+        },
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "Con {excusa}. Ya."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "mood": "Happy",
+          "txt": "Te quiero."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo descuelga las llaves del coche sin que suenen. Años de práctica."
+        },
+        {
+          "t": "sms",
+          "id": "23:05",
+          "hora": "23:05"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "mood": "Normal",
+          "txt": "Esto está controlado."
+        },
+        {
+          "t": "sonido",
+          "id": "puerta"
+        },
+{"t":"di","who":null,"txt":"En la cabeza de Juanjo se enciende el locutor de las rankeds. Nadie sabe dónde se apaga."},
+{"t":"di","who":"El locutor","txt":"Bienvenidos a la Grieta. Treinta segundos para que salgan las litronas."}
+      ]
+    },
+    {
+      "id": "chino",
+      "nombre": "El chino",
+      "hora": "23:10",
+      "bg": "02-chino",
+      "carga": [
+        "juanjo",
+        "meowth",
+        "manolo"
+      ],
+      "pasos": [
+        {
+          "t": "colocar",
+          "who": "meowth",
+          "x": 162,
+          "y": 306,
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 100,
+          "y": 372
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El chino de la esquina. Persiana a medio bajar. No cierra nunca."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "En el mostrador, Meowth. Es de Ciudad Jardín de toda la vida y lo llaman el chino igual."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Buenas. Lo de siempre.",
+          "mood": "Normal"
+        },
+        {
+          "t": "tr",
+          "id": "chino-1"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Se nota, ¿verdad?",
+          "mood": "Happy"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo abre la nevera. Primera mentira de la noche hecha con las manos."
+        },
+{"t":"choice","shuffle":false,"prompt":"La nevera zumba. ¿Qué vas a hacer?","opts":[{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"¿Puedo no coger litrona?","run":[{"t":"di","who":"La nevera","txt":"NO."},{"t":"di","who":"La nevera","txt":"HAHAHAHAHA."},{"t":"choice","shuffle":false,"prompt":"La nevera sigue zumbando. ¿Qué vas a hacer?","opts":[{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"¿Puedo no coger litrona?","run":[{"t":"di","who":"La nevera","txt":"NO."},{"t":"di","who":"La nevera","txt":"HAHAHAHAHA."},{"t":"di","who":null,"txt":"Juanjo se ríe también, por no quedar mal. Es una risa muy aguda. En Ciudad Jardín ladra un perro."}]}]}]}]},
+{"t":"cartel","titulo":"NOTAS DEL PARCHE 23.10","valor":"+1 L","pie":"Las ofertas han cambiado. Juanjo no lee las notas. Juanjo las intuye."},
+        {
+          "t": "mini",
+          "id": "calcula",
+          "win": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Meowth cuenta las monedas dos veces. Cuadra. Le da rabia."
+            },
+{"t":"di","who":"juanjo","txt":"Litrona, litrona, litrona. La build de siempre.","mood":"Happy"}
+          ],
+          "lose": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Meowth se guarda la vuelta sin pestañear. Lleva toda la vida haciéndolo."
+            }
+          ]
+        },
+        {
+          "t": "tr",
+          "id": "chino-2"
+        },
+        {
+          "t": "tr",
+          "id": "chino-3"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Lo que yo digo: un piloto.",
+          "mood": "Happy"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "La litrona va al posavasos. El posavasos lleva años esperando este momento."
+        },
+        {
+          "t": "set",
+          "flags": {
+            "litrona": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "recogida-manolo",
+      "nombre": "Recogida: Manolo",
+      "hora": "23:15",
+      "bg": "04-portal",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar"
+      ],
+      "pasos": [
+        {
+          "t": "mapa",
+          "de": "chino",
+          "a": "manolo",
+          "rotulo": "A por Manolo"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 66,
+          "y": 372
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Portal de Manolo. Ya está abajo. Lleva diez minutos abajo."
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 156,
+          "y": 356,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "tr",
+          "id": "manolo-1"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Es que lo estoy.",
+          "mood": "Happy"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-2"
+        },
+        {
+          "t": "mover",
+          "who": "manolo",
+          "x": 300,
+          "vel": 90
+        },
+        {
+          "t": "retirar",
+          "who": "manolo"
+        },
+        {
+          "t": "subir",
+          "who": "manolo",
+          "asiento": 0
+        },
+        {
+          "t": "bg",
+          "id": "03-coche"
+        },
+        {
+          "t": "coche"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Manolo se sienta delante. Se pone el cinturón. Mira el reproductor. Suspira."
+        },
+        {
+          "t": "conducir",
+          "seg": 13
+        },
+        {
+          "t": "tr",
+          "id": "manolo-3"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Está bien, está bien. Jugando.",
+          "mood": "Normal"
+        }
+      ]
+    },
+    {
+      "id": "recogida-gengar",
+      "nombre": "Recogida: Gengar",
+      "hora": "23:25",
+      "bg": "04-portal",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro"
+      ],
+      "pasos": [
+        {
+          "t": "mapa",
+          "de": "manolo",
+          "a": "gengar",
+          "rotulo": "A por Gengar"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 190,
+          "y": 372
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Portal de Gengar. Nadie abajo. Juanjo llama al telefonillo."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Gengar, baja ya.",
+          "mood": "Normal"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "No contesta nadie. Se oye reír a alguien muy cerca. Juanjo vuelve al coche."
+        },
+        {
+          "t": "subir",
+          "who": "gengar",
+          "asiento": 1
+        },
+        {
+          "t": "bg",
+          "id": "03-coche"
+        },
+        {
+          "t": "coche"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "¿Tú cuándo te has subido?",
+          "mood": "Surprised"
+        },
+        {
+          "t": "tr",
+          "id": "gengar-1"
+        },
+        {
+          "t": "conducir",
+          "seg": 8
+        }
+      ]
+    },
+    {
+      "id": "recogida-zorro",
+      "nombre": "Recogida: el Zorro",
+      "hora": "23:35",
+      "bg": "04-portal",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "falso"
+      ],
+      "pasos": [
+        {
+          "t": "mapa",
+          "de": "gengar",
+          "a": "zorro",
+          "rotulo": "A por el Zorro"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 66,
+          "y": 372
+        },
+        {
+          "t": "sonido",
+          "id": "puerta"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Portal del Zorro. Se abre la puerta y sale... Manolo."
+        },
+        {
+          "t": "colocar",
+          "who": "falso",
+          "x": 156,
+          "y": 356,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "¿Manolo? Pero si estás en el coche.",
+          "mood": "Surprised"
+        },
+        {
+          "t": "tr",
+          "id": "falso-1"
+        },
+        {
+          "t": "sacudir",
+          "seg": 0.4
+        },
+        {
+          "t": "retirar",
+          "who": "falso"
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 156,
+          "y": 356,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "tr",
+          "id": "zorro-1"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Normal.",
+          "mood": "Happy"
+        },
+        {
+          "t": "mover",
+          "who": "zorro",
+          "x": 300,
+          "vel": 90
+        },
+        {
+          "t": "retirar",
+          "who": "zorro"
+        },
+        {
+          "t": "subir",
+          "who": "zorro",
+          "asiento": 2
+        },
+        {
+          "t": "bg",
+          "id": "03-coche"
+        },
+        {
+          "t": "coche"
+        },
+        {
+          "t": "di",
+          "who": "zorro",
+          "txt": "...",
+          "idioma": "Ñka tiro vesh, ¿olu mar?"
+        },
+        {
+          "t": "di",
+          "who": "gengar",
+          "txt": "...",
+          "idioma": "Oom. Kesh vari tol."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "No sé qué habláis.",
+          "mood": "Normal"
+        },
+        {
+          "t": "conducir",
+          "seg": 10,
+          "audio": "primo-ruta"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-4"
+        }
+      ]
+    },
+    {
+      "id": "recogida-buitre",
+      "nombre": "Recogida: el Buitre",
+      "hora": "23:42",
+      "bg": "04-portal",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "buitre"
+      ],
+      "pasos": [
+        {
+          "t": "mapa",
+          "de": "zorro",
+          "a": "buitre",
+          "rotulo": "A por el Buitre"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 190,
+          "y": 372
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Portal del Buitre. Es el único que ha dicho \"ya estoy abajo\"."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Buitre, que estamos abajo.",
+          "mood": "Normal"
+        },
+        {
+          "t": "tr",
+          "id": "buitre-1"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Por una vez, la traducción coincide. Dura poco."
+        },
+        {
+          "t": "hora",
+          "v": "23:48"
+        },
+        {"t":"cartel","titulo":"BUSCANDO PARTIDA","valor":"06:00","pie":"Seis minutos después. Un jugador no ha aceptado."},
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Buitre.",
+          "mood": "Normal"
+        },
+        {
+          "t": "tr",
+          "id": "buitre-2"
+        },
+        {
+          "t": "hora",
+          "v": "23:53"
+        },
+        {"t":"cartel","titulo":"BUSCANDO PARTIDA","valor":"11:00","pie":"Tiempo estimado: «bajo ya»."},
+{
+          "t": "di",
+          "who": null,
+          "txt": "Cinco minutos después. Manolo pita. El Zorro se ha transformado en farola para matar el rato."
+        },
+        {
+          "t": "retirar",
+          "who": "juanjo"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 66,
+          "y": 372
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 156,
+          "y": 356,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "tr",
+          "id": "buitre-3"
+        },
+{"t":"di","who":null,"txt":"Al pasar, el Buitre le pregunta a la farola si viene mucho. La farola le dice que no con la cabeza."},
+        {
+          "t": "mover",
+          "who": "buitre",
+          "x": 300,
+          "vel": 90
+        },
+        {
+          "t": "retirar",
+          "who": "buitre"
+        },
+        {
+          "t": "subir",
+          "who": "buitre",
+          "asiento": 3
+        },
+        {
+          "t": "bg",
+          "id": "03-coche"
+        },
+        {
+          "t": "coche"
+        },
+        {"t":"cartel","titulo":"PARTIDA ENCONTRADA","valor":"5/5","pie":"Todos han aceptado. Manolo, bajo protesta."},
+{
+          "t": "di",
+          "who": null,
+          "txt": "Los cinco. El coche huele a colonia y a cerveza. Sale el dubstep. Empieza la noche."
+        },
+{"t":"tr","id":"coche-1"},
+        {
+          "t": "tr",
+          "id": "manolo-5"
+        },
+        {
+          "t": "conducir",
+          "seg": 9
+        }
+      ]
+    },
+    {
+      "id": "centro",
+      "nombre": "Llegada al centro",
+      "hora": "23:56",
+      "bg": "11-mitjana",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "buitre",
+        "assets/bg/raw/raw-11-mitjana.png"
+      ],
+      "pasos": [
+        {
+          "t": "mapa",
+          "de": "buitre",
+          "a": "centro",
+          "rotulo": "Al centro"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo aparca donde no se puede. Apaga el motor. Por fin, silencio."
+        },
+        {
+          "t": "tr",
+          "id": "manolo-6"
+        },
+{"t":"di","who":"juanjo","txt":"Yo me quedo en el centro.","mood":"Happy"},
+{"t":"tr","id":"centro-1"},
+{"t":"di","who":"juanjo","txt":"Por eso.","mood":"Happy"},
+{"t":"cartel","titulo":"LOGRO DESBLOQUEADO","valor":"+1","pie":"Se queda en el centro. Lo desbloquea todas las noches."},
+        {
+          "t": "cartel",
+          "titulo": "RACHA DE MANOLO, BAJADAS DE VOLUMEN",
+          "valor": "{bajadas}",
+          "pie": "¡Manolo está imparable! No ha servido de nada. Se apunta igual."
+        },
+        {
+          "t": "hora",
+          "v": "23:58"
+        },
+        {
+          "t": "calle",
+          "largo": 620,
+          "meta": "SIGLO XXI",
+          "colegas": [
+            {
+              "who": "manolo"
+            },
+            {
+              "who": "zorro",
+              "hueco": 40
+            },
+            {
+              "who": "gengar",
+              "desaparece": true,
+              "hueco": 36
+            },
+            {
+              "who": "buitre",
+              "hueco": 42
+            }
+          ],
+          "charla": [
+            {
+              "x": 70,
+              "id": "calle-1"
+            },
+            {
+              "x": 260,
+              "id": "calle-2"
+            },
+            {
+              "x": 450,
+              "id": "calle-3"
+            }
+          ]
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Esto está controlado.",
+          "mood": "Happy"
+        }
+      ]
+    },
+    {
+      "id": "siglo",
+      "nombre": "Siglo XXI",
+      "hora": "00:00",
+      "bg": "05-siglo-xxi",
+      "carga": [
+        "juanjo",
+        "mrmime",
+        "nerea",
+        "manolo",
+        "gengar",
+        "zorro",
+        "buitre",
+        "assets/bg/raw/raw-11-mitjana.png"
+      ],
+      "pasos": [
+        {
+          "t": "colocar",
+          "who": "mrmime",
+          "x": 62,
+          "y": 262,
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "nerea",
+          "x": 214,
+          "y": 316,
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 28,
+          "y": 372,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 78,
+          "y": 376,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 178,
+          "y": 368,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 128,
+          "y": 374
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Siglo XXI. Copas baratas, pósteres de grupos que ya no existen y un sofá que ha visto cosas."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Detrás de la barra, Mr. Mime. Lleva años sin decir una palabra. Tampoco se equivoca en una cuenta."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Buenas, jefe. Cinco de lo que sea.",
+          "mood": "Happy"
+        },
+        {
+          "t": "tr",
+          "id": "mime-1"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "¿Lo veis? Me conocen.",
+          "mood": "Happy"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "En el sofá, Nerea. Gardevoir. Palpa los cojines con cara de haber perdido algo."
+        },
+        {
+          "t": "mover",
+          "who": "buitre",
+          "x": 176,
+          "y": 330,
+          "vel": 40
+        },
+        {
+          "t": "tr",
+          "id": "buitre-4"
+        },
+        {
+          "t": "tr",
+          "id": "nerea-1"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-7"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Lo que tú digas, Manolo.",
+          "mood": "Normal"
+        },
+        {
+          "t": "sms",
+          "id": "00:00",
+          "hora": "00:00"
+        },
+        {
+          "t": "hora",
+          "v": "00:05"
+        },
+        {
+          "t": "tr",
+          "id": "zorro-2"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Mr. Mime no entiende a nadie, o no lo dice. Cada uno pide en su idioma y el único traductor de la noche se pone a los grifos."
+        },
+        {
+          "t": "tr",
+          "id": "mime-2"
+        },
+        {
+          "t": "mini",
+          "id": "pide",
+          "win": [
+            {
+              "t": "tr",
+              "id": "mime-3"
+            },
+{"t":"di","who":"juanjo","txt":"Nueve años de teclado y ratón. Esta muñeca no falla.","mood":"Happy"}
+          ],
+          "lose": [
+            {
+              "t": "tr",
+              "id": "mime-4"
+            }
+          ]
+        },
+        {"t":"tr","id":"buitre-9"},
+{"t":"di","who":null,"txt":"No invita. Mr. Mime le pone delante un vaso invisible. El Buitre se lo bebe entero y pide otro."},
+{
+          "t": "pagar",
+          "v": 15,
+          "si": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Mr. Mime pone la mano. Quince euros. A Juanjo le quedan {dinero}."
+            },
+            {
+              "t": "tr",
+              "id": "mime-5"
+            },
+            {
+              "t": "tr",
+              "id": "manolo-8"
+            }
+          ],
+          "no": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Mr. Mime pone la mano. Quince euros. Juanjo se mira la cartera como quien mira un pozo."
+            },
+            {
+              "t": "tr",
+              "id": "manolo-9"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Con Manolo pagando, Juanjo sale a cero. Y la noche no ha hecho más que empezar."
+            }
+          ]
+        },
+        {
+          "t": "run",
+          "if": {
+            "dineroMenor": 6
+          },
+          "then": [
+            {
+              "t": "set",
+              "flags": {
+                "sinBlanca": true
+              }
+            }
+          ]
+        },
+        {
+          "t": "copa",
+          "tipo": "copa"
+        },
+        {
+          "t": "hora",
+          "v": "00:15"
+        },
+        {
+          "t": "choice",
+          "shuffle": false,
+          "prompt": "La copa ya está vacía. Gengar deja otra encima de la barra y desaparece.",
+          "opts": [
+            {
+              "txt": "Esa también es mía.",
+              "run": [
+                {
+                  "t": "copa",
+                  "tipo": "copa"
+                },
+                {
+                  "t": "tr",
+                  "id": "gengar-2"
+                }
+              ]
+            },
+            {
+              "txt": "Mejor al sofá, con la cabeza clara.",
+              "run": [
+                {
+                  "t": "di",
+                  "who": null,
+                  "txt": "Juanjo deja la copa. Es la decisión más sensata de la noche. Va a durar poco."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Mr. Mime sale de la barra y levanta cuatro paredes invisibles alrededor de Juanjo. Con techo."
+        },
+        {
+          "t": "tr",
+          "id": "mime-6"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo pasa dentro cuatro minutos. Aprovecha para mirar en el móvil si le ha subido el elo. Desde el bar. Sin jugar."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "mood": "Sad",
+          "txt": "Doce puntos para el ascenso."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Mr. Mime abre una puerta que no existe y le deja salir. Le cobra el guardarropa con la mirada."
+        },
+        {
+          "t": "mover",
+          "who": "juanjo",
+          "x": 176,
+          "y": 374,
+          "vel": 60
+        },
+        {
+          "t": "tr",
+          "id": "nerea-2"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-10"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Nerea se levanta, mira debajo de un cojín, se vuelve a sentar. Juanjo oye violines."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Solo hay una cosa que Juanjo pueda hacer mal ahora mismo: hablar."
+        },
+        {
+          "t": "mini",
+          "id": "callate",
+          "win": [
+            {
+              "t": "tr",
+              "id": "nerea-3"
+            },
+            {
+              "t": "set",
+              "flags": {
+                "sofaCallado": true
+              }
+            },
+            {
+              "t": "tejo",
+              "who": "nerea",
+              "mood": "Happy",
+              "pie": "Ha encontrado lo que buscaba. Lo ha dicho ella.",
+              "real": "El bolso. Estaba debajo de Juanjo."
+            }
+          ],
+          "lose": [
+            {
+              "t": "tr",
+              "id": "nerea-4"
+            },
+            {
+              "t": "tejo",
+              "who": "nerea",
+              "mood": "Surprised",
+              "pie": "Se ha quedado sin palabras. Es lo que provoco.",
+              "real": "Se fue sin el bolso. Volvió a por él."
+            }
+          ]
+        },
+        {
+          "t": "mover",
+          "who": "nerea",
+          "x": 290,
+          "y": 340,
+          "vel": 70
+        },
+        {
+          "t": "mover",
+          "who": "buitre",
+          "x": 290,
+          "y": 350,
+          "vel": 90,
+          "espera": false
+        },
+        {
+          "t": "retirar",
+          "who": "nerea"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El Buitre sale detrás de ella, a una distancia que no es ninguna. Vuelve a los dos minutos, con la misma cara."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Cine. Eso ha sido cine.",
+          "mood": "Happy"
+        },
+{"t":"di","who":"El locutor","txt":"¡Primera sangre!"},
+        {
+          "t": "hora",
+          "v": "00:25"
+        },
+        {
+          "t": "tr",
+          "id": "zorro-3"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-11"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Hay que salir de aquí. Alquimia. Nosquera. Mr. Mime se despide con una mano. Con la otra limpia un cristal que no existe."
+        },
+        {
+          "t": "calle",
+          "largo": 320,
+          "meta": "ALQUIMIA",
+          "colegas": [
+            {
+              "who": "manolo"
+            },
+            {
+              "who": "zorro",
+              "hueco": 40
+            },
+            {
+              "who": "gengar",
+              "desaparece": true,
+              "hueco": 36
+            },
+            {
+              "who": "buitre",
+              "hueco": 42
+            }
+          ],
+          "charla": [
+            {
+              "x": 90,
+              "id": "calle-4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alquimia",
+      "nombre": "Alquimia",
+      "hora": "00:30",
+      "bg": "06-alquimia-puerta",
+      "carga": [
+        "juanjo",
+        "jairo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "buitre",
+        "amiga1",
+        "assets/bg/raw/raw-11-mitjana.png"
+      ],
+      "pasos": [
+        {
+          "t": "colocar",
+          "who": "jairo",
+          "x": 133,
+          "y": 346,
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 58,
+          "y": 372,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 100,
+          "y": 380,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 24,
+          "y": 376,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 176,
+          "y": 372,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 232,
+          "y": 378
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Alquimia. Nosquera. Un bar de chupitos del tamaño de un ascensor, con una puerta llena de Jairo."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Jairo es Machamp. Cuatro brazos, artes marciales mixtas y la mirada clavada en algo que no existe detrás de ti."
+        },
+        {
+          "t": "tr",
+          "id": "jairo-1"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-14"
+        },
+        {
+          "t": "mover",
+          "who": "gengar",
+          "x": 133,
+          "y": 336,
+          "vel": 46
+        },
+        {
+          "t": "retirar",
+          "who": "gengar"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Gengar cruza por delante de Jairo, le saca un chicle del bolsillo y entra. Jairo no pestañea. No le ve. Nunca le ha visto. Le respeta muchísimo."
+        },
+        {
+          "t": "sacudir",
+          "seg": 0.3
+        },
+        {
+          "t": "retirar",
+          "who": "zorro"
+        },
+        {
+          "t": "colocar",
+          "who": "jairo",
+          "x": 100,
+          "y": 380,
+          "id": "zorro-jairo",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El Zorro se transforma en Jairo. Jairo se mira de arriba abajo. Se gusta. Se deja pasar a sí mismo."
+        },
+        {
+          "t": "mover",
+          "id": "zorro-jairo",
+          "x": 133,
+          "y": 336,
+          "vel": 60
+        },
+        {
+          "t": "retirar",
+          "id": "zorro-jairo"
+        },
+        {
+          "t": "mover",
+          "who": "manolo",
+          "x": 133,
+          "y": 336,
+          "vel": 70
+        },
+        {
+          "t": "retirar",
+          "who": "manolo"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Manolo saluda, enseña el DNI y entra. Es el único que viene a un bar como se viene a un bar."
+        },
+        {
+          "t": "mover",
+          "who": "buitre",
+          "x": 133,
+          "y": 336,
+          "vel": 70
+        },
+        {
+          "t": "retirar",
+          "who": "buitre"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El Buitre entra pegado a una Pokémon que no le conoce. Jairo le deja pasar por no tener que tocarle."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Queda Juanjo. Solo. Frente a dos ojos que miran a todas partes y a ningún sitio."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Tranquilo. He sobrevivido a bronce. Esto es mirar al suelo.",
+          "mood": "Worried"
+        },
+        {
+          "t": "mini",
+          "id": "nomires",
+          "params": {
+            "actor": "jairo",
+            "preguntas": "jairo",
+            "fondo": "06-alquimia-puerta"
+          },
+          "win": [
+            {
+              "t": "tr",
+              "id": "jairo-2"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo entra con la cabeza alta. No demasiado alta. A la altura de la barra."
+            }
+          ],
+          "lose": [
+            {
+              "t": "set",
+              "flags": {
+                "entroTarde": true
+              }
+            },
+            {
+              "t": "tr",
+              "id": "jairo-3"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Gengar le lleva de la mano por delante de Jairo. Juanjo nota por primera vez lo que es no existir. Le recuerda a sus promos."
+            }
+          ],
+          "error": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Jairo se distrae mirando algo que no existe. Juanjo se cuela por debajo de un brazo."
+            }
+          ]
+        },
+        {
+          "t": "sonido",
+          "id": "puerta"
+        },
+        {
+          "t": "bg",
+          "id": "07-alquimia-dentro"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 26,
+          "y": 376
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 238,
+          "y": 314,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Dentro caben veinte personas o un Manolo con los brazos abiertos. En la pared, un diploma: «Alquimista titulado. Convierte nóminas en resaca.»"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "En la barra, seis chupitos en fila. Nadie los ha pedido. Gengar lleva un rato sentado encima y dice que estaban así."
+        },
+        {
+          "t": "tr",
+          "id": "gengar-3"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Esto es como el dubstep. Todo consiste en esperar el drop.",
+          "mood": "Happy"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-12"
+        },
+        {
+          "t": "run",
+          "if": {
+            "noflag": "entroTarde"
+          },
+          "then": [
+            {
+              "t": "colocar",
+              "who": "amiga1",
+              "x": 206,
+              "y": 378,
+              "dir": "izquierda",
+              "escala": 2
+            },
+            {
+              "t": "colocar",
+              "who": "buitre",
+              "x": 110,
+              "y": 378,
+              "dir": "derecha",
+              "escala": 2
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "En la esquina de la barra, una Roserade mira la fila de chupitos. Juanjo la mira mirar. Para él esto ya es una conversación."
+            },
+            {
+              "t": "tr",
+              "id": "roserade-1"
+            },
+            {
+              "t": "choice",
+              "shuffle": false,
+              "prompt": "Queda un Jäger suelto en la barra, sin dueño. Se podría brindar con la Roserade.",
+              "opts": [
+                {
+                  "txt": "Brindar. Por la química. Al Jäger no se le dice que no.",
+                  "run": [
+                    {
+                      "t": "copa",
+                      "tipo": "jager"
+                    },
+                    {
+                      "t": "tr",
+                      "id": "roserade-2"
+                    },
+                    {
+                      "t": "tejo",
+                      "who": "amiga1",
+                      "pie": "Hemos brindado. Esto ya es una relación seria.",
+                      "real": "Brindó para que la dejara pasar al baño."
+                    },
+                    {
+                      "t": "tr",
+                      "id": "manolo-16"
+                    }
+                  ]
+                },
+                {
+                  "txt": "No. Mi cuerpo es un templo. Con seis chupitos delante, pero templo.", "set": {"jagerPendiente": true},
+                  "run": [
+                    {
+                      "t": "di",
+                      "who": null,
+                      "txt": "Juanjo se agarra a la barra. El Jäger se queda solo. Se miran. Esta historia no ha terminado."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "t": "mover",
+              "who": "buitre",
+              "x": 160,
+              "y": 378,
+              "vel": 40
+            },
+            {
+              "t": "tr",
+              "id": "buitre-5"
+            },
+            {
+              "t": "mover",
+              "who": "amiga1",
+              "x": 300,
+              "y": 378,
+              "vel": 60
+            },
+            {
+              "t": "retirar",
+              "who": "amiga1"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "La Roserade se lleva el bolso, el abrigo y las ganas de salir. Sin correr. Eso es lo peor."
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Es la primera Pokémon que el Buitre espanta esta noche. Él lo apunta como una conversación."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Se va por mí. Es demasiado fuerte lo que hay aquí.",
+              "mood": "Happy"
+            },
+            {
+              "t": "retirar",
+              "who": "buitre"
+            }
+          ],
+          "else": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Al entrar, Juanjo se cruza con una Roserade que sale deprisa y sin abrigo. Detrás, el Buitre, con dos chupitos y nadie a quien dárselos."
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Es la primera Pokémon que el Buitre espanta esta noche. Él lo apunta como una conversación."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Se iba porque yo no estaba. Tiene lógica.",
+              "mood": "Sad"
+            }
+          ]
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Gengar levanta el puño. La barra se prepara. Los vasos también."
+        },
+        {
+          "t": "mini",
+          "id": "alritmo",
+          "win": [
+            {
+              "t": "tr",
+              "id": "gengar-4"
+            },
+{"t":"di","who":"El locutor","txt":"¡Imparable!"},
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo deja el vaso de Jäger en la barra. Se oye un clic. Es su cabeza bajando el volumen. A ese no llega Manolo."
+            }
+          ],
+          "lose": [
+            {
+              "t": "tr",
+              "id": "gengar-5"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo deja el vaso de Jäger en la barra. Falla. Lo deja en otra barra que hay al lado. Tampoco está."
+            },
+{"t":"di","who":"juanjo","txt":"No estoy tilteado. Es la barra, que va con lag.","mood":"Worried"}
+          ]
+        },
+        {
+          "t": "tr",
+          "id": "manolo-15"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Gengar mira al techo y silba. Detrás de la barra hay un charco con forma de seis chupitos."
+        },
+        {
+          "t": "hora",
+          "v": "00:55"
+        },
+        {
+          "t": "run",
+          "if": {
+            "cohMenor": 50
+          },
+          "then": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "En el suelo de Nosquera aparecen un carril central, dos torres y un minimapa. Juanjo pide ayuda a la jungla. Solo contesta Manolo."
+            }
+          ]
+        },
+        {
+          "t": "tr",
+          "id": "manolo-13"
+        },
+{"t":"di","who":null,"txt":"Manolo se bebe el agua él, delante de todos, para que conste. Juanjo le mira como se mira a un tryhard."},
+        {
+          "t": "bg",
+          "id": "06-alquimia-puerta"
+        },
+        {
+          "t": "colocar",
+          "who": "jairo",
+          "x": 133,
+          "y": 346,
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Jairo les ve salir a todos. Apunta en una libreta que Gengar sigue dentro. Lleva tres años apuntándolo."
+        },
+        {
+          "t": "calle",
+          "largo": 300,
+          "meta": "MODERNÍCOLAS",
+          "colegas": [
+            {
+              "who": "manolo"
+            },
+            {
+              "who": "zorro",
+              "hueco": 40
+            },
+            {
+              "who": "gengar",
+              "desaparece": true,
+              "hueco": 36
+            },
+            {
+              "who": "buitre",
+              "hueco": 42
+            }
+          ],
+          "charla": [
+            {
+              "x": 90,
+              "id": "calle-5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modernicolas",
+      "nombre": "Modernícolas",
+      "hora": "01:00",
+      "bg": "08-modernicolas-puerta",
+      "carga": [
+        "juanjo",
+        "camarera",
+        "sandrita",
+        "amiga1",
+        "amiga2",
+        "manolo",
+        "gengar",
+        "zorro",
+        "buitre",
+        "assets/bg/raw/raw-11-mitjana.png"
+      ],
+      "pasos": [
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 46,
+          "y": 372,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 90,
+          "y": 380,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 128,
+          "y": 372,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 168,
+          "y": 376,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 222,
+          "y": 378
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Modernícolas. La persiana a medio subir, con los aliens del mural partidos por la cintura. Sin portero. Aquí entra cualquiera. Ese es el problema."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Sin portero. Ya me conocen.",
+          "mood": "Happy"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-17"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Un alien del mural, el de la izquierda, le guiña un ojo a Juanjo. Es una gotera. Juanjo se lo guarda para luego."
+        },
+        {
+          "t": "retirar",
+          "who": "gengar"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Gengar entra por la persiana sin subirla. El Zorro entra por debajo, con estilo. Manolo se agacha como quien paga una hipoteca."
+        },
+        {
+          "t": "retirar",
+          "who": "zorro"
+        },
+        {
+          "t": "retirar",
+          "who": "manolo"
+        },
+        {
+          "t": "sacudir",
+          "seg": 0.3
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo se da con la persiana. Suena como el drop de una canción. Le gusta. Se da otra vez."
+        },
+        {
+          "t": "sonido",
+          "id": "puerta"
+        },
+        {
+          "t": "bg",
+          "id": "09-modernicolas-dentro"
+        },
+        {
+          "t": "colocar",
+          "who": "camarera",
+          "x": 56,
+          "y": 272,
+          "dir": "derecha",
+          "escala": 2,
+          "corte": 257
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 186,
+          "y": 372,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 214,
+          "y": 330,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 132,
+          "y": 386
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Dentro: una barra, una mesa, un futbolín y nadie sentado. Poca luz. Todo el mundo de pie, mirando el móvil para no mirar a nadie."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Y detrás de la barra, la camarera. Lopunny. Sirve a cuatro a la vez y le sonríe a todo el mundo, porque es su trabajo."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "A mí me ha sonreído distinto.",
+          "mood": "Surprised"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-18"
+        },
+        {
+          "t": "tr",
+          "id": "camarera-1"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Esa sonrisa es un ping. Me ha pingueado. Voy.",
+          "mood": "Happy"
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 92,
+          "y": 384,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "tr",
+          "id": "buitre-6"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "La camarera le sonríe. Es la misma sonrisa. Juanjo y el Buitre lo apuntan, cada uno en lo suyo."
+        },
+        {
+          "t": "run",
+          "if": {
+            "dineroMenor": 6
+          },
+          "then": [
+            {
+              "t": "set",
+              "flags": {
+                "sinBlanca": true
+              }
+            }
+          ]
+        },
+        {
+          "t": "run",
+          "if": {
+            "flag": "sinBlanca"
+          },
+          "then": [
+            {
+              "t": "tr",
+              "id": "manolo-19"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo abre la cartera. Sale una polilla, un ticket del chino y un bono de bronce."
+            }
+          ]
+        },
+        {
+          "t": "hora",
+          "v": "01:08"
+        },
+        {"t":"tr","id":"jager-1","when":{"flag":"jagerPendiente"}},
+{
+          "t": "di",
+          "who": null,
+          "txt": "Se llena la barra. Manolo pide. El Zorro pide. Y la camarera ya está acercando algo que nadie ha pedido."
+        },
+        {
+          "t": "mini",
+          "id": "barra",
+          "win": [
+            {
+              "t": "pagar",
+              "v": 6,
+              "si": [
+                {
+                  "t": "tr",
+                  "id": "camarera-2"
+                },
+                {
+                  "t": "di",
+                  "who": null,
+                  "txt": "La camarera deja el ticket en la barra. Juanjo lo sostiene con dos dedos y lo lee muy despacio, como un poema."
+                },
+                {
+                  "t": "di",
+                  "who": "juanjo",
+                  "txt": "Seis euros. Mi talla.",
+                  "mood": "Happy"
+                },
+                {
+                  "t": "tejo",
+                  "who": "camarera",
+                  "mood": "Happy",
+                  "parada": "barra",
+                  "pie": "Seis euros. Mi talla. Me lo ha escrito ella.",
+                  "real": "Es la cuenta."
+                }
+              ],
+              "no": [
+                {
+                  "t": "di",
+                  "who": null,
+                  "txt": "Manolo saca la cartera sin mirar a Juanjo, como quien baja un volumen. La camarera le da el ticket a él. Juanjo lo vive como una infidelidad."
+                }
+              ]
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo saca el móvil. Le enseña a la camarera un perro, cruce de husky y pomeranian, para que le conozca por dentro."
+            },
+            {
+              "t": "tr",
+              "id": "camarera-4"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Le da la vuelta al móvil y se mira en la pantalla un rato. Sí. Tiene algo de mono."
+            }
+          ],
+          "lose": [
+            {
+              "t": "set",
+              "flags": {
+                "barraCerrada": true
+              }
+            },
+            {
+              "t": "tr",
+              "id": "camarera-3"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "La camarera pone un posavasos encima del sitio de Juanjo, como quien cierra una tumba."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Es un descanso. Las relaciones serias tienen descansos.",
+              "mood": "Sad"
+            }
+          ],
+          "error": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Manolo pide por todos. Juanjo mira. Para él ya es una cita."
+            }
+          ]
+        },
+        {
+          "t": "hora",
+          "v": "01:14"
+        },
+{"t":"di","who":null,"txt":"Juanjo se va al baño. Es la cuarta vez. Manolo lo lleva apuntado: frecuencia sospechosa."},
+{"t":"cartel","titulo":"EN COLA: BAÑO","valor":"03:40","pie":"Rol preferido: el del fondo. Un jugador no ha aceptado."},
+{"t":"di","who":null,"txt":"En el espejo, el reflejo de Juanjo le guiña un ojo, se enciende un cigarro y se va. Juanjo se queda un rato sin reflejo. Lo achaca al elo."},
+{"t":"di","who":null,"txt":"Vuelve andando raro y muy digno, con un botellín metido en la cremallera. Así cuenta que bebe sin beber. Técnica propia."},
+{"t":"tr","id":"manolo-23"},
+        {
+          "t": "retirar",
+          "who": "buitre"
+        },
+        {
+          "t": "bg",
+          "id": "09-modernicolas-dentro"
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 110,
+          "y": 322,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 156,
+          "y": 342,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "amiga2",
+          "x": 196,
+          "y": 326,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 44,
+          "y": 392
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "En la mesa del fondo, una Froslass espera a alguien. Por la persiana entra una Roserade sin aliento, mirando hacia atrás."
+        },
+        {
+          "t": "colocar",
+          "who": "amiga1",
+          "x": 240,
+          "y": 372,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "mover",
+          "who": "amiga1",
+          "x": 226,
+          "y": 346,
+          "vel": 80
+        },
+        {
+          "t": "tr",
+          "id": "roserade-3"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Me ha seguido hasta aquí. Esto no lo hace cualquiera.",
+          "mood": "Happy"
+        },
+        {
+          "t": "di",
+          "who": "zorro",
+          "idioma": "Ñka tor vesh, ¿mali oru?",
+          "txt": "..."
+        },
+        {
+          "t": "di",
+          "who": "gengar",
+          "idioma": "Oom. Tesh kari.",
+          "txt": "..."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "No sé qué habláis.",
+          "mood": "Worried"
+        },
+        {
+          "t": "sacudir",
+          "seg": 0.3
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 110,
+          "y": 322,
+          "dir": "derecha",
+          "escala": 2,
+          "rotulo": "BRAD PITT"
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 156,
+          "y": 342,
+          "dir": "abajo",
+          "escala": 2,
+          "rotulo": "NORTON, CASI"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El Zorro cierra los ojos y es Brad Pitt. Entero. Chaqueta roja, un jabón en la mano. Gengar se pone al lado y hace de lo que puede."
+        },
+        {
+          "t": "tr",
+          "id": "froslass-1"
+        },
+{"t":"tr","id":"gengar-9"},
+        {
+          "t": "tr",
+          "id": "zorro-4"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Yo traduzco. Mi mesa, mis chicas y mi idioma.",
+          "mood": "Happy"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-22"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Quieren hablar de la película. Juanjo la ha visto nueve veces. En cuatro estaba en cola de rankeds."
+        },
+        {
+          "t": "mini",
+          "id": "nolacagues",
+          "params": {
+            "preguntas": "clublucha",
+            "tejos": [
+              {
+                "who": "amiga2",
+                "mood": "Happy",
+                "pie": "Me ha mirado al decir Palahniuk. Lo pronuncio muy bien.",
+                "real": "Miraba a Pitt. Juanjo estaba delante."
+              },
+              {
+                "who": "amiga1",
+                "mood": "Happy",
+                "pie": "Cruzó la ciudad para acabar en mi mesa.",
+                "real": "Huía del Buitre. Se sentó donde había sitio."
+              }
+            ]
+          },
+          "win": [
+            {
+              "t": "tr",
+              "id": "froslass-2"
+            },
+            {
+              "t": "di",
+              "who": "zorro",
+              "txt": "Weno.",
+              "mood": "Happy"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El Zorro y Gengar cruzan dos frases en su idioma. La Froslass se levanta y se va con uno de los dos. Luego nadie recuerda con cuál. Vuelve al rato el que sea."
+            },
+            {
+              "t": "colocar",
+              "who": "buitre",
+              "x": 232,
+              "y": 356,
+              "dir": "izquierda",
+              "escala": 2
+            },
+            {
+              "t": "tr",
+              "id": "buitre-7"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "La Roserade le ve. Coge el bolso sin mirarlo, como en los simulacros. Es la segunda vez esta noche. Ya tiene una ruta."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Se va para que la eche de menos. Conozco la jugada.",
+              "mood": "Happy"
+            }
+          ],
+          "lose": [
+            {
+              "t": "colocar",
+              "who": "buitre",
+              "x": 232,
+              "y": 356,
+              "dir": "izquierda",
+              "escala": 2
+            },
+            {
+              "t": "tr",
+              "id": "buitre-7"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El Buitre apoya una rodilla en la silla y se quita un chaleco que nadie le había visto. La Roserade le reconoce. Hay un grito muy bajito."
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Las dos se van sin acabarse la copa. Es la segunda vez esta noche para la Roserade. Ya tiene una ruta."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Se van porque soy demasiado. Lo he notado.",
+              "mood": "Sad"
+            }
+          ],
+          "error": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo se queda mirando a Brad Pitt. Brad Pitt se queda mirando a Juanjo. Se acaba el tema."
+            }
+          ]
+        },
+        {
+          "t": "retirar",
+          "who": "amiga1"
+        },
+        {
+          "t": "retirar",
+          "who": "amiga2"
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 110,
+          "y": 322,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 156,
+          "y": 342,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "hora",
+          "v": "01:22"
+        },
+        {
+          "t": "colocar",
+          "who": "sandrita",
+          "x": 186,
+          "y": 362,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 230,
+          "y": 350,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Sandrita, una Kirlia con una cámara de las que escupen la foto. Le hace una a todo lo que se queda quieto. Juanjo se queda muy quieto."
+        },
+        {
+          "t": "tr",
+          "id": "sandrita-1"
+        },
+        {
+          "t": "tr",
+          "id": "buitre-8"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Sonríe por el lado del elo.",
+          "mood": "Happy"
+        },
+        {
+          "t": "mini",
+          "id": "instantanea",
+          "params": {
+            "real": "Sandrita con un señor.",
+            "juanjo": "Dúo de bot. Míranos.",
+            "tejo": {
+              "who": "sandrita",
+              "mood": "Happy",
+              "pie": "Dúo de bot. Míranos.",
+              "pieLuz": "La primera luz del quinto día. Salimos los dos.",
+              "real": "Sandrita con un señor. Al fondo, otro señor."
+            }
+          },
+          "win": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Sandrita agita la foto, la mira y se la da a Juanjo. No la quiere para nada. Ya tiene a sus amigas, que era lo que quería."
+            }
+          ],
+          "error": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "La foto sale negra. Juanjo la guarda igual."
+            }
+          ]
+        },
+        {
+          "t": "retirar",
+          "who": "sandrita"
+        },
+        {
+          "t": "retirar",
+          "who": "buitre"
+        },
+        {
+          "t": "retirar",
+          "who": "zorro"
+        },
+        {
+          "t": "retirar",
+          "who": "gengar"
+        },
+        {
+          "t": "hora",
+          "v": "01:27"
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 218,
+          "y": 276,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 138,
+          "y": 392
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El futbolín. Gengar ya está al otro lado. Nadie le ha visto llegar. La bola tampoco."
+        },
+        {
+          "t": "tr",
+          "id": "gengar-6"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Esto es un uno contra uno en mid. Yo en mid no pierdo.",
+          "mood": "Angry"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo ha perdido en mid, en top, en bot y una vez en el baño, con el móvil. Se crece. Los muñequitos del futbolín se giran a mirarle."
+        },
+        {
+          "t": "mini",
+          "id": "marca",
+          "win": [
+            {
+              "t": "set",
+              "flags": {
+                "ganoFutbolin": true
+              }
+            },
+            {
+              "t": "tr",
+              "id": "gengar-7"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El marcador dice otra cosa. Nadie discute."
+            }
+          ],
+          "lose": [
+            {
+              "t": "tr",
+              "id": "gengar-8"
+            },
+{"t":"di","who":"El locutor","txt":"Has sido derrotado."},
+{"t":"di","who":"juanjo","txt":"Es un smurf. Eso no es un Gengar de plata.","mood":"Angry"},
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El marcador dice otra cosa. Nadie discute. Los muñequitos de Gengar hacen la ola. Están atornillados, pero la hacen."
+            }
+          ],
+          "error": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "La bola se cuela por un agujero que antes no estaba. Gengar mira al techo y silba."
+            }
+          ]
+        },
+        {
+          "t": "run",
+          "if": {
+            "noflag": "sms0130"
+          },
+          "then": [
+            {
+              "t": "sms",
+              "id": "01:30",
+              "hora": "01:30"
+            }
+          ]
+        },
+        {"t":"colocar","who":"buitre","x":92,"y":384,"dir":"derecha","escala":2},
+{"t":"tr","id":"buitre-10"},
+{"t":"choice","shuffle":false,"prompt":"El Buitre deja una cerveza delante de Juanjo. Es una cerveza. Juanjo tiene un precio, y es ese.","opts":[{"txt":"Cantarlo todo."},{"txt":"Cantarlo todo, y lo de Manolo."},{"txt":"¿Puedo no cantar?","run":[{"t":"di","who":"La cerveza","txt":"NO."},{"t":"di","who":"La cerveza","txt":"HAHAHAHAHA."}]}]},
+{"t":"di","who":null,"txt":"Juanjo lo canta todo: quién, cuándo y con quién. Y dos cosas que nadie le había preguntado. El Buitre lo apunta con la lengüilla fuera."},
+{"t":"di","who":null,"txt":"Cuando acaba, la cerveza ya no está. Gengar mira al techo y silba."},
+{"t":"tr","id":"manolo-24"},
+{"t":"di","who":"juanjo","txt":"Eso no es chivarse. Es visión de mapa.","mood":"Happy"},
+{"t":"retirar","who":"buitre"},
+{
+          "t": "hora",
+          "v": "01:55"
+        },
+        {
+          "t": "bg",
+          "id": "09-modernicolas-dentro"
+        },
+        {
+          "t": "colocar",
+          "who": "camarera",
+          "x": 56,
+          "y": 272,
+          "dir": "derecha",
+          "escala": 2,
+          "corte": 257
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 186,
+          "y": 372,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 132,
+          "y": 386
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 92,
+          "y": 384,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Se encienden las luces. Modernícolas con luz parece la consulta de un dentista que bebe."
+        },
+{"t":"di","who":"El locutor","txt":"Vuestro nexo va a cerrar."},
+{"t":"run","if":{"cohMayor":70},"then":[{"t":"di","who":"El locutor","txt":"Atención. Un aliado va sobrio. Repito: un aliado va sobrio."}]},
+        {
+          "t": "tr",
+          "id": "camarera-5"
+        },
+{"t":"run","if":{"cohMenor":50},"then":[{"t":"di","who":null,"txt":"Encima de la camarera flota una barra de vida. Está llena. Juanjo mira si tiene una él. Prefiere no mirar más."}]},
+        {
+          "t": "run",
+          "if": {
+            "noflag": "barraCerrada"
+          },
+          "then": [
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Me abre. Mañana. Lo ha dicho delante de todos.",
+              "mood": "Happy"
+            },
+            {
+              "t": "tr",
+              "id": "manolo-20"
+            }
+          ],
+          "else": [
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Me lo dice a mí. Aunque mire al Buitre. Es para disimular.",
+              "mood": "Happy"
+            },
+            {
+              "t": "tr",
+              "id": "manolo-20"
+            }
+          ]
+        },
+        {"t":"di","who":"juanjo","txt":"Manolo, te reporto. Por actitud negativa.","mood":"Angry"},
+{"t":"cartel","titulo":"REPORTE ENVIADO","valor":"1","pie":"Caso revisado: Manolo tiene razón. Se mantiene el reporte."},
+{
+          "t": "di",
+          "who": null,
+          "txt": "El Buitre se queda el último en la barra, mirando fijamente una servilleta. La camarera se la quita de delante y le sonríe. Él lo apunta."
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 222,
+          "y": 340,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {"t":"cartel","titulo":"VOTACIÓN PARA RENDIRSE","valor":"1/5","pie":"Manolo: sí. Juanjo: no. Gengar: en la pared. El Buitre: bajo ya. El Zorro tiene una idea."},
+{
+          "t": "tr",
+          "id": "zorro-5"
+        },
+        {
+          "t": "tr",
+          "id": "manolo-21"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Es la clase de idea que solo suena bien a las dos de la mañana y dentro de un Zoroark. Salen."
+        },
+        {
+          "t": "hora",
+          "v": "02:10"
+        },
+        {
+          "t": "bg",
+          "id": "08-modernicolas-puerta"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Fuera, el alien de la izquierda sigue guiñando. Juanjo le devuelve el guiño. Por si acaso."
+        },
+        {
+          "t": "calle",
+          "largo": 320,
+          "meta": "EL HOTEL",
+          "colegas": [
+            {
+              "who": "manolo"
+            },
+            {
+              "who": "zorro",
+              "hueco": 40
+            },
+            {
+              "who": "gengar",
+              "desaparece": true,
+              "hueco": 36
+            },
+            {
+              "who": "buitre",
+              "hueco": 42
+            }
+          ],
+          "charla": [
+            {
+              "x": 90,
+              "id": "calle-6"
+            },
+{"x":230,"id":"calle-7"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hotel",
+      "nombre": "El hotel",
+      "hora": "02:30",
+      "bg": "10-hotel",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "buitre",
+        "jairo",
+        "assets/bg/raw/raw-11-mitjana.png"
+      ],
+      "pasos": [
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 62,
+          "y": 382
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 124,
+          "y": 372,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 22,
+          "y": 356,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 176,
+          "y": 330,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 140,
+          "y": 316,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El hotel. En obras desde que Juanjo era oro. Valla abierta, cero luz, olor a yeso y a decisión."
+        },
+        {
+          "t": "tr",
+          "id": "hotel-1"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Tranquilos. Esto es jungla. Se entra, se mira y se sale.",
+          "mood": "Normal"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo no ha jungleado en su vida. Es de bot. Y lo justo."
+        },
+{"t":"di","who":null,"txt":"Se ríe de su propio chiste, fuerte y agudo. El eco se va por el pasillo y vuelve pidiendo perdón."},
+        {
+          "t": "tr",
+          "id": "hotel-8"
+        },
+{"t":"di","who":null,"txt":"En una habitación sin puerta hay una tele enchufada a nada. Se enciende sola."},
+{"t":"di","who":null,"txt":"Sale Juanjo a cámara lenta, con música épica. Juanjo sentado en un bolso. Juanjo dándose con una persiana. Juanjo señalando un minimapa que no existe."},
+{"t":"di","who":"juanjo","txt":"¡GENGAAAAR!","mood":"Angry"},
+{"t":"di","who":null,"txt":"Gengar mira al techo y silba. La tele se apaga. Se oye reír a alguien muy cerca."},
+        {
+          "t": "mover",
+          "who": "zorro",
+          "x": 216,
+          "y": 344,
+          "vel": 60
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 216,
+          "y": 344,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "tr",
+          "id": "hotel-2"
+        },
+{"t":"di","who":null,"txt":"Al oír «manguera», a Manolo se le cierra un ojo y le cae una gota por la calva."},
+        {
+          "t": "tr",
+          "id": "hotel-3"
+        },
+        {
+          "t": "tr",
+          "id": "hotel-4"
+        },
+        {
+          "t": "sacudir",
+          "seg": 0.5
+        },
+        {
+          "t": "coh",
+          "v": -1
+        },
+        {
+          "t": "set",
+          "flags": {
+            "caraBlanca": true
+          }
+        },
+        {
+          "t": "nube",
+          "x": 228,
+          "y": 250,
+          "seg": 1.4
+        },
+{"t":"tr","id":"hotel-12"},
+        {
+          "t": "mini",
+          "id": "sal",
+          "win": [
+            {
+              "t": "set",
+              "flags": {
+                "salioDeLaNube": true
+              }
+            }
+          ],
+          "lose": [
+            {
+              "t": "copa",
+              "tipo": "trago",
+              "n": 2
+            }
+          ],
+          "error": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo sale de la nube sin saber cómo. Como de casi todo."
+            }
+          ]
+        },
+        {
+          "t": "hora",
+          "v": "02:46"
+        },
+        {
+          "t": "bg",
+          "id": "11-mitjana"
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 150,
+          "y": 372,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 206,
+          "y": 354,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 236,
+          "y": 372,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 176,
+          "y": 330,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Fuera. Aire. Van saliendo todos, sacudiéndose. Gengar, ni una mota: el polvo le ha atravesado."
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 62,
+          "y": 382
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Y sale Juanjo. Todo el extintor del hotel ha encontrado una sola cara y se ha quedado a vivir."
+        },
+        {
+          "t": "tr",
+          "id": "hotel-5"
+        },
+        {
+          "t": "tr",
+          "id": "hotel-7"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "¿Se me nota algo?",
+          "mood": "Surprised"
+        },
+        {
+          "t": "tr",
+          "id": "hotel-9"
+        },
+        {
+          "t": "tr",
+          "id": "hotel-6"
+        },
+{"t":"tr","id":"hotel-11"},
+        {
+          "t": "cartel",
+          "titulo": "SKIN LEGENDARIA DESBLOQUEADA",
+          "valor": "1820 RP",
+          "pie": "Juanjo de Mármol. No se puede devolver."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Se queda. Me sube el elo de cara.",
+          "mood": "Happy"
+        },
+        {
+          "t": "tr",
+          "id": "hotel-10"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Echan a andar. Una farola se enciende al verle pasar. Son sensores. Juanjo lo apunta igual."
+        }
+      ]
+    },
+    {
+      "id": "mitjana",
+      "nombre": "La calle Mitjana",
+      "hora": "03:00",
+      "bg": "11-mitjana",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "buitre",
+        "nacional1",
+        "nacional2",
+        "assets/bg/raw/raw-11-mitjana.png"
+      ],
+      "pasos": [
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Mitjana a las tres. Persianas bajadas, balcones con ropa y gente que mañana madruga. Una calle hecha para hablar bajito."
+        },
+{"t":"run","if":{"cohMenor":50},"then":[{"t":"di","who":null,"txt":"Sobre cada ventana flota un nombre de invocador. Todos se llaman «Mañana Trabajo»."}]},
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Aquí suena bien. Mira. Acústica de Clash.",
+          "mood": "Happy"
+        },
+        {
+          "t": "calle",
+          "largo": 460,
+          "gritar": true,
+          "pista": "MANTÉN PARA ANDAR",
+          "colegas": [
+            {
+              "who": "manolo"
+            },
+            {
+              "who": "zorro",
+              "hueco": 40
+            },
+            {
+              "who": "gengar",
+              "desaparece": true,
+              "hueco": 36
+            },
+            {
+              "who": "buitre",
+              "hueco": 42
+            }
+          ],
+          "charla": [
+            {
+              "x": 100,
+              "id": "mitjana-1"
+            },
+            {
+              "x": 280,
+              "id": "mitjana-2"
+            }
+          ]
+        },
+        {
+          "t": "bg",
+          "id": "11-mitjana"
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 22,
+          "y": 372,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 64,
+          "y": 384
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 112,
+          "y": 376,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 92,
+          "y": 348,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 150,
+          "y": 356,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "nacional1",
+          "id": "n1",
+          "x": 200,
+          "y": 322,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "nacional2",
+          "id": "n2",
+          "x": 232,
+          "y": 330,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "run",
+          "if": {
+            "flag": "gritosMitjana"
+          },
+          "then": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Medio Mitjana está ya en la ventana. Al fondo de la calle, de espaldas, dos Growlithe con gorra andan despacio."
+            }
+          ],
+          "else": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Mitjana duerme. Al fondo de la calle, de espaldas, dos Growlithe con gorra andan despacio."
+            }
+          ]
+        },
+        {
+          "t": "tr",
+          "id": "mitjana-3"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo coge aire. Es un aire de plata, pero es todo el que tiene."
+        },
+        {
+          "t": "sacudir",
+          "seg": 0.5
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "¡NACIONALES, HIJOS DE PUTA!",
+          "mood": "Angry"
+        },
+        {
+          "t": "esperar",
+          "seg": 0.8
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Mitjana se calla entera. Se calla hasta el Zorro."
+        },
+        {
+          "t": "colocar",
+          "who": "nacional1",
+          "id": "n1",
+          "x": 200,
+          "y": 322,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "nacional2",
+          "id": "n2",
+          "x": 232,
+          "y": 330,
+          "dir": "izquierda",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Los dos Growlithe se giran a la vez. Sin prisa. Eso es lo que tienen: que no tienen prisa."
+        },
+        {
+          "t": "mover",
+          "id": "n1",
+          "x": 190,
+          "y": 362,
+          "vel": 30,
+          "espera": false
+        },
+        {
+          "t": "mover",
+          "id": "n2",
+          "x": 226,
+          "y": 370,
+          "vel": 30
+        },
+        {
+          "t": "tr",
+          "id": "mitjana-4"
+        },
+        {
+          "t": "tr",
+          "id": "mitjana-5"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Nadie respira. Manolo mira al suelo. El Buitre mira a una gorra. Gengar levanta una mano, muy despacio."
+        },
+        {
+          "t": "tr",
+          "id": "mitjana-6"
+        },
+        {
+          "t": "mini",
+          "id": "lacara",
+          "win": [
+            {
+              "t": "set",
+              "flags": {
+                "coloLaCara": true
+              }
+            },
+            {
+              "t": "tr",
+              "id": "mitjana-7"
+            },
+            {
+              "t": "tr",
+              "id": "mitjana-8"
+            },
+            {
+              "t": "mover",
+              "id": "n1",
+              "x": 262,
+              "y": 320,
+              "vel": 46,
+              "espera": false
+            },
+            {
+              "t": "mover",
+              "id": "n2",
+              "x": 270,
+              "y": 326,
+              "vel": 46
+            },
+            {
+              "t": "retirar",
+              "id": "n1"
+            },
+            {
+              "t": "retirar",
+              "id": "n2"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Se van. Ni se giran. Cuando ya van por los doscientos metros, Juanjo da un paso al frente."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Largo de aquí, granujas.",
+              "mood": "Angry"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Muy bajito. Nadie le ha oído. No sabe por qué ha dicho granujas."
+            }
+          ],
+          "lose": [
+            {
+              "t": "set",
+              "flags": {
+                "nacionalesDetras": true
+              }
+            },
+            {
+              "t": "tr",
+              "id": "mitjana-9"
+            },
+            {
+              "t": "tr",
+              "id": "mitjana-10"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "No preguntan adónde vais. No dicen nada más. Echan a andar detrás, a diez pasos."
+            }
+          ],
+          "error": [
+            {
+              "t": "tr",
+              "id": "mitjana-7"
+            },
+            {
+              "t": "retirar",
+              "id": "n1"
+            },
+            {
+              "t": "retirar",
+              "id": "n2"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Los Growlithe se quedan pensando. Cuando acaban, ya no hay nadie."
+            }
+          ]
+        },
+        {
+          "t": "sms",
+          "id": "03:00",
+          "hora": "03:00"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "¿Raro? Será el parche. Han tocado las tildes.",
+          "mood": "Worried"
+        },
+        {
+          "t": "hora",
+          "v": "03:18"
+        },
+        {
+          "t": "tr",
+          "id": "mitjana-11"
+        },
+        {
+          "t": "run",
+          "if": {
+            "flag": "nacionalesDetras"
+          },
+          "then": [
+            {
+              "t": "calle",
+              "largo": 300,
+              "meta": "LA MALAGUETA",
+              "pista": "MANTÉN PARA ANDAR",
+              "colegas": [
+                {
+                  "who": "manolo"
+                },
+                {
+                  "who": "zorro",
+                  "hueco": 40
+                },
+                {
+                  "who": "gengar",
+                  "desaparece": true,
+                  "hueco": 36
+                },
+                {
+                  "who": "buitre",
+                  "hueco": 42
+                },
+                {
+                  "who": "nacional1",
+                  "hueco": 64
+                },
+                {
+                  "who": "nacional2",
+                  "hueco": 30
+                }
+              ]
+            }
+          ],
+          "else": [
+            {
+              "t": "calle",
+              "largo": 300,
+              "meta": "LA MALAGUETA",
+              "pista": "MANTÉN PARA ANDAR",
+              "colegas": [
+                {
+                  "who": "manolo"
+                },
+                {
+                  "who": "zorro",
+                  "hueco": 40
+                },
+                {
+                  "who": "gengar",
+                  "desaparece": true,
+                  "hueco": 36
+                },
+                {
+                  "who": "buitre",
+                  "hueco": 42
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malagueta",
+      "nombre": "La Malagueta",
+      "hora": "03:30",
+      "bg": "12-malagueta-noche",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "buitre",
+        "nacional1",
+        "nacional2"
+      ],
+      "pasos": [
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 96,
+          "y": 368,
+          "pose": "mapa",
+          "escala": 2,
+          "tumbado": 1
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 60,
+          "y": 358,
+          "dir": "abajo",
+          "escala": 2,
+          "tumbado": -1
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 196,
+          "y": 362,
+          "dir": "abajo",
+          "escala": 2,
+          "tumbado": 1
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 262,
+          "y": 354,
+          "dir": "abajo",
+          "escala": 2,
+          "tumbado": -1
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 26,
+          "y": 336,
+          "dir": "derecha",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "La Malagueta a las tres y media. Sin música. Solo el agua, llegando y yéndose, sin apuntar nada."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Se tumban en la arena. Nadie propone nada. Es la primera vez en toda la noche."
+        },
+        {
+          "t": "run",
+          "if": {
+            "flag": "nacionalesDetras"
+          },
+          "then": [
+            {
+              "t": "colocar",
+              "who": "nacional1",
+              "id": "n1",
+              "x": 236,
+              "y": 318,
+              "dir": "izquierda",
+              "escala": 2
+            },
+            {
+              "t": "colocar",
+              "who": "nacional2",
+              "id": "n2",
+              "x": 256,
+              "y": 322,
+              "dir": "izquierda",
+              "escala": 2
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Los dos Growlithe se sientan en el paseo, junto a una farola. No dicen nada. Miran. A eso han venido."
+            }
+          ]
+        },
+        {
+          "t": "di",
+          "who": "zorro",
+          "txt": "...",
+          "idioma": "Ñka lor vesh, ¿tumi sar?"
+        },
+        {
+          "t": "di",
+          "who": "gengar",
+          "txt": "...",
+          "idioma": "Oom. Sari tol ñe vesh."
+        },
+        {
+          "t": "di",
+          "who": "zorro",
+          "txt": "...",
+          "idioma": "Ñe. Ñe, olu mar."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Se ríen bajito los dos, mirando al mismo sitio. Nadie más sabrá nunca de qué."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "No sé qué habláis.",
+          "mood": "Normal"
+        },
+        {
+          "t": "tr",
+          "id": "playa-1"
+        },
+        {
+          "t": "tr",
+          "id": "playa-2"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Sí. Fresquita.",
+          "mood": "Normal"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Manolo no insiste. Se queda mirando el agua, con un ojo cerrado. Ya ha dicho lo que tenía que decir."
+        },
+        {
+          "t": "tr",
+          "id": "playa-3"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El Buitre apoya una rodilla en la arena, luego la otra, y se tumba de lado. Se le escapa la lengüilla."
+        },
+        {
+          "t": "colocar",
+          "who": "buitre",
+          "x": 8,
+          "y": 376,
+          "dir": "abajo",
+          "escala": 2,
+          "tumbado": 1
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Se duerme. Respira despacio. Por una vez no está demasiado cerca de nadie."
+        },
+        {
+          "t": "esperar",
+          "seg": 1.2
+        },
+        {
+          "t": "tr",
+          "id": "playa-4"
+        },
+        {
+          "t": "choice",
+          "prompt": "Hay una lata en la arena. El Zorro jura que es de ahora. Está fría, que ya es más de lo que se puede decir de la noche.",
+          "opts": [
+            {
+              "txt": "Bebérsela despacio",
+              "run": [
+                {
+                  "t": "copa",
+                  "por": 1
+                },
+                {
+                  "t": "di",
+                  "who": null,
+                  "txt": "Sabe a sal y a lata. Juanjo la termina mirando el mar. Es la mejor copa de la noche y nadie se la ha servido."
+                }
+              ]
+            },
+            {
+              "txt": "Dejarla donde estaba",
+              "run": [
+                {
+                  "t": "di",
+                  "who": null,
+                  "txt": "La deja. La lata se queda en la arena, muy digna."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Y entonces Juanjo se pone a cantar. Bajito. Entera, de principio a fin, en un inglés perfecto que nadie le ha oído nunca despierto."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Desde el paseo solo se ve un bulto en la arena del que sale una melodía."
+        },
+        {
+          "t": "di",
+          "who": "zorro",
+          "txt": "No sé qué cantas."
+        },
+        {
+          "t": "esperar",
+          "seg": 0.8
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Voy a repasar las jugadas.",
+          "mood": "Sad"
+        },
+        {
+          "t": "movil",
+          "tab": "tejos"
+        },
+        {
+          "t": "cartel",
+          "titulo": "RESUMEN DE PARTIDA",
+          "valor": "{tejos}",
+          "pie": "Tejos. Rango: Aspirante. Nadie de tu equipo te ha dado honor."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo cierra el álbum. La luz del móvil se le queda un rato en la cara blanca. Luego se apaga."
+        },
+{"t":"hora","v":"04:12"},
+{"t":"di","who":null,"txt":"A su lado, Manolo escribe algo en el móvil con un dedo, despacio, como quien apunta. Luego lo guarda. Nadie le pregunta."},
+        {
+          "t": "hora",
+          "v": "04:30"
+        },
+        {
+          "t": "esperar",
+          "seg": 1.4
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Las cuatro y media. El móvil no suena. Laura escribe a las doce, a la una y media, a las tres. A las cuatro y media no."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo mira el hilo. Abajo del todo, el teclado esperando. El mar sigue a lo suyo."
+        },
+{"t":"di","who":null,"txt":"En la cabeza de Juanjo, el locutor no dice nada."},
+        {
+          "t": "choice",
+          "prompt": "Laura no ha escrito.",
+          "shuffle": false,
+          "opts": [
+            {
+              "txt": "Escribirle",
+              "run": [
+                {
+                  "t": "sms_propio",
+                  "id": "04:30",
+                  "hora": "04:30"
+                },
+                {
+                  "t": "di",
+                  "who": null,
+                  "txt": "El mensaje se va. Ni escribiendo, ni nada. El móvil se apaga solo, de vergüenza."
+                }
+              ]
+            },
+            {
+              "txt": "Guardarse el móvil",
+              "run": [
+                {
+                  "t": "sms_nota",
+                  "id": "04:30",
+                  "hora": "04:30"
+                },
+                {
+                  "t": "di",
+                  "who": null,
+                  "txt": "Se lo guarda en el bolsillo. Pesa más que antes. Debe de ser la arena."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "t": "esperar",
+          "seg": 1.2
+        },
+        {
+          "t": "hora",
+          "v": "04:48"
+        },
+        {
+          "t": "tr",
+          "id": "playa-5"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Se levantan. Al Buitre nadie le avisa: duerme tan a gusto que da cosa. Ya vendrá. Siempre tarda."
+        }
+      ]
+    },
+    {
+      "id": "onda",
+      "nombre": "Onda Pasadena",
+      "hora": "05:00",
+      "bg": "12-malagueta-noche",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "jynx",
+        "nacional1",
+        "nacional2",
+        "sandrita",
+        "camarera",
+        "mrmime",
+        "amiga1",
+        "meowth"
+      ],
+      "pasos": [
+        {
+          "t": "run",
+          "if": {
+            "flag": "nacionalesDetras"
+          },
+          "then": [
+            {
+              "t": "colocar",
+              "who": "juanjo",
+              "x": 56,
+              "y": 382
+            },
+            {
+              "t": "colocar",
+              "who": "manolo",
+              "x": 100,
+              "y": 372,
+              "dir": "derecha",
+              "escala": 2
+            },
+            {
+              "t": "colocar",
+              "who": "nacional1",
+              "id": "n1",
+              "x": 176,
+              "y": 366,
+              "dir": "izquierda",
+              "escala": 2
+            },
+            {
+              "t": "colocar",
+              "who": "nacional2",
+              "id": "n2",
+              "x": 218,
+              "y": 370,
+              "dir": "izquierda",
+              "escala": 2
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "La puerta de Onda Pasadena. Se oye el bombo desde la calle. Los dos Growlithe llegan antes que nadie, sin correr, y se ponen delante."
+            },
+            {
+              "t": "tr",
+              "id": "onda-8"
+            },
+            {
+              "t": "tr",
+              "id": "onda-9"
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Yo me encargo. Tengo experiencia con porteros. Es no mirar.",
+              "mood": "Normal"
+            },
+            {
+              "t": "mini",
+              "id": "nomires",
+              "params": {
+                "actor": "nacional1",
+                "preguntas": "nacionales",
+                "fondo": "12-malagueta-noche",
+                "ojos": {
+                  "x": 18,
+                  "y": 13,
+                  "w": 20,
+                  "h": 9
+                },
+                "rondas": 3,
+                "escapeTras": 2,
+                "maxVueltas": 4,
+                "coste": 1,
+                "minutos": 4,
+                "textos": {
+                  "escape": "SEGUIR A GENGAR POR EL ALTAVOZ",
+                  "vueltaTitulo": "¡A DAR LA VUELTA!",
+                  "vueltas": [
+                    "El Growlithe señala el paseo. Juanjo da la vuelta a la palmera. La palmera no le ha preguntado nada, y lo agradece.",
+                    "Segunda vuelta. Juanjo le pide el DNI a la palmera. Por si acaso.",
+                    "Tercera vuelta. Ya saluda a la farola por su nombre."
+                  ],
+                  "win": {
+                    "titulo": "DESPISTADOS",
+                    "lineas": [
+                      "Los Growlithe se miran, sacan una libreta y apuntan algo. Se van hacia el puerto.",
+                      "Juanjo no sabe qué ha hecho. Ellos tampoco."
+                    ]
+                  },
+                  "winVueltas": "VUELTAS A LA PALMERA",
+                  "escapado": {
+                    "titulo": "POR EL ALTAVOZ",
+                    "lineas": [
+                      "Gengar atraviesa la pared y abre una salida de emergencia desde dentro.",
+                      "Los Growlithe se quedan vigilando una puerta que no es."
+                    ]
+                  },
+                  "harto": {
+                    "titulo": "POR EL ALTAVOZ",
+                    "lineas": [
+                      "Los Growlithe se cansan de Juanjo. Hay que cansar mucho a un Growlithe.",
+                      "Gengar le mete por detrás de un altavoz."
+                    ]
+                  }
+                }
+              },
+              "win": [
+                {
+                  "t": "set",
+                  "flags": {
+                    "nacionalesDespistados": true
+                  }
+                }
+              ],
+              "lose": [
+                {
+                  "t": "set",
+                  "flags": {
+                    "nacionalesDespistados": true,
+                    "entroPorDetras": true
+                  }
+                }
+              ],
+              "error": [
+                {
+                  "t": "set",
+                  "flags": {
+                    "nacionalesDespistados": true
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "t": "sonido",
+          "id": "puerta"
+        },
+        {
+          "t": "bg",
+          "id": "13-onda-pasadena"
+        },
+        {
+          "t": "colocar",
+          "who": "jynx",
+          "x": 134,
+          "y": 276,
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 60,
+          "y": 384
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 112,
+          "y": 372,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 170,
+          "y": 362,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 216,
+          "y": 372,
+          "dir": "arriba",
+          "escala": 2
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Onda Pasadena. Las cinco de la mañana. Aquí no se viene, se acaba. El dubstep sale de las paredes y entra por los empastes."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Por fin. Esto es música. Lo demás es hablar.",
+          "mood": "Happy"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Hay más hielo que copa. A las cinco, en vaso de plástico, todo sabe a lo mismo. Juanjo se la bebe."
+        },
+        {
+          "t": "copa",
+          "por": 1
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Al fondo, alguien con alas marrones mira fijamente un altavoz. O es un abrigo en una silla. Con esta luz, cualquiera sabe."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Jynx sube al escenario. No baila. Canta las flechas, en jynx, y la pista obedece. Nadie sabe desde cuándo."
+        },
+        {
+          "t": "tr",
+          "id": "onda-1"
+        },
+        {
+          "t": "mini",
+          "id": "baila",
+          "win": [
+            {
+              "t": "set",
+              "flags": {
+                "bailoConColegas": true
+              }
+            },
+            {
+              "t": "tejo",
+              "who": "jynx",
+              "pie": "Ha cantado para mí. Toda la noche. En su idioma.",
+              "real": "Cantaba flechas."
+            },
+            {
+              "t": "tr",
+              "id": "onda-2"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Y Juanjo baila. De verdad. Y al lado baila Manolo, serio, como quien monta un mueble."
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El Zorro baila por dos, transformándose a cada golpe. Gengar baila en tres sitios a la vez. Durante un compás entero, están todos en el mismo compás."
+            },
+            {
+              "t": "tr",
+              "id": "onda-10"
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Me queda esto de por vida. Lo sé.",
+              "mood": "Happy"
+            }
+          ],
+          "lose": [
+            {
+              "t": "tr",
+              "id": "onda-3"
+            },
+            {
+              "t": "retirar",
+              "who": "manolo"
+            },
+            {
+              "t": "retirar",
+              "who": "gengar"
+            },
+            {
+              "t": "retirar",
+              "who": "zorro"
+            },
+            {
+              "t": "colocar",
+              "who": "juanjo",
+              "x": 44,
+              "y": 384
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Desde la barra, Juanjo ve la pista de lejos. Allí pasa algo, porque hay risas y brazos en alto. Le llega el final de cada cosa."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Me ha sacado porque le quito protagonismo. Es normal.",
+              "mood": "Sad"
+            }
+          ],
+          "error": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Jynx se calla un rato. La pista sigue sola."
+            }
+          ]
+        },
+        {
+          "t": "hora",
+          "v": "05:50"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo mira lo que queda en el vaso. Un hielo. El hielo le devuelve la mirada."
+        },
+{"t":"tr","id":"hielo-1"},
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Esta copa sabe a algo. Me han echado algo.",
+          "mood": "Worried"
+        },
+        {
+          "t": "tr",
+          "id": "onda-4"
+        },
+{"t":"di","who":"El locutor","txt":"Inactividad detectada. Mueve a tu campeón o perderás puntos."},
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Lo sabía. Por eso me miraba. Por eso me miran todos.",
+          "mood": "Dizzy"
+        },
+        {
+          "t": "colocar",
+          "who": "manolo",
+          "x": 124,
+          "y": 372,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "gengar",
+          "x": 176,
+          "y": 360,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "colocar",
+          "who": "zorro",
+          "x": 222,
+          "y": 372,
+          "dir": "abajo",
+          "escala": 2
+        },
+        {
+          "t": "set",
+          "flags": {
+            "dientes": true
+          }
+        },
+        {
+          "t": "sacudir",
+          "seg": 0.4
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo levanta la vista. Manolo le sonríe. Manolo tiene dientes. Muchos. Nunca había tenido tantos."
+        },
+        {
+          "t": "tr",
+          "id": "onda-5"
+        },
+        {
+          "t": "tr",
+          "id": "onda-6"
+        },
+        {
+          "t": "cartel",
+          "titulo": "NOTAS DEL PARCHE 5.00",
+          "valor": "+100 %",
+          "pie": "Dientes. Manolo: sin cambios. Juanjo: mejorado, según Juanjo."
+        },
+        {
+          "t": "mini",
+          "id": "esquiva",
+          "win": [
+            {
+              "t": "set",
+              "flags": {
+                "dientes": false
+              }
+            },
+            {
+              "t": "tr",
+              "id": "onda-7"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Los dientes se le van pasando. Los demás llevan un minuto llorando de risa. Juanjo decide que se ríen con él."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Lo he esquivado todo. Eso es elo.",
+              "mood": "Happy"
+            },
+            {
+              "t": "tr",
+              "id": "onda-11"
+            }
+          ],
+          "lose": [
+            {
+              "t": "set",
+              "flags": {
+                "dientes": false,
+                "huyoDelAfter": true
+              }
+            },
+            {
+              "t": "bg",
+              "id": "12-malagueta-noche"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo corre por el paseo con la cara blanca y el vaso en la mano. Nadie le sigue. Nadie le seguía."
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Para cuando se le pasan los dientes, ya no sabe volver. Se sienta en un banco, lejos de todo, a esperar a que alguien le escriba."
+            },
+            {
+              "t": "di",
+              "who": "juanjo",
+              "txt": "Mejor. Yo me quedo en el centro.",
+              "mood": "Sad"
+            }
+          ],
+          "error": [
+            {
+              "t": "set",
+              "flags": {
+                "dientes": false
+              }
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Los dientes se le pasan solos. Era el hielo."
+            }
+          ]
+        }
+      ],
+      "musica": {
+        "tema": "onda",
+        "tapado": true
+      }
+    },
+    {
+      "id": "amanecer",
+      "nombre": "La Malagueta, amanecer",
+      "hora": "07:00",
+      "bg": "14-malagueta-amanecer",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro"
+      ],
+      "pasos": [
+        {
+          "t": "run",
+          "if": {
+            "flag": "huyoDelAfter"
+          },
+          "then": [
+            {
+              "t": "amanecer",
+              "lejos": true
+            },
+            {
+              "t": "colocar",
+              "who": "juanjo",
+              "x": 222,
+              "y": 378,
+              "pose": "mapa",
+              "escala": 2,
+              "dir": "arriba"
+            },
+            {
+              "t": "colocar",
+              "who": "gengar",
+              "x": 138,
+              "y": 314,
+              "dir": "arriba"
+            },
+            {
+              "t": "colocar",
+              "who": "zorro",
+              "x": 162,
+              "y": 316,
+              "dir": "arriba"
+            },
+            {
+              "t": "esperar",
+              "seg": 2.4,
+              "limpio": true
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Las siete. Desde un banco del paseo, lejos, el mar es una raya."
+            },
+            {
+              "t": "boya",
+              "fase": "entra",
+              "hasta": 0.5
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Allá abajo hay dos puntos en la arena y uno en el agua, camino de la boya. Juanjo sabe quiénes son."
+            },
+            {
+              "t": "boya",
+              "fase": "entra"
+            },
+            {
+              "t": "esperar",
+              "seg": 2.6,
+              "limpio": true
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Podría bajar. Se queda en el banco, con el vaso vacío."
+            },
+            {
+              "t": "esperar",
+              "seg": 4,
+              "limpio": true
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El sol sale igual."
+            },
+            {
+              "t": "esperar",
+              "seg": 2.4,
+              "limpio": true
+            }
+          ],
+          "else": [
+            {
+              "t": "amanecer"
+            },
+            {
+              "t": "colocar",
+              "who": "juanjo",
+              "x": 62,
+              "y": 366,
+              "pose": "mapa",
+              "escala": 2,
+              "dir": "arriba"
+            },
+            {
+              "t": "colocar",
+              "who": "gengar",
+              "x": 158,
+              "y": 358,
+              "dir": "arriba",
+              "escala": 2
+            },
+            {
+              "t": "colocar",
+              "who": "zorro",
+              "x": 210,
+              "y": 368,
+              "dir": "arriba",
+              "escala": 2
+            },
+            {
+              "t": "esperar",
+              "seg": 2.4,
+              "limpio": true
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Las siete. Vuelven a la playa sin que nadie lo proponga."
+            },
+            {
+              "t": "esperar",
+              "seg": 2.2,
+              "limpio": true
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Manolo deja las llaves dentro de las zapatillas. Y se mete en el agua."
+            },
+            {
+              "t": "boya",
+              "fase": "entra",
+              "hasta": 0.45
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Nada sin prisa, hacia la boya. Nadie le pregunta por qué."
+            },
+            {
+              "t": "boya",
+              "fase": "entra"
+            },
+            {
+              "t": "esperar",
+              "seg": 2.6,
+              "limpio": true
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El Zorro y Gengar no dicen nada. En ningún idioma."
+            },
+            {
+              "t": "esperar",
+              "seg": 2.6,
+              "limpio": true
+            },
+            {
+              "t": "boya",
+              "fase": "saluda"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Allá lejos, Manolo levanta un brazo. Por saludar, o por nada."
+            },
+            {
+              "t": "boya",
+              "fase": "saluda",
+              "v": false
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo abre la boca para traducirlo. Y la cierra."
+            },
+            {
+              "t": "esperar",
+              "seg": 4.5,
+              "limpio": true
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Sale el sol del todo. Nadie sabría decir cuándo ha pasado."
+            },
+            {
+              "t": "esperar",
+              "seg": 3,
+              "limpio": true
+            },
+            {
+              "t": "boya",
+              "fase": "vuelve"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Manolo sale del agua con un alga en la calva y un ojo cerrado."
+            },
+            {
+              "t": "di",
+              "who": "manolo",
+              "txt": "Pos na.",
+              "mood": "Sigh"
+            },
+            {
+              "t": "esperar",
+              "seg": 2.4,
+              "limpio": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vuelta",
+      "nombre": "El coche a casa",
+      "hora": "07:30",
+      "bg": "03-coche",
+      "carga": [
+        "juanjo",
+        "manolo",
+        "gengar",
+        "zorro",
+        "control"
+      ],
+      "pasos": [
+        {
+          "t": "bajar",
+          "who": "buitre"
+        },
+        {
+          "t": "coche",
+          "dia": true
+        },
+        {
+          "t": "run",
+          "if": {
+            "flag": "huyoDelAfter"
+          },
+          "then": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Cuando Juanjo baja, le están esperando junto al coche. Nadie pregunta por el banco."
+            }
+          ],
+          "else": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Manolo se sienta delante, mojando el asiento. Se pone el cinturón. Mira el reproductor. Suspira."
+            }
+          ]
+        },
+        {
+          "t": "tr",
+          "id": "vuelta-1"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Ya lo sé.",
+          "mood": "Happy"
+        },
+        {
+          "t": "conducir",
+          "seg": 7,
+          "litrona": false
+        },
+        {
+          "t": "mapa",
+          "de": "centro",
+          "a": "zorro",
+          "rotulo": "Portal del Zorro"
+        },
+        {
+          "t": "di",
+          "who": "zorro",
+          "txt": "...",
+          "idioma": "Ñe. Sari vesh, ñe."
+        },
+        {
+          "t": "di",
+          "who": "gengar",
+          "txt": "...",
+          "idioma": "Oom."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "No sé qué habláis.",
+          "mood": "Normal"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El Zorro se baja. Antes de cerrar se queda mirando a Juanjo un rato largo, como quien se aprende algo de memoria."
+        },
+        {
+          "t": "bajar",
+          "who": "zorro"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Me admira. Es normal.",
+          "mood": "Happy"
+        },
+        {
+          "t": "conducir",
+          "seg": 6,
+          "litrona": false
+        },
+        {
+          "t": "mapa",
+          "de": "zorro",
+          "a": "gengar",
+          "rotulo": "Portal de Gengar"
+        },
+        {
+          "t": "bajar",
+          "who": "gengar"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Gengar no se baja. Simplemente, ya no está. La puerta sigue cerrada y el cinturón, abrochado."
+        },
+        {
+          "t": "conducir",
+          "seg": 5,
+          "litrona": false,
+          "audio": "primo-vuelta"
+        },
+        {
+          "t": "semaforo"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "El semáforo estaba en rojo. El coche ha pasado igual. Nadie ha decidido nada."
+        },
+        {
+          "t": "tr",
+          "id": "vuelta-2"
+        },
+        {
+          "t": "mapa",
+          "de": "gengar",
+          "a": "manolo",
+          "rotulo": "Portal de Manolo"
+        },
+        {
+          "t": "tr",
+          "id": "vuelta-3"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Sí. Fresquita.",
+          "mood": "Normal"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Manolo se baja. Se queda en el portal, goteando, hasta que el coche dobla la esquina."
+        },
+        {
+          "t": "bajar",
+          "who": "manolo"
+        },
+        {
+          "t": "volumen",
+          "v": 11
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Por fin. Juanjo lo sube a once. Como debe ser."
+        },
+        {
+          "t": "esperar",
+          "seg": 2.6
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Nadie lo baja."
+        },
+        {
+          "t": "esperar",
+          "seg": 1.6
+        },
+        {
+          "t": "volumen",
+          "v": 3
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Lo baja él. A tres. No sabe por qué."
+        },
+        {
+          "t": "run",
+          "if": {
+            "cohMayor": 50
+          },
+          "then": [
+            {
+              "t": "coh",
+              "v": -4
+            }
+          ]
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Sin nadie al lado, le entra toda la noche de golpe. Se le cierran los ojos. Los abre. Sigue habiendo carretera."
+        },
+{"t":"di","who":null,"txt":"El coche hace ping. Lleva haciéndolo desde las once. Es el cinturón. Juanjo se lo pone."}
+      ]
+    },
+    {
+      "id": "control",
+      "nombre": "El control",
+      "hora": "08:10",
+      "bg": "15-control",
+      "carga": [
+        "juanjo",
+        "control"
+      ],
+      "pasos": [
+        {
+          "t": "cuadro",
+          "id": "manana"
+        },
+        {
+          "t": "colocar",
+          "who": "control",
+          "x": -30,
+          "y": 318,
+          "dir": "derecha",
+          "escala": 3,
+          "corte": 310
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Las ocho y diez. Un coche cruzado, con las luces puestas. Y una gorra que se acerca sin prisa."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Tranquilo. Soy plata.",
+          "mood": "Worried"
+        },
+        {
+          "t": "mover",
+          "who": "control",
+          "x": 48,
+          "vel": 40
+        },
+        {
+          "t": "tr",
+          "id": "control-1"
+        },
+        {
+          "t": "tr",
+          "id": "control-2"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "De casa. De una partida. De... casa.",
+          "mood": "Worried"
+        },
+        {
+          "t": "tr",
+          "id": "control-3"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Esta vez las dos traducciones dicen lo mismo. Esto lo entiende hasta Juanjo."
+        },
+        {
+          "t": "mini",
+          "id": "viabuena",
+          "params": {
+            "buena": "La buena. A mi casa.",
+            "malas": [
+              "¿Esto cuenta para el elo?",
+              "Estoy en promos, agente.",
+              "Se equivoca usted.",
+              "¿La mala es top o bot?",
+              "¿Puedo rendirme en el 15?",
+              "Soy plata, pero de manos diamante.",
+              "¿Conoces a mi primo?",
+              "Me quedo en el centro.",
+              "¿La mala va con jungla?",
+              "GG. GG WP.",
+              "¿Tú sabes cuántos tejos llevo?", "Agente, yo solo he feedeado."
+            ],
+            "linea": {
+              "idioma": "¿Arca? Arcanine, ar, ¿canine?",
+              "texto": "¿Prefiere usted la vía buena, que es irse a su casa, o la mala?"
+            },
+            "tarjeta": {
+              "titulo": "LA VÍA BUENA",
+              "lineas": [
+                "Es lo que pasó.",
+                "Sin premio y sin castigo."
+              ]
+            }
+          },
+          "win": [
+            {
+              "t": "tr",
+              "id": "control-4"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Arcanine se toca la gorra y se aparta. No ha cambiado de cara en ningún momento."
+            },
+            {
+              "t": "retirar",
+              "who": "control"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo tarda tres intentos en meter la primera. Le tiemblan las manos. Será el dubstep."
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El dubstep está a tres."
+            }
+          ]
+        },
+        {
+          "t": "mapa",
+          "de": "manolo",
+          "a": "casa",
+          "rotulo": "A casa, despacio"
+        },
+        {
+          "t": "bg",
+          "id": "03-coche"
+        },
+        {
+          "t": "coche",
+          "dia": true
+        },
+        {
+          "t": "volumen",
+          "v": 0
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Aparca. Apaga el motor. El dubstep se corta a mitad de un wub."
+        },
+        {"t":"di","who":null,"txt":"Le vibra el móvil. No es Laura. Es la liga: doce puntos menos por inactividad."},
+{
+          "t": "di",
+          "who": null,
+          "txt": "Se queda un rato con las llaves en la mano. Luego escribe."
+        },
+        {
+          "t": "sms_propio",
+          "id": "ultimo",
+          "hora": "08:40"
+        },
+        {
+          "t": "esperar",
+          "seg": 0.8
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Esto está controlado.",
+          "mood": "Normal"
+        }
+      ]
+    },
+    {
+      "id": "casa-vuelta",
+      "nombre": "Casa de Laura, por la mañana",
+      "hora": "09:00",
+      "bg": "01-pasillo-laura",
+      "carga": [
+        "juanjo"
+      ],
+      "pasos": [
+        {
+          "t": "run",
+          "if": {
+            "tejosMenor": 1
+          },
+          "then": [
+            {
+              "t": "tejo",
+              "who": "juanjo",
+              "mood": "Happy",
+              "pie": "Me he mirado en el retrovisor. Me he gustado.",
+              "real": "Se lo ha apuntado él."
+            }
+          ]
+        },
+        {
+          "t": "sonido",
+          "id": "puerta"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Las nueve. Juanjo abre la puerta de casa como quien desactiva algo."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "La puerta del dormitorio sigue cerrada. Con su raya de luz por debajo."
+        },
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "¿Qué tal los videojuegos?"
+        },
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "¿Saliste de promos?",
+          "when": {
+            "excusa": "rankeds"
+          }
+        },
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "¿Ganasteis el Clash?",
+          "when": {
+            "excusa": "clash"
+          }
+        },
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "¿Se bajó ya el parche?",
+          "when": {
+            "excusa": "parche"
+          }
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Bien. Muy bien. Espera, que te lo explico.",
+          "mood": "Worried"
+        },
+        {
+          "t": "coartada"
+        },
+        {
+          "t": "cartel",
+          "titulo": "KDA DE LA NOCHE",
+          "valor": "{tejos}/{fallos}/{bajadas}",
+          "pie": "Tejos, fallos y bajadas de Manolo. Se queda en el centro: 1."
+        },
+        {
+          "t": "final"
+        }
+      ]
+    }
+  ],
+  "musica": {
+    "01-pasillo-laura": null,
+    "02-chino": {
+      "tema": "calle",
+      "tapado": true
+    },
+    "03-coche": "dubstep",
+    "04-portal": "calle",
+    "05-siglo-xxi": "bar",
+    "06-alquimia-puerta": {
+      "tema": "bar",
+      "tapado": true
+    },
+    "07-alquimia-dentro": "bar",
+    "08-modernicolas-puerta": {
+      "tema": "modernicolas",
+      "tapado": true
+    },
+    "09-modernicolas-dentro": "modernicolas",
+    "10-hotel": "hotel",
+    "11-mitjana": "calle",
+    "12-malagueta-noche": "malagueta",
+    "13-onda-pasadena": "onda",
+    "14-malagueta-amanecer": "amanecer",
+    "15-control": null
+  },
+  "preguntas": {
+    "jairo": [
+      {
+        "idioma": "¿Machamp? Cham.",
+        "real": "¿Tú qué miras?",
+        "juanjo": "Dice que tengo mirada de profesional.",
+        "loca": "Dice que me ha visto ganar el Clash en la tele.",
+        "ok": "NADA",
+        "malas": [
+          "TUS OJAZOS",
+          "EL MINIMAPA"
+        ]
+      },
+      {
+        "idioma": "Cham, cham, ¿cham?",
+        "real": "¿Cuántos venís? Yo veo cuatro.",
+        "juanjo": "Pregunta cuántas me han tirado los tejos hoy.",
+        "loca": "Pregunta cuántas novias tengo. Es por Hacienda.",
+        "ok": "CUATRO",
+        "malas": [
+          "DE MOMENTO, UNA",
+          "DOCE PUNTOS"
+        ]
+      },
+      {
+        "idioma": "¿Champ? ¿Machamp?",
+        "real": "¿Has bebido?",
+        "juanjo": "Pregunta si me queda litrona. Que le apetece.",
+        "loca": "Dice que huelo a reserva del 98.",
+        "ok": "LO NORMAL",
+        "malas": [
+          "¿QUIERES UN TRAGO?",
+          "SEIS TRAGOS"
+        ]
+      },
+      {
+        "idioma": "Machamp, cham. ¿Cham?",
+        "real": "¿Vas a liarla ahí dentro?",
+        "juanjo": "Dice que si voy de top o de jungla.",
+        "loca": "Dice que me quiere de capitán en su equipo.",
+        "ok": "NO, JEFE",
+        "malas": [
+          "VOY DE JUNGLA",
+          "SI ME DAN DROP"
+        ]
+      },
+      {
+        "idioma": "Cham. ¿Macha?",
+        "real": "¿Qué llevas en el móvil?",
+        "juanjo": "Dice que le encanta mi camisa de palmeras.",
+        "loca": "Dice que las palmeras se han girado a mirarme.",
+        "ok": "NADA, JEFE",
+        "malas": [
+          "MIS TEJOS",
+          "MI ELO"
+        ]
+      },
+      {
+        "idioma": "¿Cham, machamp?",
+        "real": "¿De dónde vienes?",
+        "juanjo": "Dice que hacía mucho que no venía por aquí.",
+        "loca": "Dice que sin mí esta calle no era lo mismo.",
+        "ok": "DE SIGLO",
+        "malas": [
+          "DE LA GRIETA",
+          "ME QUEDO EN EL CENTRO"
+        ]
+      },
+      {
+        "idioma": "Machamp. ¿Macha?",
+        "real": "¿Tú me conoces de algo?",
+        "juanjo": "Dice que le suena mi cara de internet.",
+        "loca": "Dice que tiene un póster mío. Uno de los buenos.",
+        "ok": "NO, NO",
+        "malas": [
+          "ME DICEN EL TOPO",
+          "¿JUGAMOS A DUO?"
+        ]
+      },
+      {
+        "idioma": "¡Cham! ¿Machamp?",
+        "real": "¿Quieres pelea?",
+        "juanjo": "Dice que si le subo a oro. En duo.",
+        "loca": "Dice que le lleve a Challenger a hombros.",
+        "ok": "NO, GRACIAS",
+        "malas": [
+          "SOLO EN CLASH",
+          "¿QUÉ ELO TIENES?"
+        ]
+      },
+      {
+        "idioma": "Macha, macha. ¿Cham?",
+        "real": "¿Y a ti qué te pasa?",
+        "juanjo": "Dice que me ve muy fuerte. Que si entreno.",
+        "loca": "Dice que tengo más brazos que él.",
+        "ok": "NADA, JEFE",
+        "malas": [
+          "ESCUCHA ESTE DROP",
+          "DOCE PUNTOS"
+        ]
+      }
+    ],
+    "clublucha": [
+      {
+        "q": "¿Cómo se llama el personaje de Brad Pitt?",
+        "ok": "Tyler Durden.",
+        "otra": "Aquiles, el de Troya.",
+        "delata": "El Zorro. Digo... eso, el Zorro."
+      },
+      {
+        "q": "¿Qué vende Tyler Durden?",
+        "ok": "Jabón.",
+        "otra": "Bombones, de caja en caja, como Forrest Gump.",
+        "delata": "Nada. Eso lo paga Manolo, que viene con el Zorro y Gengar."
+      },
+      {
+        "q": "¿De qué hace Tyler el jabón?",
+        "ok": "De la grasa que tiran las clínicas de liposucción.",
+        "otra": "De especia de Arrakis.",
+        "delata": "Eso pregúntaselo a Gengar, que lo tienes al lado."
+      },
+      {
+        "q": "¿En qué trabaja el narrador?",
+        "ok": "Calcula si a su empresa le compensa retirar coches.",
+        "otra": "Caza replicantes por Los Ángeles.",
+        "delata": "Pregúntale al Zorro. Ese, el del pelo."
+      },
+      {
+        "q": "¿Dónde conoce el narrador a Tyler?",
+        "ok": "En un avión, en un viaje de trabajo.",
+        "otra": "En la cubierta del Titanic.",
+        "delata": "En un portal, a las once, con el Zorro y Gengar."
+      },
+      {
+        "q": "¿Qué le pasa al piso del narrador?",
+        "ok": "Que explota.",
+        "otra": "Que se lo lleva un tornado a Oz.",
+        "delata": "Que entraron el Zorro y Gengar."
+      },
+      {
+        "q": "¿Dónde se pelean los del club al principio?",
+        "ok": "En el sótano de un bar.",
+        "otra": "En el Coliseo de Roma.",
+        "delata": "En el sótano del Buitre, con el Zorro y Gengar."
+      },
+      {
+        "q": "¿Quién es Marla Singer?",
+        "ok": "La que se cuela en los grupos de apoyo.",
+        "otra": "Bellatrix, la de Harry Potter.",
+        "delata": "Ni idea. Esa llévala tú, Zorro."
+      },
+      {
+        "q": "¿Qué actriz hace de Marla?",
+        "ok": "Helena Bonham Carter.",
+        "otra": "Kate Winslet, la del Titanic.",
+        "delata": "Gengar con peluca."
+      },
+      {
+        "q": "¿Cómo se llama el narrador?",
+        "ok": "No se dice en toda la película.",
+        "otra": "Neo, el elegido.",
+        "delata": "Gengar. Se llama Gengar. Míralo."
+      },
+      {
+        "q": "¿Quién dirige la película?",
+        "ok": "David Fincher.",
+        "otra": "Quentin Tarantino, el de Pulp Fiction.",
+        "delata": "El Zorro, que lo dirige todo desde el móvil."
+      },
+      {
+        "q": "¿Quién escribió la novela?",
+        "ok": "Chuck Palahniuk.",
+        "otra": "Tolkien, entre anillo y anillo.",
+        "delata": "Gengar, en un idioma que solo entiende el Zorro."
+      },
+      {
+        "q": "¿Quién hace de Bob, el grandullón?",
+        "ok": "Meat Loaf.",
+        "otra": "Russell Crowe, el de Gladiator.",
+        "delata": "Ese es Manolo. Viene con el Zorro y Gengar."
+      },
+      {
+        "q": "¿Cómo se llama el plan de Tyler?",
+        "ok": "Proyecto Mayhem.",
+        "otra": "La Estrella de la Muerte.",
+        "delata": "Irse al centro con el Zorro y Gengar."
+      },
+      {
+        "q": "¿Qué canción suena al final?",
+        "ok": "Where Is My Mind?, de los Pixies.",
+        "otra": "My Heart Will Go On, la del Titanic.",
+        "delata": "Dubstep, el del coche, con el Zorro y Gengar detrás."
+      },
+      {
+        "q": "¿Qué ven los dos por la ventana al final?",
+        "ok": "Edificios viniéndose abajo.",
+        "otra": "Un barco hundiéndose.",
+        "delata": "Al Zorro y a Gengar, que han salido a fumar."
+      },
+      {
+        "q": "¿Cuál es el gran secreto de la película?",
+        "ok": "Tyler y el narrador son la misma persona.",
+        "otra": "Que Bruce Willis estaba muerto.",
+        "delata": "Que este es el Zorro y ese es Gengar."
+      },
+      {
+        "q": "¿Qué trabajo de noche tiene Tyler?",
+        "ok": "Proyeccionista de cine.",
+        "otra": "Piloto de cazas, como en Top Gun.",
+        "delata": "Hacer trampas al futbolín, como Gengar."
+      },
+      {
+        "q": "Última. ¿Cuál es la primera regla del club?",
+        "ok": "No se habla del club de la lucha.",
+        "otra": "Yo soy el senado.",
+        "delata": "Que el Zorro y Gengar no pagan.",
+        "final": true
+      }
+    ],
+    "nacionales": [
+      {
+        "idioma": "Growl. ¿Growlithe?",
+        "real": "¿Adónde van a estas horas?",
+        "juanjo": "Preguntan si voy a firmar autógrafos.",
+        "loca": "Preguntan dónde me compro la cara.",
+        "ok": "A CASA, AGENTE",
+        "malas": [
+          "AL AFTER",
+          "ME QUEDO EN EL CENTRO"
+        ]
+      },
+      {
+        "idioma": "Grrr. Growl, ¿grow?",
+        "real": "¿Por qué lleva la cara blanca?",
+        "juanjo": "Dicen que me sienta bien el blanco.",
+        "loca": "Dicen que el mármol es de ley.",
+        "ok": "HA SIDO UN EXTINTOR",
+        "malas": [
+          "SKIN LEGENDARIA",
+          "1820 RP"
+        ]
+      },
+      {
+        "idioma": "Growl, growl. ¿Grrr?",
+        "real": "¿Quién ha gritado en Mitjana?",
+        "juanjo": "Preguntan quién es mi preparador vocal.",
+        "loca": "Preguntan si doy clases de canto.",
+        "ok": "NO SÉ, AGENTE",
+        "malas": [
+          "YO SOLO",
+          "ACÚSTICA DE CLASH"
+        ]
+      },
+      {
+        "idioma": "¿Grow? Growlithe.",
+        "real": "¿Ha bebido usted?",
+        "juanjo": "Preguntan si me queda litrona. Que les apetece.",
+        "loca": "Dicen que huelo a reserva. Reserva de las buenas.",
+        "ok": "LO NORMAL",
+        "malas": [
+          "SOLO UNA LATA",
+          "¿INVITAS TÚ?"
+        ]
+      },
+      {
+        "idioma": "Growl. Grow, ¿grrr?",
+        "real": "¿De quién es ese móvil que no para?",
+        "juanjo": "Dicen que tengo mucho éxito con el móvil.",
+        "loca": "Dicen que me escribe mucha gente importante.",
+        "ok": "MÍO, AGENTE",
+        "malas": [
+          "DE MI CHICA",
+          "DE MIS TEJOS"
+        ]
+      },
+      {
+        "idioma": "Grrr, growlithe.",
+        "real": "¿Nos conocemos de algo?",
+        "juanjo": "Dicen que les suena mi cara de internet.",
+        "loca": "Dicen que tienen un póster mío en comisaría.",
+        "ok": "NO, AGENTE",
+        "malas": [
+          "ME DICEN EL TOPO",
+          "¿JUGAMOS A DUO?"
+        ]
+      }
+    ]
+  },
+  "textos": {
+    "andar": "MANTÉN PULSADO PARA ANDAR",
+    "volumen": "VOLUMEN",
+    "audio": "AUDIO DE WHATSAPP",
+    "asientos": [
+      "CONDUCE",
+      "DELANTE",
+      "DETRÁS"
+    ],
+    "gritar": "¡GRITAR!",
+    "gritos": [
+      "¡WUB WUB WUB!",
+      "¡ME QUEDO EN EL CENTRO!",
+      "¡SOY PLATA!",
+      "¡GG! ¡GG WP!",
+      "¡ESTOY EN PROMOS!",
+      "¡MANOLO, SUBE ESO!",
+      "¡LAURA, DUERME!", "¡REPORT MANOLO!", "¡HA SIDO EL JUNGLA!"
+    ],
+    "vecinos": [
+      {
+        "real": "¡Son las tres de la mañana!",
+        "texto": "Dice que mi voz da la hora."
+      },
+      {
+        "real": "¡Mañana trabajo, sinvergüenza!",
+        "texto": "Dice que mañana me hace un hueco."
+      },
+      {
+        "real": "¡Esa cara blanca, que te estoy viendo!",
+        "texto": "Dice que me ha visto en la tele."
+      },
+      {
+        "real": "¡Voy a llamar a alguien!",
+        "texto": "Dice que me quiere presentar a alguien."
+      },
+      {
+        "real": "¿Tú no eres el de las litronas?",
+        "texto": "Conoce mi obra."
+      },
+      {
+        "real": "¡A tu casa, hombre, a tu casa!",
+        "texto": "Me invita a su casa. Esto no lo apunto, soy humilde."
+      },
+      {
+        "real": "Que deje dormir al barrio.",
+        "texto": "Dice que el barrio no duerme sin mí."
+      },
+      { "real": "¿Quién se ríe así a estas horas?", "texto": "Dice que mi risa debería salir en la radio." }
+    ],
+    "borrar_noche": "TOCA OTRA VEZ PARA BORRAR",
+    "aviso_inicio": "JUEGO PERSONAL · SIN ÁNIMO DE LUCRO",
+    "consejo_iphone": "Para jugar a pantalla completa: Compartir y «Añadir a pantalla de inicio». Toca para cerrar."
+  },
+  "movil": {
+    "titulo": "MÓVIL DE JUANJO",
+    "laura": "LAURA",
+    "cerrar": "VOLVER",
+    "tabs": {
+      "hilo": "SMS",
+      "tejos": "TEJOS",
+      "audios": "AUDIOS"
+    },
+    "vacio": {
+      "hilo": "Laura no ha escrito. Todavía.",
+      "tejos": "Ninguna, de momento. Es cuestión de tiempo. Juanjo lo sabe.",
+      "audios": "Sin audios. El primo estará conduciendo."
+    },
+    "mas_tejo": "+1 TEJO",
+    "anulado": "ANULADO",
+    "sin_responder": "SIN RESPONDER",
+    "escribiendo": "LAURA ESTÁ ESCRIBIENDO...",
+    "seguir": "TOCA PARA SEGUIR",
+    "contestar": "TOCA PARA CONTESTAR",
+    "musica_si": "MÚSICA: SÍ",
+    "musica_no": "MÚSICA: NO",
+    "efectos_si": "EFECTOS: SÍ",
+    "efectos_no": "EFECTOS: NO"
+  },
+  "coche": {
+    "bajadas": [
+      "bajada-1",
+      "bajada-2",
+      "bajada-3",
+      "bajada-4",
+      "bajada-5"
+    ],
+    "tragos": [
+      "trago-1",
+      "trago-2",
+      "trago-3",
+      "trago-4"
+    ],
+    "pista": "DESLIZA PARA SUBIR. TOCA LA LITRONA.",
+    "pista_audio": "AUDIO DEL PRIMO: TOCA EL MÓVIL",
+    "boton_trago": "TRAGO",
+    "boton_vacia": "VACÍA",
+    "vacia": "Queda espuma. Juanjo la mira con respeto.",
+    "pista_vuelta": "DESLIZA PARA SUBIR"
+  },
+  "caras": {
+    "Normal": {
+      "etiqueta": "NI SE INMUTA",
+      "pistas": [
+        {
+          "idioma": "Growl, growl. Grow.",
+          "real": "El que no ha sido ni se inmuta. Cara de lunes y ya está.",
+          "juanjo": "Dice que le ponga cara de susto. Que le divierte.",
+          "loca": "Dice que quiere verme asustado. Es fan."
+        },
+        {
+          "idioma": "Grow. ¿Grrr, growl?",
+          "real": "A mí me vale uno tranquilo, que ni pestañee.",
+          "juanjo": "Dice que quiere verme enfadado, por la adrenalina.",
+          "loca": "Dice que cabreado salgo mejor en las fotos."
+        }
+      ]
+    },
+    "Happy": {
+      "etiqueta": "SONRISA",
+      "pistas": [
+        {
+          "idioma": "Growl. Growlithe, grow.",
+          "real": "El que tiene la conciencia limpia sonríe. A mí, que me sonrían.",
+          "juanjo": "Dice que el que llora es buena persona.",
+          "loca": "Dice que lloremos juntos. Que le ha pasado algo."
+        },
+        {
+          "idioma": "¿Grrr? Grow, grow.",
+          "real": "Si sonríe de oreja a oreja, es que no ha sido.",
+          "juanjo": "Dice que quiere una cara de pena. De las mías.",
+          "loca": "Dice que mi tristeza le da seguridad."
+        }
+      ]
+    },
+    "Pain": {
+      "etiqueta": "DOLIDO",
+      "pistas": [
+        {
+          "idioma": "Grow, growl. ¿Grow?",
+          "real": "Si le duele que le acuses, es que no ha sido.",
+          "juanjo": "Dice que sonría, que hoy es mi día.",
+          "loca": "Dice que sonría, que me están grabando."
+        },
+        {
+          "idioma": "Growlithe. Grrr.",
+          "real": "Quiero verle dolido. Que le duela de verdad la acusación.",
+          "juanjo": "Dice que quiere verme sorprendido.",
+          "loca": "Dice que me ha preparado una sorpresa."
+        }
+      ]
+    },
+    "Sad": {
+      "etiqueta": "PENA",
+      "pistas": [
+        {
+          "idioma": "Grow. Growl, growl.",
+          "real": "Con uno triste no puedo. Me da pena y le dejo ir.",
+          "juanjo": "Dice que el que se enfada tiene razón.",
+          "loca": "Dice que me enfade, que él me sujeta."
+        },
+        {
+          "idioma": "¿Growl? Grow, grrr.",
+          "real": "Si lo ves triste, déjalo. Bastante tiene.",
+          "juanjo": "Dice que ni me inmute. Que soy de piedra.",
+          "loca": "Dice que soy de mármol. Y es verdad."
+        }
+      ]
+    },
+    "Surprised": {
+      "etiqueta": "SORPRESA",
+      "pistas": [
+        {
+          "idioma": "Grrr, grow. Growl.",
+          "real": "El inocente se sorprende. Se queda con la boca abierta.",
+          "juanjo": "Dice que si sonrío me invita a algo.",
+          "loca": "Dice que si sonrío me hace sargento."
+        },
+        {
+          "idioma": "Growl. ¿Grow?",
+          "real": "Se le nota en la sorpresa: no sabía nada de nada.",
+          "juanjo": "Dice que ponga cara triste, que me queda bien.",
+          "loca": "Dice que tengo un sollozo muy trabajado."
+        }
+      ]
+    },
+    "Angry": {
+      "etiqueta": "ENFADO",
+      "pistas": [
+        {
+          "idioma": "Grow, grow. Grrr.",
+          "real": "El inocente se enfada. Si se cabrea, no ha sido.",
+          "juanjo": "Dice que ponga cara de lunes.",
+          "loca": "Dice que hoy es lunes. Que me lo apunte."
+        },
+        {
+          "idioma": "¿Growlithe? Growl.",
+          "real": "A mí me convence el que se indigna y se enfada.",
+          "juanjo": "Dice que el que sonríe manda.",
+          "loca": "Dice que sonría y él me deja mandar."
+        }
+      ]
+    }
+  },
+  "coartada": {
+    "pide": "TOCA TRES COSAS PARA EXPLICARTE",
+    "caja": "LO QUE VA A DECIR JUANJO",
+    "boton": "DECIRLO",
+    "sms_juanjo": "A las {hora} lo dejé por escrito: {txt}",
+    "sms_laura": "A las {hora} me dijiste tú: {txt}",
+    "tejos": {
+      "nerea": "A las {hora}, una support se me sienta al lado. Buscaba algo. Me encontró.",
+      "amiga1": "A las {hora}, una maga me pinguea. Se ha cambiado de línea por un aliado.",
+      "amiga2": "A las {hora}, otra maga. Esta me congela. Con la mirada.",
+      "camarera": "A las {hora}, la de la tienda me da objetos. Sin pedirlos. Hay ticket.",
+      "sandrita": "A las {hora} salgo en la repetición de la jugada. Hay foto.",
+      "jynx": "A las {hora}, la locutora canta mi nombre. En su idioma.",
+      "juanjo": "A las {hora} me llevo el MVP. Me lo he dado yo.",
+      "silueta": "A las {hora} me cruzo con una campeona que no sale en la lista. Me mira. Eso cuenta."
+    },
+    "tejo_otro": "A las {hora} pasa algo que no puedo explicar. Es cosa de elo."
+  },
+  "finales": {
+    "cuela": {
+      "titulo": "CUELA",
+      "resumen": "Laura se da la vuelta. Juanjo se acuesta con la cara blanca.",
+      "pista": "Bebe poco, contesta lo justo y no lo apuntes todo.",
+      "pasos": [
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "Mmm."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Laura ya no escucha. Se oye el colchón: se da la vuelta. Y sigue durmiendo."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Controlado.",
+          "mood": "Happy"
+        },
+        {
+          "t": "bg",
+          "id": "01-pasillo-laura"
+        },
+        {
+          "t": "cuadro",
+          "id": "cama"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 96,
+          "y": 282,
+          "pose": "mapa",
+          "escala": 3,
+          "tumbado": 1
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Juanjo se acuesta vestido, encima de la colcha, con la cara blanca."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Mañana no se acordará de casi nada. Laura sí."
+        },
+        {
+          "t": "esperar",
+          "seg": 2.4,
+          "limpio": true
+        },
+        {
+          "t": "fundido",
+          "seg": 3
+        },
+        {
+          "t": "fin"
+        }
+      ]
+    },
+    "nocuela": {
+      "titulo": "NO CUELA",
+      "resumen": "Manolo, 04:12, desde la playa. Sofá. En la cama, otro Juanjo.",
+      "pista": "Este no hay que buscarlo. Te encuentra él.",
+      "movil": {
+        "titulo": "MÓVIL DE LAURA",
+        "de": "MANOLO",
+        "hora": "04:12",
+        "lugar": "DESDE LA PLAYA",
+        "sms": "tu novio está bien, lo traigo yo"
+      },
+      "pasos": [
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "Juanjo."
+        },
+        {
+          "t": "sonido",
+          "id": "puerta"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "La puerta se abre un palmo. Por el hueco sale un móvil. Solo el móvil."
+        },
+        {
+          "t": "pantalla_laura"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Eso... es de otra partida.",
+          "mood": "Surprised"
+        },
+        {
+          "t": "di",
+          "who": "laura",
+          "txt": "El sofá está hecho."
+        },
+        {
+          "t": "sonido",
+          "id": "puerta"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "La puerta se cierra. La raya de luz se apaga."
+        },
+        {
+          "t": "bg",
+          "id": "01-pasillo-laura"
+        },
+        {
+          "t": "cuadro",
+          "id": "sofa"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 92,
+          "y": 326,
+          "pose": "mapa",
+          "escala": 2,
+          "tumbado": 1
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Sofá. La manta pica. Juanjo mira el techo con la cara blanca."
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Hemos perdido por el jungla.",
+          "mood": "Sad"
+        },
+        {
+          "t": "esperar",
+          "seg": 1.6,
+          "limpio": true
+        },
+        {
+          "t": "set",
+          "flags": {
+            "caraBlanca": false
+          }
+        },
+        {
+          "t": "bg",
+          "id": "01-pasillo-laura"
+        },
+        {
+          "t": "cuadro",
+          "id": "falso"
+        },
+        {
+          "t": "colocar",
+          "who": "juanjo",
+          "x": 96,
+          "y": 282,
+          "pose": "mapa",
+          "escala": 3,
+          "tumbado": 1,
+          "rotulo": "JUANJO, CASI"
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "En la cama, Juanjo duerme a pierna suelta. Sin cara blanca. Con cola."
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Laura no ha notado la diferencia. O sí."
+        },
+        {
+          "t": "esperar",
+          "seg": 2.4,
+          "limpio": true
+        },
+        {
+          "t": "fundido",
+          "seg": 3
+        },
+        {
+          "t": "set",
+          "flags": {
+            "caraBlanca": true
+          }
+        },
+        {
+          "t": "fin"
+        }
+      ]
+    },
+    "doble": {
+      "titulo": "DOBLE VIDA",
+      "resumen": "Tres chicas, como si fuera un mérito, con el álbum en la mano.",
+      "pista": "Que no se te escape ni un tejo. Cuesta lo que cuesta.",
+      "pasos": [
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Laura. Te lo voy a contar, porque te lo mereces.",
+          "mood": "Happy"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Esta noche me han tirado los tejos tres chicas.",
+          "mood": "Happy"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Tres. Sin buscarlo. Es que sale solo.",
+          "mood": "Happy"
+        },
+        {
+          "t": "movil",
+          "tab": "tejos"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Mira. Con foto y con hora. Son {tejos}, pero digo tres por no presumir.",
+          "mood": "Happy"
+        },
+        {
+          "t": "di",
+          "who": "juanjo",
+          "txt": "Y aquí estoy. En casa. A las nueve. Eso también se valora.",
+          "mood": "Happy"
+        },
+        {
+          "t": "esperar",
+          "seg": 2.6,
+          "limpio": true
+        },
+        {
+          "t": "di",
+          "who": null,
+          "txt": "Laura no dice nada. Al otro lado de la puerta no se oye ni el teclado."
+        },
+        {
+          "t": "cuadro",
+          "id": "raya"
+        },
+        {
+          "t": "esperar",
+          "seg": 1.6,
+          "limpio": true
+        },
+        {
+          "t": "fundido",
+          "seg": 2.4
+        },
+        {
+          "t": "fin"
+        }
+      ]
+    }
+  },
+  "creditos": [
+    {
+      "txt": "DOBLE VIDA",
+      "f": "bold",
+      "color": "rosa_neon"
+    },
+    {
+      "txt": "Una noche de Málaga, para Juanjo"
+    },
+    {
+      "txt": ""
+    },
+    {
+      "txt": "REPARTO",
+      "f": "label",
+      "color": "gris"
+    },
+    {
+      "txt": "Juanjo, que nunca se entera"
+    },
+    {
+      "txt": "Manolo, Machoke"
+    },
+    {
+      "txt": "Samuel, Gengar"
+    },
+    {
+      "txt": "Jorge, el Zorro, Zoroark"
+    },
+    {
+      "txt": "Ismael, el Buitre, Mandibuzz"
+    },
+    {
+      "txt": "Laura, que nunca se ve"
+    },
+    {
+      "txt": ""
+    },
+    {
+      "txt": "SPRITES Y RETRATOS DE POKÉMON",
+      "f": "label",
+      "color": "gris"
+    },
+    {
+      "txt": "PMD SpriteCollab"
+    },
+    {
+      "txt": "sprites.pmdcollab.org",
+      "f": "label",
+      "color": "cian_neon"
+    },
+    {
+      "txt": "Licencia CC BY-NC 4.0, sin modificar"
+    },
+    {
+      "txt": ""
+    },
+    {
+      "txt": "AUTORES",
+      "f": "label",
+      "color": "gris"
+    },
+    {
+      "txt": "CHUNSOFT, de los Mystery Dungeon originales"
+    },
+    {
+      "txt": "JFain, Emboarger, baronessfaron, 0palite, Deeshura, powercristal, Emmuffin, PhillipsYoung, G〜, Deltex12, LT, JustAGunk"
+    },
+    {
+      "txt": ""
+    },
+    {
+      "txt": "FUENTES",
+      "f": "label",
+      "color": "gris"
+    },
+    {
+      "txt": "Pixelify Sans y Silkscreen, SIL OFL 1.1"
+    },
+    {
+      "txt": ""
+    },
+    {
+      "txt": "FONDOS, JUANJO Y TÍTULO",
+      "f": "label",
+      "color": "gris"
+    },
+    {
+      "txt": "Jorge y Claude"
+    },
+    {
+      "txt": ""
+    },
+    {
+      "txt": "Proyecto personal, sin ánimo de lucro, no afiliado a Nintendo, Creatures ni GAME FREAK. Pokémon es propiedad de sus dueños.",
+      "f": "dialog",
+      "color": "gris"
+    },
+    {
+      "txt": ""
+    },
+    {
+      "txt": "Los bares y lugares existieron o existen en Málaga. Los hechos están contados con la memoria de los amigos y no pretenden ser exactos.",
+      "f": "dialog",
+      "color": "gris"
+    },
+    {
+      "txt": ""
+    }
+  ],
+  "resultados": {
+    "tabs": {
+      "noche": "NOCHE",
+      "finales": "FINALES",
+      "hilo": "SMS",
+      "tejos": "TEJOS"
+    },
+    "final": "FINAL",
+    "sms": "SMS ENVIADOS",
+    "tejos": "TEJOS",
+    "copas": "COPAS",
+    "bajadas": "VECES QUE MANOLO BAJÓ EL VOLUMEN",
+    "tragos": "TRAGOS DE LITRONA",
+    "de_mas": "SMS QUE NO DEBISTE MANDAR",
+    "buitre": "El Buitre se fue a las {buitre}",
+    "logro": "LOGRO OCULTO",
+    "logro_nombre": "Sin un solo tejo",
+    "logro_txt": "Imposible. Juanjo apunta uno siempre.",
+    "otra": "OTRA NOCHE",
+    "oculto": "???",
+    "ver": "TOCA PARA VERLO",
+    "saltar": "MANTÉN PULSADO PARA ADELANTAR"
+  }
+}
