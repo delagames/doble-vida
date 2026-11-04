@@ -1,8 +1,8 @@
-// ¡PIDE! II: la barra de Modernícolas. Hereda ¡PIDE! con cinco bebidas, y le añade a la
-// camarera, que acerca copas que nadie ha pedido. Mientras se lee su traducción doble, los
-// pedidos van a cámara lenta y no se pueden coger copas.
+// ¡PIDE! II: la barra de Modernícolas. Hereda ¡PIDE! con cinco bebidas y dos Pokémon a la
+// vez, y le añade a la camarera, que acerca copas que nadie ha pedido. Mientras se lee su
+// traducción doble, las notas van a cámara lenta y no se pueden coger.
 //   Aceptar: tejo (parada 'barra') y la copa, que baja coherencia.
-//   Rechazar o dejarla pasar: Juanjo se pasa un rato explicándose y los pedidos no esperan.
+//   Rechazar o dejarla pasar: Juanjo se pasa un rato explicándose y las notas no esperan.
 // Cada dos aciertos, un punto de coherencia: el control de calidad. Fallar te bebe la copa
 // como en ¡PIDE!. Tres fallos seguidos cierran la barra: se devuelve la coherencia de la
 // entrada y los tejos de la barra se anulan. Sin dinero solo llega una copa, de Manolo.
@@ -12,27 +12,28 @@ import { W } from '../screen.js';
 import { text, wrap, lineHeight } from '../text.js';
 import { bar, button, panel, rect } from '../draw.js';
 import { DINERO_BARRA, S, barajar } from '../state.js';
-import { anularTejos, coh, copa, sumarTejo, tejosDeParada } from '../medidores.js';
+import { anularTejos, coh, copa, endurece, sumarTejo, tejosDeParada } from '../medidores.js';
 import { traduce } from '../night.js';
 import { audio } from '../audio.js';
 import { G } from '../game.js';
 import { drawBebida, fondoTenue, retrato } from './dibujo.js';
 import Pide from './pide.js';
 
-const LENTO = 0.25;        // velocidad de los pedidos mientras la camarera habla
+const LENTO = 0.25;        // velocidad de las notas mientras la camarera habla
 const OFERTA_SEG = 7;      // lo que espera con la copa en la mano
 const EXCUSA_SEG = 1.5;    // lo que cuesta rechazarla
-const GRACIA = 0.3;        // el toque con el que soltabas una copa no acepta sin querer
+const GRACIA = 0.3;        // el toque con el que soltabas una nota no acepta sin querer
 const CUANDO = [1, 3, 5];  // copas bien servidas tras las que llega cada oferta
 const CUANDO_SIN = [2];
 const PANEL = { x: 4, y: 240, w: 262, h: 140 };
 const SI = { x: PANEL.x + 5, y: PANEL.y + 97, w: 124, h: 38 };
 const NO = { x: PANEL.x + 133, y: PANEL.y + 97, w: 124, h: 38 };
 const BARRA = 'barra';
+const INTERVALO = 2.55;    // entre parejas de notas: justo lo que da de sí un pulgar
 
 export default class Barra extends Pide {
   static instruccion = '¡PIDE! II';
-  static ayuda = 'Como en Siglo XXI: arrastra cada copa hasta quien la pide, ahora con cinco bebidas. Si la camarera te acerca una copa, toca ACEPTAR (tejo, pero bebes) o RECHAZAR (pierdes tiempo). Tres fallos seguidos y te cierra la barra.';
+  static ayuda = 'Como en Siglo XXI: arrastra cada nota a su grifo y mira arriba qué quiere ahora, con dos notas a la vez y cinco bebidas. Si la camarera te acerca una copa, toca ACEPTAR (tejo, pero bebes) o RECHAZAR (pierdes tiempo). Tres fallos seguidos y te cierra la barra.';
   static carga = ['manolo', 'zorro', 'buitre', 'camarera'];
 
   start({ coh: c, params }) {
@@ -41,10 +42,12 @@ export default class Barra extends Pide {
       params: {
         bebidas: ['cerveza', 'ipa', 'chupito', 'jagercerveza', 'jagerbomb'],
         pokemon: ['manolo', 'zorro'],
-        meta: 6, maxFallos: 3, ritmo: 1.2,
+        aLaVez: 2, meta: 6, maxFallos: 3, ritmo: 1.4,
         ...params,
       },
     });
+    this.intervalo = INTERVALO;      // lo endurecen la velocidad, los cambios y el tercer Pokémon
+    this.velBase = endurece(1, 1.8);
     const datos = G.data.pedidos.camarera;
     this.sinBlanca = !!S.flags.sinBlanca || S.dinero < DINERO_BARRA;
     this.cola = this.sinBlanca
@@ -77,7 +80,7 @@ export default class Barra extends Pide {
     super.update(dt);
     this.pausa -= dt;
     const def = this.cola[0];
-    // Con una copa en la mano no se interrumpe: espera a que la sueltes.
+    // Con una nota en la mano no se interrumpe: espera a que la sueltes.
     const yaEs = def && this.servidas >= this.p.meta;   // la última no se pierde por servir rápido
     if (def && (this.pausa <= 0 || yaEs) && !this.arr.obj && this.servidas >= def.n) this.ofrece(this.cola.shift());
   }
@@ -126,7 +129,7 @@ export default class Barra extends Pide {
     audio.compas(false);
   }
 
-  alServir(c, tipo) {
+  alServir(n, tipo) {
     if (tipo !== 'bien') { this.bebidasTuyas++; return; }
     this.fallos = 0;
     if (++this.aciertos % 2 === 0) coh(-1);

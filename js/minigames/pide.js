@@ -1,41 +1,46 @@
-// ¡PIDE!: arriba está cada Pokémon con un bocadillo que dice lo que quiere, con dibujo y nombre.
-// Se coge la copa de su grifo, abajo, y se arrastra hasta quien la pide: el grifo y el bocadillo
-// llevan el mismo icono. Lo que quiere cada uno cambia cada pocos segundos y al servirle, y a
-// veces justo cuando ya vas con su copa en la mano: el bocadillo tiembla antes de cambiar. Una
-// copa soltada abajo vuelve al grifo sin coste. Si le das otra cosa, o se le acaba la paciencia,
-// la copa te la bebes tú. El idioma de cada uno queda de adorno, en lo gris de la franja.
+// ¡PIDE!: los pedidos suben como notas, cada una con la cara de su Pokémon, y hay que llevarlas
+// a su grifo antes de que lleguen arriba. La nota dice de quién es; lo que quiere se mira en la
+// lista de arriba, con su cara, dibujo y nombre, el mismo icono que el grifo. Lo que quiere va
+// cambiando, también con la nota de camino, y vale lo que pida al soltarla: su fila da un
+// destello al cambiar. Si no la llevas a tiempo o fallas el grifo, la copa te la bebes tú. Una
+// nota soltada fuera de los grifos vuelve a su sitio sin coste. Lo que pone en la nota, en su
+// idioma, es adorno: no hace falta entenderlo.
 //
 // Parámetros (todos opcionales), para reutilizarlo en ¡PIDE! II:
 //   bebidas, pokemon   claves de data/pedidos.json. Hasta cinco bebidas.
 //   extra              Pokémon que se suma con coherencia baja.
 //   meta               copas bien servidas para ganar.
 //   maxFallos          copas bebidas para perder.
-//   ritmo              multiplica la paciencia y el tiempo entre cambios.
-// Para añadir cosas, hereda: alServir(cliente, tipo) se llama con 'bien', 'mal' o 'cansa';
+//   aLaVez             notas que salen juntas (dos Pokémon a la vez).
+//   ritmo              multiplica el tiempo entre notas y entre cambios.
+// Para añadir cosas, hereda: alServir(nota, tipo) se llama con 'bien', 'mal' o 'cansa';
 // fondo(ctx) pinta el local y `rotulos` da los textos de la franja de estado.
 import { C } from '../assets.js';
-import { input } from '../input.js';
-import { W, vibrar } from '../screen.js';
+import { input, inRect } from '../input.js';
+import { W, H, vibrar } from '../screen.js';
 import { text, wrap, measure, lineHeight } from '../text.js';
-import { bar, cifras, dither, outline, panel, pixelLine, rect } from '../draw.js';
-import { S, UMBRAL, barajar } from '../state.js';
+import { cifras, outline, panel, pixelLine, rect } from '../draw.js';
+import { S, barajar } from '../state.js';
 import { copa, endurece } from '../medidores.js';
 import { audio } from '../audio.js';
 import { G } from '../game.js';
 import { Arrastre } from '../minigame.js';
 import { drawBebida, drawGrifo, fondoTenue, grifos, retrato } from './dibujo.js';
 
-const RET_Y = 50, BOC_Y = 96, BOC_H = 114, PAC_Y = 213;    // retrato, bocadillo y paciencia
-const REVELA = { x: 4, y: 338, w: W - 8, h: 42 };          // la franja de lo que acaba de pasar
+const LISTA = { x: 4, y: 48, w: W - 8, h: 92 };     // opaca: las notas no entran ahí
+const NOTA = { w: 124, h: 28 };
+const CARRILES = [7, 139];
+const SALE_Y = 334 - NOTA.h, TOPE_Y = LISTA.y + LISTA.h + 2;
+const SOBRE_DEDO = 24;        // la nota cogida va por encima del dedo, para que no la tape
+const REVELA = { x: 4, y: 338, w: W - 8, h: 42 };   // la franja de lo que acaba de pasar
 const REVELA_SEG = 1.8;
-const SUELTA_Y = REVELA.y + REVELA.h;     // por encima se entrega; por debajo vuelve al grifo
-const GRACIA_CAMBIO = 0.25;   // la copa soltada justo al cambiar aún vale: se vio el pedido viejo
-const PAUSA_CAMBIAZO = 3;     // entre un cambio a mala idea y el siguiente
+const DESTELLO_SEG = 0.6;
+const GRACIA_CAMBIO = 0.2;    // la nota soltada justo al cambiar aún vale: el dedo ya iba
 const COSTE_LOSE = 3;         // los vasos de la ronda mal hecha
 
 export default class Pide {
   static instruccion = '¡PIDE!';
-  static ayuda = 'Arriba ves qué quiere cada uno. Coge esa copa de su grifo y arrástrala hasta él, antes de que se le acabe la paciencia. Lo que quieren va cambiando: si tiembla, está a punto. Suéltala abajo y vuelve al grifo. Si te equivocas, te la bebes tú.';
+  static ayuda = 'Arrastra cada nota a su grifo antes de que llegue arriba. La nota dice de quién es; mira arriba qué quiere ahora. Lo que quieren va cambiando, y vale lo que pida al soltarla. Si fallas el grifo o se te escapa, te la bebes tú.';
   static carga = ['manolo', 'zorro', 'buitre'];
 
   start({ coh, params }) {
@@ -44,7 +49,8 @@ export default class Pide {
       pokemon: ['manolo', 'zorro'],
       extra: 'buitre',
       meta: 7,
-      maxFallos: Math.round(endurece(4, 2)),
+      maxFallos: 3,
+      aLaVez: 1,
       ritmo: 1,
       ...params,
     };
@@ -52,26 +58,29 @@ export default class Pide {
     for (const b of this.p.bebidas) if (!this.bebidas[b]) throw new Error(`Bebida desconocida: ${b}`);
     if (this.p.extra && coh < 50) this.p.pokemon = [...this.p.pokemon, this.p.extra];
     this.grifos = grifos(this.p.bebidas.length).map((r, i) => ({ r, id: this.p.bebidas[i] }));
-    this.paciencia = endurece(12, 6) * this.p.ritmo;
-    this.cambio = endurece(5.5, 2.8) * this.p.ritmo;
-    this.aviso = endurece(0.8, 0.45);
-    this.pCambiazo = endurece(0.2, 0.65);
-    this.borroso = coh < UMBRAL.loca;
+    this.intervalo = endurece(2.7, 1.7) * this.p.ritmo;
+    this.velBase = endurece(1, 2.2);
+    this.cambio = endurece(3.9, 2) * this.p.ritmo;
+    this.pDoble = endurece(0, 0.35);     // con poca coherencia, a veces salen dos juntas
     const n = this.p.pokemon.length;
-    const w = Math.floor((W - 8 - (n - 1) * 4) / n);
+    const alto = n > 2 ? 28 : 43;
+    this.alto = alto;
     this.clientes = [];
     this.p.pokemon.forEach((who, i) => {
-      const c = { who, r: { x: 4 + i * (w + 4), w }, fase: i * 2.1, quiere: null, antes: null, graciaCambio: 0, flash: 0, pac: 0, cambia: 0 };
+      const c = { who, y: LISTA.y + 2 + i * (alto + 1), fase: i * 2.1, quiere: null, antes: null, graciaCambio: 0, flash: 0, cambia: 0 };
       this.clientes.push(c);
       this.pidePedido(c);
-      c.pac = this.paciencia * (1 + i * 0.35);    // no se cansan todos a la vez
-      c.cambia = this.proxCambio() + i * 0.9;
       c.flash = 0;
+      c.cambia = this.proxCambio() + i * 0.9;
     });
+    this.notas = [];
+    this.bolsa = [];
     this.arr = new Arrastre();
     this.servidas = 0;
     this.fallos = 0;
-    this.pausaCambiazo = 2;
+    this.sale = 0.5;
+    this.lanzadas = 0;
+    this.carril = 0;
     this.rev = null;
     this.destello = null;
     this.tiempo = 0;
@@ -86,84 +95,115 @@ export default class Pide {
     const vale = libres.length ? libres : this.p.bebidas.filter((b) => b !== c.quiere);
     c.antes = c.quiere;
     c.quiere = barajar(vale)[0];
-    c.flash = 0.3;
+    c.flash = DESTELLO_SEG;
+    c.graciaCambio = GRACIA_CAMBIO;
   }
 
-  /** Tras servirle, o tras fallarle, vuelve a empezar con otro pedido. */
-  renueva(c) {
-    this.pidePedido(c);
-    c.antes = null;
-    c.pac = this.paciencia;
-    c.cambia = this.proxCambio();
+  cliente(who) { return this.clientes.find((c) => c.who === who); }
+
+  /** Al principio van lentas para dar tiempo a entenderlo, y luego ya no. */
+  duracionNota(n) {
+    const base = n < 3 ? 12 : n < 6 ? 10 : 8.5;
+    return base / this.velBase;
+  }
+
+  /** Los Pokémon se turnan al azar, de bolsa: nadie encadena tres notas seguidas. */
+  sacaWho() {
+    if (!this.bolsa.length) this.bolsa = barajar(this.p.pokemon);
+    return this.bolsa.pop();
+  }
+
+  lanza(dt) {
+    this.sale -= dt;
+    if (this.sale > 0) return;
+    this.sale = this.intervalo;
+    const cuantas = Math.min(2, this.p.aLaVez + (Math.random() < this.pDoble ? 1 : 0));
+    for (let k = 0; k < cuantas; k++) this.notaNueva();
+  }
+
+  notaNueva() {
+    const hueco = (x) => !this.notas.some((n) => n !== this.arr.obj && n.x === x && n.y > SALE_Y - NOTA.h - 2);
+    const x = [CARRILES[this.carril % 2], CARRILES[(this.carril + 1) % 2]].find(hueco);
+    if (x === undefined) return;       // el fondo está lleno: la siguiente tanda sale cuando quepa
+    this.carril = CARRILES.indexOf(x) + 1;
+    const who = this.sacaWho();
+    const palabras = Object.values(G.data.pedidos.palabras[who] ?? {});
+    this.notas.push({
+      who, x, y: SALE_Y,
+      palabra: barajar(palabras)[0] ?? '',       // su idioma: solo sabor
+      v: (SALE_Y - TOPE_Y) / this.duracionNota(this.lanzadas),
+      fase: Math.random() * 6,
+    });
+    this.lanzadas++;
+  }
+
+  zona(n) { return { x: n.x, y: n.y, w: NOTA.w, h: NOTA.h }; }
+
+  /** Otra nota justo delante en su carril: espera detrás, para no pisarla. */
+  tapada(n) {
+    return this.notas.some((o) => o !== n && o !== this.arr.obj && o.x === n.x && o.y <= n.y && n.y - o.y < NOTA.h + 2 && (o.y < n.y || this.notas.indexOf(o) < this.notas.indexOf(n)));
   }
 
   update(dt) {
     this.tiempo += dt;
+    this.lanza(dt);
     if (this.rev && (this.rev.t -= dt) <= 0) this.rev = null;
     if (this.destello && (this.destello.t -= dt) <= 0) this.destello = null;
-    this.pausaCambiazo -= dt;
-    const antes = this.arr.obj;
-    const suelto = this.arr.update(this.grifos, (g) => g.r, 1);
-    if (!antes && this.arr.obj) this.alCoger(this.arr.obj);
+    const suelto = this.arr.update(this.notas, (n) => this.zona(n));
     if (suelto) this.soltar(suelto);
     this.atajos();
     for (const c of this.clientes) {
       c.flash = Math.max(0, c.flash - dt);
       c.graciaCambio = Math.max(0, c.graciaCambio - dt);
-      c.pac -= dt;
       c.cambia -= dt;
       if (c.cambia <= 0) {
         this.pidePedido(c);
-        c.graciaCambio = GRACIA_CAMBIO;
         c.cambia = this.proxCambio();
-        audio.compas(false);
       }
-      if (c.pac <= 0) this.servir(c, c.quiere, 'cansa');
+    }
+    for (const n of [...this.notas]) {
+      if (n === this.arr.obj || this.tapada(n)) continue;
+      n.y -= n.v * dt;
+      if (n.y <= TOPE_Y) this.servir(n, 'cansa', this.cliente(n.who).quiere);
     }
   }
 
-  /** El cambio a mala idea: quien quería esa copa se lo piensa mientras se la llevas. */
-  alCoger(g) {
-    const c = this.clientes.find((q) => q.quiere === g.id);
-    if (!c || this.pausaCambiazo > 0 || Math.random() > this.pCambiazo) return;
-    this.pausaCambiazo = PAUSA_CAMBIAZO;
-    c.cambia = Math.min(c.cambia, this.aviso * (0.8 + Math.random() * 0.5));
-  }
-
-  /** En ordenador, las teclas 1 a 5 llevan esa copa a quien tenga menos paciencia. */
+  /** En ordenador, las teclas 1 a 5 mandan la nota más alta a ese grifo. */
   atajos() {
     const i = this.grifos.findIndex((_, k) => input.hit(`Digit${k + 1}`));
-    if (i < 0) return;
-    this.entrega(this.clientes.reduce((a, b) => (b.pac < a.pac ? b : a)), this.grifos[i].id);
+    if (i < 0 || !this.notas.length) return;
+    const n = this.notas.reduce((a, b) => (b.y < a.y ? b : a));
+    this.entrega(n, this.grifos[i].id);
   }
 
-  clienteBajo(x, y) {
-    if (y >= SUELTA_Y) return null;
-    return this.clientes.find((c) => x >= c.r.x - 2 && x < c.r.x + c.r.w + 2) ?? null;
+  grifoBajo(x, y) {
+    return this.grifos.find((g) => inRect({ x, y }, { x: g.r.x - 2, y: g.r.y - 4, w: g.r.w + 4, h: g.r.h + 6 }));
   }
 
   soltar({ obj, x, y }) {
-    const c = this.clienteBajo(x, y);
-    if (c) this.entrega(c, obj.id);
+    const g = this.grifoBajo(x, y);
+    if (g) this.entrega(obj, g.id);    // si no, vuelve a su sitio y sigue subiendo
   }
 
-  entrega(c, bebida) {
+  entrega(n, bebida) {
+    const c = this.cliente(n.who);
     const vale = bebida === c.quiere || (c.graciaCambio > 0 && bebida === c.antes);
-    this.servir(c, vale ? bebida : c.quiere, vale ? 'bien' : 'mal', bebida);
+    this.servir(n, vale ? 'bien' : 'mal', vale ? bebida : c.quiere, bebida);
   }
 
-  /** bebida: la que quería. dada: la que se le ha llevado, la que enciende su grifo. */
-  servir(c, bebida, tipo, dada = bebida) {
-    this.rev = { who: c.who, bebida, tipo, t: REVELA_SEG };
-    this.destello = { id: dada, ok: tipo === 'bien', t: 0.22 };   // el grifo responde
+  /** bebida: la que quería. dada: la del grifo al que ha ido, el que responde. */
+  servir(n, tipo, bebida, dada = bebida) {
+    this.notas = this.notas.filter((o) => o !== n);
+    if (this.arr.obj === n) this.arr.obj = null;
+    this.rev = { who: n.who, bebida, tipo, t: REVELA_SEG };
+    this.destello = { id: dada, ok: tipo === 'bien', t: 0.22 };
     if (tipo === 'bien') { this.servidas++; audio.toque(); } else {
       this.fallos++;
       copa(1, 'copa');
       audio.fallo();
       vibrar();
     }
-    this.alServir(c, tipo);
-    this.renueva(c);
+    this.alServir(n, tipo);
   }
 
   alServir() {}
@@ -196,64 +236,80 @@ export default class Pide {
   fondo(ctx) { fondoTenue(ctx, '05-siglo-xxi', 3); }
 
   get rotulos() {
-    return { fallos: 'BEBIDAS', pista: 'ARRASTRA LA COPA HASTA QUIEN LA PIDE', mal: 'NO ERA ESA. TE LA BEBES TÚ', cansa: 'SE HA CANSADO. TE LA BEBES TÚ' };
+    return { fallos: 'BEBIDAS', pista: 'LLEVA CADA NOTA AL GRIFO DE LO QUE PIDE', mal: 'NO ERA ESA. TE LA BEBES TÚ', cansa: 'LLEGÓ ARRIBA. TE LA BEBES TÚ' };
   }
 
   draw(ctx) {
     this.fondo(ctx);
+    pixelLine(ctx, 0, TOPE_Y - 1, W, TOPE_Y - 1, C.rojo_extintor, 1, 2);
     panel(ctx, 4, 27, W - 8, 19, { fill: C.carbon });
     text(ctx, 'COPAS', 10, 33, { font: 'label', color: C.gris });
     cifras(ctx, `${this.servidas}/${this.p.meta}`, 48, 31, { escala: 2, color: C.cian_neon });
     text(ctx, this.rotulos.fallos, 142, 33, { font: 'label', color: C.gris });
     cifras(ctx, `${this.fallos}/${this.p.maxFallos}`, 196, 31, { escala: 2, color: this.fallos ? C.rojo_extintor : C.gris });
-    const encima = this.arr.obj ? this.clienteBajo(this.arr.x, this.arr.y) : null;
-    for (const c of this.clientes) this.pintaCliente(ctx, c, c === encima);
+    this.pintaLista(ctx);
     this.pintaRevela(ctx);
-    for (const g of this.grifos) drawGrifo(ctx, g.r, g.id, { activo: g === this.arr.obj });
+    const encima = this.arr.obj ? this.grifoBajo(this.arr.x, this.arr.y) : null;
+    for (const g of this.grifos) drawGrifo(ctx, g.r, g.id, { activo: g === encima });
     const f = this.destello && this.grifos.find((g) => g.id === this.destello.id);
     if (f) {
       const { x, y, w, h } = f.r, c = this.destello.ok ? C.cian_neon : C.rojo_extintor, l = this.destello.t > 0.11 ? 3 : 1;
       outline(ctx, x - l, y - l, w + l * 2, h + l * 2, c);
     }
+    for (const n of this.notas) if (n !== this.arr.obj) this.pintaNota(ctx, n, n.x, n.y);
     if (!this.servidas && !this.fallos && !this.arr.obj) this.pintaGesto(ctx);
-    // La copa va por encima del dedo: si no, la tapa el pulgar.
-    if (this.arr.obj) drawBebida(ctx, this.arr.obj.id, Math.round(this.arr.x) - 21, Math.round(this.arr.y) - 66, { escala: 3 });
+    // La nota va por encima del dedo, y nunca sube a la lista.
+    if (this.arr.obj) {
+      const x = Math.max(4, Math.min(W - NOTA.w - 4, Math.round(this.arr.x) - (NOTA.w >> 1)));
+      const y = Math.max(TOPE_Y, Math.min(H - NOTA.h, Math.round(this.arr.y) - NOTA.h - SOBRE_DEDO));
+      this.pintaNota(ctx, this.arr.obj, x, y);
+    }
   }
 
-  /** Hasta la primera copa, un fantasma enseña el gesto: de su grifo a quien la pide. */
+  /** Hasta la primera copa, un fantasma enseña el camino: de la nota a su fila y a su grifo. */
   pintaGesto(ctx) {
-    const c = this.clientes[0], g = this.grifos.find((q) => q.id === c.quiere);
+    const n = this.notas.reduce((a, b) => (!a || b.y < a.y ? b : a), null);
+    const c = n && this.cliente(n.who), g = c && this.grifos.find((q) => q.id === c.quiere);
     if (!g) return;
+    const x0 = n.x + (NOTA.w >> 1), y0 = Math.round(n.y), x1 = g.r.x + (g.r.w >> 1), y1 = g.r.y + 8;
+    pixelLine(ctx, x0, y0, x0, c.y + this.alto, C.amarillo_mural, 1, 3);
+    pixelLine(ctx, x0, y0 + NOTA.h, x1, y1, C.rosa_neon, 1, 3);
     const k = (this.tiempo % 1.6) / 1.6;
-    const x0 = g.r.x + (g.r.w >> 1), y0 = g.r.y + 8, x1 = c.r.x + (c.r.w >> 1), y1 = 240;
-    pixelLine(ctx, x0, y0, x1, y1, C.rosa_neon, 1, 3);
-    drawBebida(ctx, c.quiere, Math.round(x0 + (x1 - x0) * k) - 14, Math.round(y0 + (y1 - y0) * k) - 18, { escala: 2 });
+    drawBebida(ctx, c.quiere, Math.round(x0 + (x1 - x0) * k) - 7, Math.round(y0 + NOTA.h + (y1 - y0 - NOTA.h) * k) - 9);
   }
 
-  pintaCliente(ctx, c, encima) {
-    const { x, w } = c.r, cx = x + (w >> 1);
+  pintaLista(ctx) {
+    panel(ctx, LISTA.x, LISTA.y, LISTA.w, LISTA.h, { fill: C.carbon, edge: C.morado });
+    for (const c of this.clientes) this.pintaFila(ctx, c);
+  }
+
+  /** Una fila: cara, dibujo y nombre. Al cambiar, destella. Sin coherencia, todo tiembla. */
+  pintaFila(ctx, c) {
+    const x = LISTA.x + 2, w = LISTA.w - 4, h = this.alto, grande = h > 30;
     const beb = this.bebidas[c.quiere];
-    const avisa = c.cambia < this.aviso;
-    const amp = Math.round(endurece(0, 3)) + (avisa ? 2 : 0);
+    const luce = c.flash > 0 && Math.floor(c.flash * 10) % 2 === 1;
+    panel(ctx, x, c.y, w, h, { fill: luce ? C.amarillo_mural : C.marfil, edge: c.flash > 0 ? C.rojo_extintor : C.morado });
+    if (c.flash > 0) outline(ctx, x + 1, c.y + 1, w - 2, h - 2, C.rojo_extintor);
+    const amp = Math.round(endurece(0, 3));
     const dx = amp ? Math.round(Math.sin(this.tiempo * 37 + c.fase) * amp) : 0;
     const dy = amp ? Math.round(Math.cos(this.tiempo * 29 + c.fase) * (amp >> 1)) : 0;
-    retrato(ctx, c.who, cx - 20, RET_Y);
-    const borde = encima ? C.rosa_neon : c.flash > 0 ? C.amarillo_mural : avisa ? C.rojo_extintor : C[beb.color];
-    rect(ctx, cx - 3, BOC_Y - 4, 7, 5, borde);       // el pico del bocadillo
-    rect(ctx, cx - 1, BOC_Y - 6, 3, 3, borde);
-    panel(ctx, x, BOC_Y, w, BOC_H, { fill: C.marfil, edge: borde });
-    if (encima || c.flash > 0) outline(ctx, x + 1, BOC_Y + 1, w - 2, BOC_H - 2, borde);
-    drawBebida(ctx, c.quiere, cx - 28 + dx, BOC_Y + 5 + dy, { escala: 4 });
-    const lineas = wrap(beb.nombre, 'bold', w - 6);
+    const lado = grande ? 40 : 20, cy = c.y + (h >> 1);
+    retrato(ctx, c.who, x + 4 + dx, cy - (lado >> 1) + dy, { lado });
+    const xb = x + lado + 10 + dx;
+    drawBebida(ctx, c.quiere, xb, cy - (grande ? 18 : 9) + dy, { escala: grande ? 2 : 1 });
+    const xt = xb + (grande ? 34 : 19);
+    const lineas = wrap(beb.nombre, 'bold', LISTA.x + LISTA.w - 8 - xt);
     const lh = lineHeight('bold');
-    const y0 = BOC_Y + BOC_H - 3 - lineas.length * lh;
-    lineas.forEach((l, i) => {
-      if (this.borroso) text(ctx, l, cx + dx + 1, y0 + i * lh, { font: 'bold', color: C.gris, align: 'center' });
-      text(ctx, l, cx + dx, y0 + i * lh, { font: 'bold', color: C.carbon, align: 'center' });
-    });
-    if (this.borroso) dither(ctx, x + 2, BOC_Y + 3, w - 4, 74, C.marfil, 1);
-    const f = Math.max(0, c.pac / this.paciencia);
-    bar(ctx, x, PAC_Y, w, 6, Math.min(1, f), f < 0.3 ? C.rojo_extintor : C.cian_neon);
+    lineas.forEach((l, i) => text(ctx, l, xt, cy - ((lineas.length * lh) >> 1) + 1 + i * lh + dy, { font: 'bold', color: C.carbon }));
+  }
+
+  pintaNota(ctx, n, x, y) {
+    const baila = n === this.arr.obj ? 0 : Math.round(Math.sin(this.tiempo * 3 + n.fase) * endurece(0, 3));
+    x = Math.round(x + baila); y = Math.round(y);
+    panel(ctx, x, y, NOTA.w, NOTA.h, { fill: C.marfil, edge: C.gris });
+    retrato(ctx, n.who, x + 4, y + 4, { lado: 20 });
+    const ancho = NOTA.w - 30, cabe = measure(n.palabra, 'bold') <= ancho;     // las largas, en pequeño
+    text(ctx, n.palabra, x + 27 + (ancho >> 1), y + (cabe ? 7 : 10), { font: cabe ? 'bold' : 'label', color: C.carbon, align: 'center' });
   }
 
   pintaRevela(ctx) {
@@ -265,11 +321,8 @@ export default class Pide {
     }
     const { who, bebida, tipo } = this.rev;
     retrato(ctx, who, r.x + 6, r.y + 10, { lado: 20 });
-    const grito = G.data.pedidos.palabras[who]?.[bebida] ?? '';     // su idioma: solo sabor
-    text(ctx, grito, r.x + 31, r.y + 7, { font: 'bold', color: C.gris });
-    const xb = r.x + 31 + measure(grito, 'bold') + 7;
-    drawBebida(ctx, bebida, xb, r.y + 3);
-    text(ctx, this.bebidas[bebida].nombre, xb + 18, r.y + 9, { font: 'label', color: C.amarillo_mural });
+    drawBebida(ctx, bebida, r.x + 31, r.y + 3);
+    text(ctx, this.bebidas[bebida].nombre, r.x + 49, r.y + 9, { font: 'label', color: C.amarillo_mural });
     const nota = { bien: '¡MARCHANDO!', mal: this.rotulos.mal, cansa: this.rotulos.cansa }[tipo];
     const color = tipo === 'bien' ? C.cian_neon : C.rojo_extintor;
     text(ctx, nota, r.x + 31, r.y + 27, { font: 'label', color });
