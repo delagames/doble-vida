@@ -1,7 +1,7 @@
 // Service worker: primero la red y, si no hay, la caché. Así en casa siempre se juega lo último y
 // en un sótano se juega igual. La lista la escribe tools/precache.py: no se toca a mano.
 // Cada commit que cambie el juego sube CACHE; al activarse, borra las versiones anteriores.
-const CACHE = 'doble-vida-v09';
+const CACHE = 'doble-vida-v10';
 const ESPERA_RED = 3000;     // con mala cobertura no se espera más: se tira de caché
 
 const PRECACHE = [

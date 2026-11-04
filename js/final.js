@@ -12,12 +12,12 @@ import { W, H } from './screen.js';
 import { text, wrap, lineHeight, measure } from './text.js';
 import { button, cifras, dither, outline, panel, rect } from './draw.js';
 import { pintaAmbiente } from './ambiente.js';
-import { S, barajar, elegirFinal, finalesVistos, reiniciar, borrar, rellenar, terminarNoche } from './state.js';
+import { S, barajar, elegirFinal, finalesVistos, nocheTerminada, reiniciar, borrar, rellenar, terminarNoche } from './state.js';
 import { G } from './game.js';
 import { NightRunner, registrarOps } from './night.js';
 import { drawHud } from './hud.js';
 import { abrirMovil, drawPhoneFrame } from './phone.js';
-import { drawFoto } from './sprites.js';
+import { DIR, drawFoto, drawSprite, preload } from './sprites.js';
 import { Amanecer } from './amanecer.js';
 import { Balance, registrarLogros } from './balance.js';
 import { audio } from './audio.js';
@@ -320,6 +320,8 @@ export class Resultados {
     this.final = final;
     this.tab = 'balance';
     this.balance = new Balance(final, nuevos);
+    this.avisoBuitre = nocheTerminada();   // se avisa al llegar, una vez por noche
+    preload(['buitre']);
     this.vistos = finalesVistos();
     const t = textos().resultados;
     this.finales = ['cuela', 'nocuela', 'doble'].map((id, i) => {
@@ -340,6 +342,11 @@ export class Resultados {
 
   update(dt) {
     if (this.gracia > 0) { this.gracia -= dt; input.consume(); return; }
+    if (this.avisoBuitre) {
+      if (input.confirm()) { this.avisoBuitre = false; this.gracia = 0.3; audio.opcion(); }
+      input.consume();
+      return;
+    }
     const i = TABS.findIndex((_, n) => input.tapIn(this.rectTab(n)));
     if (i >= 0) { this.cambiar(TABS[i]); return; }
     if (input.tapIn(OTRA)) { this.otraNoche(); return; }
@@ -378,6 +385,19 @@ export class Resultados {
     if (this.tab === 'balance') this.balance.draw(ctx);
     else this.pintaFinales(ctx);
     button(ctx, OTRA, t.otra, { edge: C.rosa_neon });
+    if (this.avisoBuitre) this.pintaAvisoBuitre(ctx, t);
+  }
+
+  pintaAvisoBuitre(ctx, t) {
+    const lineas = wrap(t.buitre_texto, 'dialog', W - 56);
+    const h = 76 + lineas.length * lineHeight('dialog');
+    const y = (H - h) >> 1;
+    dither(ctx, 0, 0, W, H, C.carbon, 3);
+    panel(ctx, 14, y, W - 28, h, { edge: C.rosa_neon });
+    drawSprite(ctx, '0630', 'Idle', DIR.abajo, G.time * 60, W >> 1, y + 40, { escala: 1 });
+    wrap(t.buitre_titulo, 'bold', W - 44).forEach((l, i) => text(ctx, l, W >> 1, y + 42 + i * lineHeight('bold'), { font: 'bold', color: C.rosa_claro, align: 'center' }));
+    lineas.forEach((l, i) => text(ctx, l, W >> 1, y + 58 + i * lineHeight('dialog'), { color: C.marfil, align: 'center' }));
+    if (Math.floor(G.time * 2) % 2) text(ctx, t.buitre_seguir, W >> 1, y + h - 12, { font: 'label', color: C.gris, align: 'center' });
   }
 
   pintaFinales(ctx) {

@@ -286,7 +286,7 @@
         {
           "t": "di",
           "who": "juanjo",
-          "txt": "Está bien, está bien. Jugando.",
+          "txt": "Está dormida, está dormida.",
           "mood": "Normal"
         }
       ]
@@ -5101,10 +5101,13 @@
       "trago-3",
       "trago-4"
     ],
-    "pista": "DESLIZA PARA SUBIR. TOCA LA LITRONA.",
+    "pista": "SUBE EL VOLUMEN A TOPE PARA BEBER",
+    "pista_beber": "¡A TOPE! TOCA LA LITRONA",
+    "pista_otra": "BAJA Y SUBE OTRA VEZ PARA BEBER",
     "pista_audio": "AUDIO DEL PRIMO: TOCA EL MÓVIL",
     "boton_trago": "TRAGO",
     "boton_vacia": "VACÍA",
+    "boton_espera": "A TOPE",
     "vacia": "Queda espuma. Juanjo la mira con respeto.",
     "pista_vuelta": "DESLIZA PARA SUBIR"
   },
@@ -5608,6 +5611,9 @@
     }
   ],
   "resultados": {
+    "buitre_titulo": "MODO BUITRE DESBLOQUEADO",
+    "buitre_texto": "Mientras tú ibas con Juanjo, el Buitre hacía lo suyo. Búscalo en la pantalla de inicio.",
+    "buitre_seguir": "TOCA PARA VER TU NOCHE",
     "tabs": {
       "noche": "NOCHE",
       "finales": "FINALES",

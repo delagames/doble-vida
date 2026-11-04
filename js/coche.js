@@ -10,7 +10,7 @@ import { button, cajaVacia, cifras, dither, outline, panel, rect } from './draw.
 import { Aviso, Dialog } from './dialog.js';
 import { traduce } from './night.js';
 import { DIR, drawSprite } from './sprites.js';
-import { S, copa, rellenar } from './state.js';
+import { S, coh, rellenar } from './state.js';
 import { G } from './game.js';
 import { audio } from './audio.js';
 import { ciudadDeDia, pintaAmbiente } from './ambiente.js';
@@ -32,7 +32,9 @@ const SLIDER = { x: 12, y: 448, w: 150, h: 22 };
 const ZONA_SLIDER = { x: 2, y: 436, w: 172, h: 44 };
 const TRAGO = { x: 180, y: 442, w: 80, h: 30 };
 const VOL_MAX = 11, VOL_MANOLO = 3, VOL_MOLESTA = 6;
-const TRAGOS_LITRONA = 6;
+const TRAGOS_LITRONA = 3;       // cada tramo trae litrona nueva: acabársela es llegar
+const COSTE_TRAGO = 2;
+const PRORROGA = 8;             // segundos de más si ya se ha empezado a beber
 
 // Asientos -------------------------------------------------------------------
 
@@ -189,7 +191,7 @@ export class Coche {
     drawAsientos(ctx, S.coche, { t: this.t, bote: this.vol >= VOL_MOLESTA });
     this.pintaRadio(ctx);
     if (this.movil) this.pintaAvisoMovil(ctx);
-    if (S.tragos) this.pintaLitrona(ctx);
+    if (this.tragada) this.pintaLitrona(ctx);
     for (const w of this.wubs) text(ctx, 'WUB', w.x, w.y, { font: 'label', color: C.rosa_neon, shadow: C.carbon, align: 'center' });
     if (this.mano > 0) this.pintaBrazo(ctx);
   }
@@ -222,7 +224,7 @@ export class Coche {
     for (let i = 0; i < TRAGOS_LITRONA; i++) {
       const y = 372 - i * 5;
       rect(ctx, 236, y, 5, 4, C.carbon);
-      rect(ctx, 237, y + 1, 3, 2, i < TRAGOS_LITRONA - S.tragos ? C.naranja_farola : C.noche_clara);
+      rect(ctx, 237, y + 1, 3, 2, i < TRAGOS_LITRONA - this.tragada ? C.naranja_farola : C.noche_clara);
     }
   }
 
@@ -308,7 +310,9 @@ export class Conducir {
     this.aviso = null;
     this.drag = false;
     this.litrona = s.litrona !== false;   // a la vuelta ya no hay litrona ni botón
-    this.mira = 1.4;                // lo que tarda Manolo en reaccionar
+    coche.tragada = 0;              // en cada tramo, litrona llena
+    this.sed = true;                // un trago por cada subida del volumen a tope
+    this.mira = 2;                // lo que tarda Manolo en reaccionar
     this.txt = G.data.night.coche;
     if (this.audio) coche.movil = 1;
   }
@@ -331,13 +335,22 @@ export class Conducir {
     if (this.aviso?.done) this.aviso = null;
     this.controles();
     this.volumen(dt);
-    if (!this.oido && (this.t >= this.seg || input.tapIn(TOQUE_MOVIL))) {
+    if (!this.oido && (this.fin || input.tapIn(TOQUE_MOVIL))) {
       this.c.movil = 0;
       this.sub = new AudioNota(this.audio);
       return;
     }
-    if (this.t >= this.seg && this.oido && !this.aviso && this.c.mano <= 0) this.done = true;
+    if (this.fin && this.oido && !this.aviso && this.c.mano <= 0) this.done = true;
   }
+
+  get vacia() { return this.c.tragada >= TRAGOS_LITRONA; }
+
+  /** Se llega al acabarse la litrona, o al pasar el tiempo; si ya se ha empezado a beber, da para acabarla. */
+  get fin() { return this.vacia || this.t >= this.seg + (this.c.tragada ? PRORROGA : 0); }
+
+  get aTope() { return this.c.vol >= VOL_MAX; }
+
+  get puedeBeber() { return this.litrona && !this.vacia && this.aTope && this.sed; }
 
   controles() {
     const p = input.p();
@@ -349,11 +362,12 @@ export class Conducir {
     }
     if (input.hit('ArrowRight', 'ArrowUp')) this.c.vol = Math.min(VOL_MAX, this.c.vol + 1);
     if (input.hit('ArrowLeft', 'ArrowDown')) this.c.vol = Math.max(0, this.c.vol - 1);
-    if (this.litrona && (input.tapIn(TOQUE_LITRONA) || input.tapIn(TRAGO) || input.hit('KeyT'))) this.trago();
+    if (!this.aTope) this.sed = true;
+    if (this.puedeBeber && (input.tapIn(TOQUE_LITRONA) || input.tapIn(TRAGO) || input.hit('KeyT'))) this.trago();
   }
 
   volumen(dt) {
-    if (!this.manolo || this.c.vol < VOL_MOLESTA) { this.mira = 1.1 + Math.random() * 0.8; return; }
+    if (!this.manolo || this.c.vol < VOL_MOLESTA) { this.mira = 1.7 + Math.random() * 0.8; return; }
     this.mira -= dt;
     if (this.mira > 0) return;
     // Manolo baja el volumen. Siempre. No sirve de nada. Se cuenta igual.
@@ -366,14 +380,15 @@ export class Conducir {
   }
 
   trago() {
-    if (S.tragos >= TRAGOS_LITRONA) {
-      this.aviso = new Aviso({ texto: this.txt.vacia }, W - 18);
-      return;
-    }
-    copa(1, 'trago');
+    this.sed = false;
+    this.c.tragada++;
     S.tragos++;
+    coh(-COSTE_TRAGO);
     shake(0.15);
-    if (this.manolo) this.decir(this.txt.tragos, S.tragos - 1);
+    if (this.vacia) {
+      S.copas++;                    // la litrona entera cuenta como una cerveza
+      this.aviso = new Aviso({ texto: this.txt.vacia }, W - 18);
+    } else if (this.manolo) this.decir(this.txt.tragos, S.tragos - 1);
   }
 
   draw(ctx) {
@@ -381,13 +396,14 @@ export class Conducir {
     panel(ctx, 2, UI_Y, W - 4, H - UI_Y - 2);
     if (this.aviso) this.aviso.draw(ctx, 8, UI_Y + 6);
     else {
-      const pista = this.audio && !this.oido ? this.txt.pista_audio : this.litrona ? this.txt.pista : this.txt.pista_vuelta;
+      const beber = this.puedeBeber ? this.txt.pista_beber : this.aTope ? this.txt.pista_otra : this.txt.pista;
+      const pista = this.audio && !this.oido ? this.txt.pista_audio : this.litrona ? beber : this.txt.pista_vuelta;
       text(ctx, pista, W >> 1, UI_Y + 18, { font: 'label', color: C.gris, align: 'center' });
     }
     this.pintaSlider(ctx);
     if (!this.litrona) return;
-    const vacia = S.tragos >= TRAGOS_LITRONA;
-    button(ctx, TRAGO, vacia ? this.txt.boton_vacia : this.txt.boton_trago, { color: vacia ? C.gris : C.naranja_farola });
+    const etiqueta = this.vacia ? this.txt.boton_vacia : this.puedeBeber ? this.txt.boton_trago : this.txt.boton_espera;
+    button(ctx, TRAGO, etiqueta, { color: this.puedeBeber ? C.naranja_farola : C.gris, active: this.puedeBeber });
   }
 
   pintaSlider(ctx) {
