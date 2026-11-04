@@ -19,6 +19,7 @@ import { drawHud } from './hud.js';
 import { abrirMovil, drawPhoneFrame } from './phone.js';
 import { drawFoto } from './sprites.js';
 import { Amanecer } from './amanecer.js';
+import { Balance, registrarLogros } from './balance.js';
 import { audio } from './audio.js';
 
 const textos = () => G.data.night;
@@ -310,34 +311,31 @@ class Creditos {
 
 // Resultados ------------------------------------------------------------------
 
-const TABS = ['noche', 'finales', 'hilo', 'tejos'];
+const TABS = ['balance', 'finales', 'hilo', 'tejos'];
 const TAB = { y: 6, h: 30 };
 const OTRA = { x: 30, y: H - 50, w: 210, h: 42 };
-const FILA = 21;
-const FINAL_Y = 46;
 
 export class Resultados {
-  constructor(final) {
-    G.sober = true;
-    G.inclina = null;
+  constructor(final, nuevos = []) {
     this.final = final;
-    this.tab = 'noche';
-    this.gracia = 0.4;
+    this.tab = 'balance';
+    this.balance = new Balance(final, nuevos);
     this.vistos = finalesVistos();
     const t = textos().resultados;
-    this.filas = [
-      [t.sms, S.smsEnviados], [t.tejos, S.tejos], [t.copas, S.copas],
-      [t.bajadas, S.bajadas], [t.tragos, S.tragos],
-    ];
-    if (S.flags.escribio0430) this.filas.push([t.de_mas, S.smsDeMas]);
-    this.buitre = rellenar(t.buitre);
-    this.logro = wrap(t.logro_txt, 'dialog', W - 44);
     this.finales = ['cuela', 'nocuela', 'doble'].map((id, i) => {
       const f = textos().finales[id];
       const visto = this.vistos.includes(id);
       const lineas = wrap(visto ? f.resumen : f.pista, 'dialog', W - 40);
       return { id, visto, lineas, titulo: visto ? f.titulo : t.oculto, r: { x: 6, y: 50 + i * 104, w: W - 12, h: 98 } };
     });
+    this.volver();
+  }
+
+  /** Al llegar y al volver de repetir un final: la misma pantalla, con la misma noche. */
+  volver() {
+    G.sober = true;
+    G.inclina = null;
+    this.gracia = 0.4;
   }
 
   update(dt) {
@@ -347,8 +345,9 @@ export class Resultados {
     if (input.tapIn(OTRA)) { this.otraNoche(); return; }
     if (this.tab === 'finales') {
       const f = this.finales.find((q) => q.visto && input.tapIn(q.r));
-      if (f) G.setScene(new RepiteFinal(f.id, this.final));
+      if (f) G.setScene(new RepiteFinal(f.id, this));
     }
+    if (this.tab === 'balance') this.balance.update(dt);
   }
 
   cambiar(id) {
@@ -374,37 +373,11 @@ export class Resultados {
     rect(ctx, 0, 0, W, H, C.noche);
     dither(ctx, 0, 0, W, H, C.noche_clara, 1);
     TABS.forEach((id, i) => {
-      button(ctx, this.rectTab(i), t.tabs[id], { active: id === this.tab, font: 'label' });
+      button(ctx, this.rectTab(i), t.tabs[id] ?? G.data.final.tab, { active: id === this.tab, font: 'label' });
     });
-    if (this.tab === 'noche') this.pintaNoche(ctx);
+    if (this.tab === 'balance') this.balance.draw(ctx);
     else this.pintaFinales(ctx);
     button(ctx, OTRA, t.otra, { edge: C.rosa_neon });
-  }
-
-  pintaNoche(ctx) {
-    const t = textos().resultados;
-    const titulo = textos().finales[this.final]?.titulo ?? '';
-    panel(ctx, 6, FINAL_Y - 4, W - 12, 54, { edge: C.rosa_neon });
-    text(ctx, t.final, W >> 1, FINAL_Y, { font: 'label', color: C.gris, align: 'center' });
-    text(ctx, titulo, W >> 1, FINAL_Y + 11, { font: 'huge', color: C.rosa_neon, align: 'center' });
-    const y0 = FINAL_Y + 56;
-    const alto = this.filas.length * FILA + 8;
-    panel(ctx, 6, y0, W - 12, alto);
-    this.filas.forEach(([k, v], i) => {
-      const y = y0 + 6 + i * FILA;
-      text(ctx, k, 16, y + 4, { font: 'label', color: C.gris });
-      cifras(ctx, v, W - 16, y, { escala: 3, color: C.marfil, align: 'right' });
-    });
-    const y1 = y0 + alto + 4;
-    panel(ctx, 6, y1, W - 12, 26);
-    text(ctx, this.buitre, W >> 1, y1 + 6, { color: C.marfil, align: 'center' });
-    const y2 = y1 + 30;
-    const lh = lineHeight('dialog');
-    const hLogro = 40 + this.logro.length * lh;
-    panel(ctx, 6, y2, W - 12, hLogro, { edge: C.amarillo_mural });
-    text(ctx, t.logro, W >> 1, y2 + 6, { font: 'label', color: C.amarillo_mural, align: 'center' });
-    text(ctx, t.logro_nombre, W >> 1, y2 + 17, { font: 'bold', color: C.marfil, align: 'center' });
-    this.logro.forEach((l, i) => text(ctx, l, W >> 1, y2 + 34 + i * lh, { color: C.gris, align: 'center' }));
   }
 
   pintaFinales(ctx) {
@@ -421,10 +394,10 @@ export class Resultados {
 
 /** Volver a ver un final desde resultados. No guarda nada: la partida ya está borrada. */
 class RepiteFinal extends NightRunner {
-  constructor(id, final) {
+  constructor(id, resultados) {
     super(-1, { pasos: textos().finales[id].pasos });
     audio.musica(null);
-    this.repeticion = () => { G.setScene(new Resultados(final)); };
+    this.repeticion = () => { resultados.volver(); G.setScene(resultados); };
   }
 }
 
@@ -449,6 +422,7 @@ registrarOps({
     terminarNoche(final);
     r.finished = true;
     G.sober = true;
-    G.setScene(new Creditos(final, () => G.setScene(new Resultados(final))));
+    const nuevos = registrarLogros(final);
+    G.setScene(new Creditos(final, () => G.setScene(new Resultados(final, nuevos))));
   },
 });

@@ -107,6 +107,7 @@ export function drawGrifo(ctx, r, id, { activo = false } = {}) {
     lineas.forEach((l, i) => text(ctx, l, cx, r.y + r.h - 5 - (lineas.length - i) * lineHeight('label'), { font: 'label', color: C.marfil, align: 'center' }));
     return;
   }
-  drawBebida(ctx, id, r.x + 4, r.y + ((r.h - 18) >> 1));
-  lineas.forEach((l, i) => text(ctx, l, r.x + 20, r.y + ((r.h - lineas.length * 9) >> 1) + i * 9, { font: 'label', color: C.marfil }));
+  drawBebida(ctx, id, r.x + 4, r.y + ((r.h - 36) >> 1), { escala: 2 });      // el mismo icono del bocadillo
+  const lados = wrap(beb.nombre, 'label', r.w - 38);
+  lados.forEach((l, i) => text(ctx, l, r.x + 34, r.y + ((r.h - lados.length * 9) >> 1) + i * 9, { font: 'label', color: C.marfil }));
 }

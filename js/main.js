@@ -15,7 +15,8 @@ import * as movil from './phone.js';
 import * as medidores from './medidores.js';
 import './escena.js';
 import './amanecer.js';
-import './final.js';
+import { Resultados } from './final.js';
+import { registrarLogros } from './balance.js';
 import { Minijuego, Banco } from './minigame.js';
 import { audio, initAudio } from './audio.js';
 
@@ -32,12 +33,12 @@ async function boot() {
   initPWA();
   await loadCore();
   await cargarGlifos();
-  const [night, translations, sms, cast, audios, mapa, sprites] = await Promise.all(
-    ['night', 'translations', 'sms', 'cast', 'audios', 'mapa', 'sprites'].map((n) => loadJSON(`data/${n}.json`)),
+  const [night, translations, sms, cast, audios, mapa, sprites, final] = await Promise.all(
+    ['night', 'translations', 'sms', 'cast', 'audios', 'mapa', 'sprites', 'final'].map((n) => loadJSON(`data/${n}.json`)),
   );
   // Sin la tabla de ¡PIDE! el juego arranca igual: el minijuego se cierra solo y la noche sigue.
   const pedidos = await loadJSON('data/pedidos.json').catch(() => null);
-  G.data = { night, translations, sms, cast, audios, mapa, pedidos };
+  G.data = { night, translations, sms, cast, audios, mapa, pedidos, final };
   setManifest(sprites);
   await loadPortraits('juanjo', JUANJO_MOODS);
   G.setScene(new Title());
@@ -56,6 +57,8 @@ async function boot() {
         G.sober = false;
         G.setScene(new Banco(id, params));
       },
+      // DV.resultados('cuela'): la pantalla de resultados con el estado de ahora.
+      resultados: (f) => { G.setScene(new Resultados(f, registrarLogros(f))); },
       // DV.resultado('win'|'lose'): acaba el minijuego en curso con ese resultado.
       resultado: (res) => Minijuego.activo?.forzar(res),
       get activo() { return Minijuego.activo; },

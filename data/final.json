@@ -1,0 +1,154 @@
+{
+  "tab": "BALANCE",
+  "desliza": "ARRASTRA: HAY LOGROS Y MÁS",
+  "final": "FINAL",
+  "cervezas": {
+    "label": "CERVEZAS, SEGÚN JUANJO",
+    "tragos": "DE ELLAS, TRAGOS DE LITRONA",
+    "tramos": [
+      { "de": 0, "a": 0, "txt": "Cero. Es la única verdad de la noche y nadie va a creérsela." },
+      { "de": 1, "a": 5, "txt": "Según Juanjo, esto es hidratarse con criterio." },
+      { "de": 6, "a": 11, "txt": "«Solo unas cañitas», declara Juanjo ante nadie." },
+      { "de": 12, "a": 17, "txt": "Al límite de lo que un humano puede con cerveza." },
+      { "de": 18, "a": 999, "txt": "Para él, Jäger es cerveza. El chino le manda flores." }
+    ]
+  },
+  "cordura": {
+    "label": "NIVEL DE CORDURA",
+    "tramos": [
+      { "de": 95, "a": 100, "txt": "Intacta. Sospechoso: no se ha enterado de nada." },
+      { "de": 70, "a": 94, "txt": "Aún distingue un tejo de un saludo. Casi siempre." },
+      { "de": 50, "a": 69, "txt": "Ve la pantalla torcida. Dice que es la pantalla." },
+      { "de": 30, "a": 49, "txt": "Ha pedido gank en la Malagueta. Nadie sabe a quién." },
+      { "de": 10, "a": 29, "txt": "Cree que sabe bailar. Esto ya no se arregla con agua." },
+      { "de": 0, "a": 9, "txt": "Nadie al teclado. Juanjo, AFK desde Mitjana." }
+    ]
+  },
+  "tejos": {
+    "label": "NIVEL DE TEJOS",
+    "tramos": [
+      { "de": 0, "a": 1, "txt": "Uno, para la estadística. Juanjo apunta uno siempre." },
+      { "de": 2, "a": 3, "txt": "Poco botín. Juanjo lo llama jugar seguro." },
+      { "de": 4, "a": 6, "txt": "Ya camina como si Málaga le debiera dinero." },
+      { "de": 7, "a": 9, "txt": "Peligro: ya se cree sus propios pies de foto." },
+      { "de": 10, "a": 10, "txt": "Diez, con hora y con foto. Ninguna con permiso." },
+      { "de": 11, "a": 999, "txt": "Todos. Nadie le ha tirado los tejos, pero los tiene todos." }
+    ]
+  },
+  "laura": {
+    "label": "LAURA, CONVENCIDA AL",
+    "juanjo": "JUANJO, CONVENCIDO AL",
+    "cuela": [
+      { "de": 0, "a": 69, "txt": "Lo deja pasar. Por hoy. Lo ha apuntado, eso sí." },
+      { "de": 70, "a": 84, "txt": "Se lo ha creído. Mañana él no se acordará. Ella sí." },
+      { "de": 85, "a": 100, "txt": "Convencida. El {laura_resto} % duerme con un ojo abierto." }
+    ],
+    "nocuela": [
+      { "de": 0, "a": 14, "txt": "Ni se cree que seas Juanjo. Y no va muy errada." },
+      { "de": 15, "a": 29, "txt": "Solo se cree la hora de llegada. Porque la ha visto." },
+      { "de": 30, "a": 100, "txt": "Casi. Le ha sobrado una mentira, o Manolo." }
+    ],
+    "doble": [
+      { "de": 0, "a": 100, "txt": "Se cree lo de los tejos lo mismo que lo de los videojuegos." }
+    ]
+  },
+  "logros": { "label": "LOGROS", "nuevo": "NUEVO", "nuevos": "NUEVOS ESTA NOCHE", "oculto": "???" },
+  "datos": "LO DEMÁS DE LA NOCHE",
+  "lista": [
+    { "id": "centro", "metal": "oro", "nombre": "Se queda en el centro", "txt": "Lo desbloquea todas las noches.", "pista": "" },
+    { "id": "cuela", "metal": "oro", "oculto": true, "nombre": "Controlado", "txt": "Final Cuela. Juanjo se cree un genio.", "pista": "Bebe poco y contesta lo justo." },
+    { "id": "nocuela", "metal": "bronce", "oculto": true, "nombre": "El sofá está hecho", "txt": "Final No cuela. En tu lado duerme otro.", "pista": "Este no hay que buscarlo. Te encuentra él." },
+    { "id": "doble", "metal": "oro", "oculto": true, "nombre": "Digo tres por no presumir", "txt": "Final Doble vida. Con foto y con hora.", "pista": "Que no se te escape ni un tejo." },
+    { "id": "litrona", "metal": "plata", "nombre": "Litrona de adorno", "txt": "Ni un trago en el coche. Milagro.", "pista": "Deja la litrona en paz. Entera." },
+    { "id": "camarera", "metal": "plata", "nombre": "Ella trabajaba, él apuntaba", "txt": "Las copas de la camarera, todas. Tejo por copa.", "pista": "Que no te deje ninguna en la barra." },
+    { "id": "sms", "metal": "plata", "nombre": "Novio del año", "txt": "Ni uno sin responder. Otra cosa es lo respondido.", "pista": "Contesta a todos los SMS de Laura." },
+    { "id": "s0430", "metal": "bronce", "oculto": true, "nombre": "SMS que no debiste mandar", "txt": "A las 04:30, desde la playa. Laura no contesta.", "pista": "En la playa, a cierta hora, el móvil pesa." },
+    { "id": "mitjana", "metal": "bronce", "nombre": "Regresa a mí", "txt": "Has gritado en Mitjana. Te ha oído medio Mitjana.", "pista": "En Mitjana se puede gritar." },
+    { "id": "lacara", "metal": "plata", "nombre": "Cara de oposición", "txt": "¡LA CARA! ganada. El Growlithe ha dudado.", "pista": "Gana ¡LA CARA! en Mitjana." },
+    { "id": "after", "metal": "bronce", "oculto": true, "nombre": "Retirada estratégica", "txt": "Has huido del after. No te seguía nadie.", "pista": "Hay afters que se ganan corriendo." },
+    { "id": "bajadas", "metal": "plata", "nombre": "Manolo baja, Juanjo sube", "txt": "Cinco bajadas o más. El dubstep no se rinde.", "pista": "Que Manolo baje el volumen cinco veces." },
+    { "id": "blanca", "metal": "bronce", "nombre": "Treinta euros de doble vida", "txt": "Sin un euro. La doble vida sale cara.", "pista": "Acaba la noche sin un euro." },
+    { "id": "imposible", "metal": "oro", "nombre": "Sin un solo tejo", "txt": "", "pista": "Imposible. Juanjo apunta uno siempre." }
+  ],
+  "titulares": [
+    { "si": { "final": "cuela", "cor": [90, 100], "cop": [0, 2] }, "v": [
+      { "t": "ESTO NO ES JUANJO", "s": "Cordura {cordura} y {copas_txt}. Tú deberías preocuparte." },
+      { "t": "NOCHE DE MONJE", "s": "{copas_txt} en toda la noche. El Buitre ha pedido que te analicen." }
+    ] },
+    { "si": { "final": "cuela", "cor": [60, 100], "tej": [0, 3], "cop": [0, 9] }, "v": [
+      { "t": "COARTADA DE DIAMANTE", "s": "Laura se da la vuelta. Es el mejor elo que has tocado en tu vida." },
+      { "t": "MVP DEL PASILLO", "s": "{tejos_txt}, {copas_txt} y la puerta sin abrirse. Ni en promos jugaste así." }
+    ] },
+    { "si": { "final": "cuela", "cor": [60, 100], "tej": [0, 3] }, "v": [
+      { "t": "TEMPLO CON GOTERAS", "s": "{copas_txt} y Laura sigue durmiendo. Nadie sabe dónde las ha metido." }
+    ] },
+    { "si": { "final": "cuela", "cor": [60, 100] }, "v": [
+      { "t": "LIGÓN EN LA SOMBRA", "s": "{tejos_txt} en el álbum y Laura dormida. Juanjo lo cuenta como victoria en solitario." },
+      { "t": "EL ÁLBUM NO HABLA", "s": "{tejos_txt} con foto y hora en el bolsillo. Y coló. Esconde ese móvil." }
+    ] },
+    { "si": { "final": "cuela", "tej": [0, 3] }, "v": [
+      { "t": "CUELA DE CARAMBOLA", "s": "Con la cabeza a {cordura} sobre 100, miente mejor que sereno." },
+      { "t": "BORRACHO CON TÁCTICA", "s": "Cordura {cordura}. No sabía ni lo que decía, y eso le ha salvado." }
+    ] },
+    { "si": { "final": "cuela" }, "v": [
+      { "t": "EMPAREJADOR ROTO", "s": "Cordura {cordura}, {tejos_txt} y Laura se lo traga. Esto hay que reportarlo." },
+      { "t": "NI ÉL SABE CÓMO", "s": "Ha colado con {tejos_txt} encima. Mañana pedirá que se lo expliquen." }
+    ] },
+
+    { "si": { "final": "nocuela", "cor": [0, 5] }, "v": [
+      { "t": "JUANJO NO RESPONDE", "s": "Cordura {cordura}. Ha intentado explicarse y le ha salido un resumen de partida." },
+      { "t": "SERVIDOR CAÍDO", "s": "Cordura {cordura}. Vuelve a intentarlo cuando se le pase, hacia el jueves." }
+    ] },
+    { "si": { "final": "nocuela", "cor": [85, 100], "cop": [0, 4] }, "v": [
+      { "t": "SERENO Y AL SOFÁ", "s": "{copas_txt}, cordura {cordura}. Ni siquiera puedes echarle la culpa a la cerveza." },
+      { "t": "SIN EXCUSA NI ALCOHOL", "s": "Lo has hecho todo mal estando perfectamente. Eso es talento." }
+    ] },
+    { "si": { "final": "nocuela", "cor": [60, 100], "tej": [4, 9] }, "v": [
+      { "t": "MENTIROSO LÚCIDO", "s": "Cordura {cordura} y {tejos_txt}. Sabías lo que hacías, y por eso hueles a manta." },
+      { "t": "AL SOFÁ POR CHULO", "s": "{tejos_txt} y una coletilla en cada SMS. Laura ha leído la partida entera." }
+    ] },
+    { "si": { "final": "nocuela", "cor": [60, 100] }, "v": [
+      { "t": "TE HA VENDIDO MANOLO", "s": "Tú ibas bien. Un SMS a las 04:12 y a dormir con la manta que pica." },
+      { "t": "BUENA PARTIDA, MAL EQUIPO", "s": "Cordura {cordura}, {tejos_txt}. Hemos perdido por el jungla, y el jungla es Manolo." }
+    ] },
+    { "si": { "final": "nocuela", "cor": [30, 59], "tej": [4, 9] }, "v": [
+      { "t": "DOBLE VIDA A MEDIAS", "s": "{tejos_txt}: ni pocos para ocultarlos ni bastantes para contarlos. Al sofá." },
+      { "t": "NI CHICHA NI LIMONÁ", "s": "Ni tan borracho ni tan ligón. Y creíble, nada." }
+    ] },
+    { "si": { "final": "nocuela", "cor": [30, 59] }, "v": [
+      { "t": "FEEDEO CONTROLADO", "s": "{copas_txt}, cordura {cordura}. Ha perdido con método. La manta lo espera." },
+      { "t": "SURRENDER AL VEINTE", "s": "Antes de llegar a casa ya se sabía. Solo te ha faltado pulsar el botón." }
+    ] },
+    { "si": { "final": "nocuela", "cop": [0, 8] }, "v": [
+      { "t": "BORRACHO DE FÁBRICA", "s": "Solo {copas_txt} y cordura {cordura}. Lo tuyo no es la cerveza: viene de serie." }
+    ] },
+    { "si": { "final": "nocuela", "tej": [4, 9] }, "v": [
+      { "t": "EL ZORRO DUERME MEJOR", "s": "En tu lado de la cama. Tú, con {tejos_txt} y una manta que pica." },
+      { "t": "BAJA POR EL JUNGLA", "s": "{copas_txt}, {tejos_txt}, cordura {cordura}. La peor línea de la noche, y es la tuya." }
+    ] },
+    { "si": { "final": "nocuela" }, "v": [
+      { "t": "AFK EN EL SOFÁ", "s": "{copas_txt}, cordura {cordura}. Hemos perdido por el jungla." },
+      { "t": "DERROTA EN TRES LÍNEAS", "s": "Pierdes a Laura, la cama y la cabeza. Con {copas_txt} no se cubre todo." }
+    ] },
+
+    { "si": { "final": "doble", "cor": [60, 100] }, "v": [
+      { "t": "LO HA DICHO SERENO", "s": "Cordura {cordura}. Eso es lo peor. Eso es lo que Laura no va a olvidar." },
+      { "t": "ALEVOSÍA Y ÁLBUM", "s": "{tejos_txt} contados a las nueve, con la cabeza clara y foto de cada uno." }
+    ] },
+    { "si": { "final": "doble", "tej": [11, 999] }, "v": [
+      { "t": "FULL BUILD DE TEJOS", "s": "{tejos} de {max}. Álbum completo. Ni una le ha mirado; él dice que todas." },
+      { "t": "PENTAKILL IMAGINARIO", "s": "{tejos_txt}, todos confirmados por la misma fuente: Juanjo." }
+    ] },
+    { "si": { "final": "doble", "cop": [15, 999] }, "v": [
+      { "t": "REY DE MÁLAGA, ÉL SOLO", "s": "{copas_txt} y {tejos_txt}. Su reinado acaba en la raya de luz de la puerta." },
+      { "t": "SE LO CREE TODO", "s": "A {copas_txt} de distancia, hasta el retrovisor le tiraba los tejos." }
+    ] },
+    { "si": { "final": "doble", "cor": [0, 20] }, "v": [
+      { "t": "SEGURO DE SÍ MISMO", "s": "Cordura {cordura}. No queda nada de Juanjo salvo la confianza." }
+    ] },
+    { "si": { "final": "doble" }, "v": [
+      { "t": "TÍTULO DE TEMPORADA", "s": "{tejos_txt}, y los ha enseñado. Al otro lado de la puerta no se oye ni el teclado." },
+      { "t": "SE LO HA CONTADO", "s": "A Laura. Por su propia voluntad. Con el álbum en la mano." }
+    ] }
+  ]
+}

@@ -33,25 +33,29 @@
           "prompt": "La mentira de esta noche:",
           "opts": [
             {
-              "txt": "Rankeds, que estoy en promos.",
+              "txt": "Voy a jugar unas rankeds.",
               "excusa": {
                 "id": "rankeds",
                 "frase": "las rankeds"
               }
             },
             {
-              "txt": "Clash con los del equipo.",
+              "txt": "Voy a pasarme un juego indie.",
               "excusa": {
-                "id": "clash",
-                "frase": "el Clash"
+                "id": "indie",
+                "frase": "el juego indie"
               }
             },
             {
-              "txt": "Está bajando el parche.",
+              "txt": "Voy a jugar al FIFA.",
               "excusa": {
-                "id": "parche",
-                "frase": "el parche"
-              }
+                "id": "fifa",
+                "frase": "el FIFA"
+              },
+              "run": [
+                { "t": "di", "who": "laura", "txt": "¿Al FIFA? Tú no has jugado al FIFA en tu vida." },
+                { "t": "di", "who": "juanjo", "mood": "Worried", "txt": "Estoy probando cosas." }
+              ]
             },
 {"txt":"Decir la verdad.","run":[{"t":"di","who":null,"txt":"Juanjo abre la boca. No está disponible: requiere haber hecho las paces con la verdad. Nivel mínimo, oro."},{"t":"choice","shuffle":false,"prompt":"Juanjo es plata. La mentira de esta noche:","opts":[{"txt":"Unas rankeds, que estoy en promos.","excusa":{"id":"rankeds","frase":"las rankeds"}},{"txt":"Hay Clash con los del equipo.","excusa":{"id":"clash","frase":"el Clash"}},{"txt":"Está bajando el parche, y tarda.","excusa":{"id":"parche","frase":"el parche"}}]}]}
           ]
@@ -4497,55 +4501,40 @@
           "id": "control-1"
         },
         {
-          "t": "tr",
-          "id": "control-2"
-        },
-        {
-          "t": "di",
-          "who": "juanjo",
-          "txt": "De casa. De una partida. De... casa.",
-          "mood": "Worried"
-        },
-        {
-          "t": "tr",
-          "id": "control-3"
-        },
-        {
-          "t": "di",
-          "who": null,
-          "txt": "Esta vez las dos traducciones dicen lo mismo. Esto lo entiende hasta Juanjo."
-        },
-        {
           "t": "mini",
           "id": "viabuena",
-          "params": {
-            "buena": "La buena. A mi casa.",
-            "malas": [
-              "¿Esto cuenta para el elo?",
-              "Estoy en promos, agente.",
-              "Se equivoca usted.",
-              "¿La mala es top o bot?",
-              "¿Puedo rendirme en el 15?",
-              "Soy plata, pero de manos diamante.",
-              "¿Conoces a mi primo?",
-              "Me quedo en el centro.",
-              "¿La mala va con jungla?",
-              "GG. GG WP.",
-              "¿Tú sabes cuántos tejos llevo?", "Agente, yo solo he feedeado."
-            ],
-            "linea": {
-              "idioma": "¿Arca? Arcanine, ar, ¿canine?",
-              "texto": "¿Prefiere usted la vía buena, que es irse a su casa, o la mala?"
-            },
-            "tarjeta": {
-              "titulo": "LA VÍA BUENA",
-              "lineas": [
-                "Es lo que pasó.",
-                "Sin premio y sin castigo."
-              ]
-            }
-          },
+          "params": {"preguntas": [{"idioma": "Ar. Arcanine, ¿can?", "texto": "Documentación del vehículo y carné, por favor.", "buena": "Aquí tiene, agente.", "malas": ["Le paso mi OP.GG. Ahí sale todo.", "Tengo el carné en promos, agente.", "Soy plata, pero de manos diamante.", "¿Le valen mis tejos? Llevo una colección.", "Se lo enseño si me deja un remake."]}, {"idioma": "Ar, ¿arcanine?", "texto": "¿De dónde viene usted a estas horas?", "buena": "De estar con unos amigos. Ya me iba.", "malas": ["Estaba con {excusa}, agente. Toda la noche.", "De un sitio con mucho wub y poca luz.", "De bot, con el Buitre de support.", "De casa. De una partida. De... casa.", "Eso no se lo digo yo ni a Laura."]}, {"idioma": "¿Arca? Ar, ¿canine, ar?", "texto": "¿Ha bebido usted algo esta noche?", "buena": "Algo he bebido, agente. Voy despacio.", "malas": ["Solo Jäger. Es verde: es verdura.", "Yo no he bebido. Me han bebido a mí.", "Cuatro, y un chupito que fue asistencia.", "Sobrio no, pero en racha.", "Solo dubstep. En vena."], "bien": "Arcanine no apunta nada. Eso es lo peor."}, {"idioma": "Arcanine, ar. ¿Ar?", "texto": "¿Y a dónde va ahora, si se puede saber?", "buena": "A mi casa. Directo y despacio.", "malas": ["A por la revancha. Una y lo dejo.", "A mid, que se ha caído la torre.", "Donde me lleve el bajo, agente.", "Al after. Pero al after sano.", "A pedirle duo a la camarera."]}, {"idioma": "¿Arca? Arcanine, ar, ¿canine?", "texto": "¿Prefiere usted la vía buena, que es irse a su casa, o la mala?", "buena": "La buena. A mi casa.", "malas": ["¿La mala es top o bot?", "¿La mala va con jungla?", "¿Esto cuenta para el elo?", "¿Puedo rendirme en el 15?", "Estoy en promos, agente.", "Agente, yo solo he feedeado.", "¿Tú sabes cuántos tejos llevo?", "GG. GG WP.", "¿Conoces a mi primo?"], "bien": "Esta vez las dos traducciones dicen lo mismo. Esto lo entiende hasta Juanjo."}], "extra": {"idioma": "Ar. Arca. Ar.", "texto": "¿Sabe usted lo que se juega conduciendo así?", "buena": "Sí, agente. Lo siento.", "malas": ["¿Elo?", "Doce puntos, como mucho.", "Más que en promos, no creo.", "Un remake, a lo sumo."], "mal": "Arcanine le mira un buen rato. Esto no era un chiste."}, "bien": ["Arcanine asiente un milímetro.", "Apunta algo corto. Sigue.", "La gorra se mueve. Hacia abajo. Sigue."], "mal": ["Arcanine no contesta. Apunta algo. Tarda.", "«Repita eso.» No lo repita.", "La gorra no se mueve. Tampoco la cola.", "Da un paso atrás y mira la matrícula.", "Le pide que apague el móvil. No estaba encendido."], "tarjeta": {"win": {"titulo": "LA VÍA BUENA", "lineas": ["A su casa, despacio.", "Sin premio. Es lo que hay que hacer."]}, "lose": {"titulo": "LA VÍA LARGA", "lineas": ["Media hora de ventanilla y a casa igual.", "No es un premio. Es suerte."]}}},
           "win": [
+            {
+              "t": "tr",
+              "id": "control-4"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Arcanine se toca la gorra y se aparta. No ha cambiado de cara en ningún momento."
+            },
+            {
+              "t": "retirar",
+              "who": "control"
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Juanjo tarda tres intentos en meter la primera. Le tiemblan las manos. Será el dubstep."
+            },
+            {
+              "t": "di",
+              "who": null,
+              "txt": "El dubstep está a tres."
+            }
+          ],
+          "lose": [
+            {
+              "t": "di",
+              "who": null,
+              "txt": "Media hora después, Arcanine devuelve la documentación. No dice nada. No hace falta."
+            },
             {
               "t": "tr",
               "id": "control-4"
@@ -4671,17 +4660,17 @@
         {
           "t": "di",
           "who": "laura",
-          "txt": "¿Ganasteis el Clash?",
+          "txt": "¿Te lo pasaste, el juego indie ese?",
           "when": {
-            "excusa": "clash"
+            "excusa": "indie"
           }
         },
         {
           "t": "di",
           "who": "laura",
-          "txt": "¿Se bajó ya el parche?",
+          "txt": "¿Qué tal el FIFA, Juanjo? El FIFA.",
           "when": {
-            "excusa": "parche"
+            "excusa": "fifa"
           }
         },
         {
