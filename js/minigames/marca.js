@@ -38,14 +38,14 @@ const FALSOS = ['Soy Laura. La de verdad. Jejejeje.', '¿Me pasas la bola? Firma
 const REVELACION = { x: 70, y: 430, w: 130, h: 42 };
 
 const LOCUTOR_YO = ['¡PRIMERA SANGRE!', '¡DOBLE GOL!', '¡VICTORIA! SEGÚN JUANJO'];
-const LOCUTOR_EL = ['HAS SIDO EJECUTADO', 'GENGAR ESTÁ IMPARABLE', 'DERROTA. CULPA DEL JUNGLA'];
+const LOCUTOR_EL = ['HAS SIDO EJECUTADO', 'SAMUÉ ESTÁ IMPARABLE', 'DERROTA. CULPA DEL JUNGLA'];
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const azar = (a, b) => a + Math.random() * (b - a);
 
 export default class Marca {
   static instruccion = '¡MARCA!';
-  static ayuda = 'Arrastra el dedo a los lados y tu barra lo sigue. Da a la bola con el borde de la barra y sale torcida: así pillas a Gengar. Gana quien marque tres. Si Laura escribe, tocar el aviso y contestar es gol de Gengar.';
+  static ayuda = 'Arrastra el dedo a los lados y tu barra lo sigue. Da a la bola con el borde de la barra y sale torcida: así pillas a Samué. Gana quien marque tres. Si Laura escribe, tocar el aviso y contestar es gol de Samué.';
   static carga = ['gengar', 'juanjo'];
 
   start({ coh, params }) {
@@ -160,7 +160,7 @@ export default class Marca {
     this.smsResuelto = true;
     if (!r.respondido) { this.aviso('SMS SIN RESPONDER. SIGUE EL PARTIDO'); return; }
     this.contesto = true;
-    this.gol('el', 'CONTESTAS A LAURA. GOL DE GENGAR');
+    this.gol('el', 'CONTESTAS A LAURA. GOL DE SAMUÉ');
   }
 
   quizaRevela() {
@@ -213,7 +213,7 @@ export default class Marca {
     this.cruces--;
     this.cruce = { t: 0.8, de: this.el.x, a: viene.x };
     this.el.x = clamp(viene.x, IZQ + (this.elW >> 1), DER - (this.elW >> 1));
-    this.aviso('GENGAR ATRAVIESA LA MESA');
+    this.aviso('SAMUÉ ATRAVIESA LA MESA');
   }
 
   mueve(b, dt) {
@@ -292,9 +292,9 @@ export default class Marca {
       coste: 0,
       lineas: [
         '«21 a 20 clarísimo y sin discusión.»',
-        res === 'win' ? 'Lo dice Gengar. El marcador dice otra cosa. Nadie discute.' : 'Quien pierde se bebe la del otro. Juanjo pide remake.',
+        res === 'win' ? 'Lo dice Samué. El marcador dice otra cosa. Nadie discute.' : 'Quien pierde se bebe la del otro. Juanjo pide remake.',
       ],
-      datos: [['JUANJO', this.yoGoles], ['GENGAR', this.elGoles]],
+      datos: [['JUANJO', this.yoGoles], ['SAMUÉ', this.elGoles]],
     };
   }
 

@@ -40,7 +40,7 @@ const CUADROS_Y = 54, CUADRO = 24;
 
 export default class AlRitmo {
   static instruccion = '¡AL RITMO!';
-  static ayuda = 'Gengar marca cada compás él solo; luego te toca a ti. Toca la pantalla cuando cada golpe llegue a la marca. El chupito fallado va dos veces. El último es de Jäger y va al doble.';
+  static ayuda = 'Samué marca cada compás él solo; luego te toca a ti. Toca la pantalla cuando cada golpe llegue a la marca. El chupito fallado va dos veces. El último es de Jäger y va al doble.';
   static carga = ['gengar'];
   static musica = null;          // aquí la música es la barra: pistaChupitos, golpe a golpe
 
@@ -227,13 +227,13 @@ export default class AlRitmo {
     datos.push(['MEJOR RACHA', this.rachaMax]);
     if (res === 'win') {
       const lineas = this.fallos
-        ? ['Con alguna repetición, como el buen dubstep.', 'Juanjo dice que Gengar sigue su ritmo. Gengar ya no está.']
-        : ['Ni un golpe fuera. Gengar aplaude sin manos.', 'Manolo: «Gengar lleva cinco sin beber nada.» Juanjo: «Dice que voy ganando.»'];
+        ? ['Con alguna repetición, como el buen dubstep.', 'Juanjo dice que Samué sigue su ritmo. Samué ya no está.']
+        : ['Ni un golpe fuera. Samué aplaude sin manos.', 'Manolo: «Samué lleva cinco sin beber nada.» Juanjo: «Dice que voy ganando.»'];
       return { titulo: '¡DROP!', lineas, datos };
     }
     const lineas = this.deGolpe
-      ? ['Gengar se cansa de marcar y le pone el resto de golpe.', 'Juanjo lo llama «ejecución de bajo elo».']
-      : ['Tres fuera de compás. Gengar mira al techo.', 'Juanjo culpa al ping de la barra.'];
+      ? ['Samué se cansa de marcar y le pone el resto de golpe.', 'Juanjo lo llama «ejecución de bajo elo».']
+      : ['Tres fuera de compás. Samué mira al techo.', 'Juanjo culpa al ping de la barra.'];
     if (this.deGolpe) datos.push(['DE GOLPE', this.deGolpe]);
     return { titulo: '¡DESCOMPÁS!', lineas, datos, coste: 0 };   // el fallo ya se paga en chupitos
   }
@@ -347,7 +347,7 @@ export default class AlRitmo {
     if (this.t < m.desde - m.per * 0.5) {
       const s = m.s;
       if (s.repe) return { txt: 'OTRA VEZ: VA DOS VECES', color: C.rojo_extintor };
-      return { txt: s.jager ? 'MIRA: JÄGER AL DOBLE' : `MIRA A GENGAR: DE ${s.n}`, color: C.cian_neon };
+      return { txt: s.jager ? 'MIRA: JÄGER AL DOBLE' : `MIRA A SAMUÉ: DE ${s.n}`, color: C.cian_neon };
     }
     return { txt: m.s.jager ? '¡TE TOCA: JÄGER!' : `¡TE TOCA: DE ${m.s.n}!`, color: C.rosa_neon };
   }

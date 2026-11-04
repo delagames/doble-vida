@@ -123,7 +123,7 @@
       { "t": "BORRACHO DE FÁBRICA", "s": "Solo {copas_txt} y cordura {cordura}. Lo tuyo no es la cerveza: viene de serie." }
     ] },
     { "si": { "final": "nocuela", "tej": [4, 9] }, "v": [
-      { "t": "EL ZORRO DUERME MEJOR", "s": "En tu lado de la cama. Tú, con {tejos_txt} y una manta que pica." },
+      { "t": "JORGE DUERME MEJOR", "s": "En tu lado de la cama. Tú, con {tejos_txt} y una manta que pica." },
       { "t": "BAJA POR EL JUNGLA", "s": "{copas_txt}, {tejos_txt}, cordura {cordura}. La peor línea de la noche, y es la tuya." }
     ] },
     { "si": { "final": "nocuela" }, "v": [

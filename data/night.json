@@ -293,7 +293,7 @@
     },
     {
       "id": "recogida-gengar",
-      "nombre": "Recogida: Gengar",
+      "nombre": "Recogida: Samué",
       "hora": "23:25",
       "bg": "04-portal",
       "carga": [
@@ -307,7 +307,7 @@
           "t": "mapa",
           "de": "manolo",
           "a": "gengar",
-          "rotulo": "A por Gengar"
+          "rotulo": "A por Samué"
         },
         {
           "t": "colocar",
@@ -318,12 +318,12 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Portal de Gengar. Nadie abajo. Juanjo llama al telefonillo."
+          "txt": "Portal de Samué. Nadie abajo. Juanjo llama al telefonillo."
         },
         {
           "t": "di",
           "who": "juanjo",
-          "txt": "Gengar, baja ya.",
+          "txt": "Samué, baja ya.",
           "mood": "Normal"
         },
         {
@@ -361,7 +361,7 @@
     },
     {
       "id": "recogida-zorro",
-      "nombre": "Recogida: el Zorro",
+      "nombre": "Recogida: Jorge",
       "hora": "23:35",
       "bg": "04-portal",
       "carga": [
@@ -376,7 +376,7 @@
           "t": "mapa",
           "de": "gengar",
           "a": "zorro",
-          "rotulo": "A por el Zorro"
+          "rotulo": "A por Jorge"
         },
         {
           "t": "colocar",
@@ -391,7 +391,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Portal del Zorro. Se abre la puerta y sale... Manolo."
+          "txt": "Portal de Jorge. Se abre la puerta y sale... Manolo."
         },
         {
           "t": "colocar",
@@ -556,7 +556,7 @@
 {
           "t": "di",
           "who": null,
-          "txt": "Cinco minutos después. Manolo pita. El Zorro se ha transformado en farola para matar el rato."
+          "txt": "Cinco minutos después. Manolo pita. Jorge se ha transformado en farola para matar el rato."
         },
         {
           "t": "retirar",
@@ -925,7 +925,7 @@
         {
           "t": "choice",
           "shuffle": false,
-          "prompt": "La copa ya está vacía. Gengar deja otra encima de la barra y desaparece.",
+          "prompt": "La copa ya está vacía. Samué deja otra encima de la barra y desaparece.",
           "opts": [
             {
               "txt": "Esa también es mía.",
@@ -1210,7 +1210,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Gengar cruza por delante de Jairo, le saca un chicle del bolsillo y entra. Jairo no pestañea. No le ve. Nunca le ha visto. Le respeta muchísimo."
+          "txt": "Samué cruza por delante de Jairo, le saca un chicle del bolsillo y entra. Jairo no pestañea. No le ve. Nunca le ha visto. Le respeta muchísimo."
         },
         {
           "t": "sacudir",
@@ -1231,7 +1231,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "El Zorro se transforma en Jairo. Jairo se mira de arriba abajo. Se gusta. Se deja pasar a sí mismo."
+          "txt": "Jorge se transforma en Jairo. Jairo se mira de arriba abajo. Se gusta. Se deja pasar a sí mismo."
         },
         {
           "t": "mover",
@@ -1320,7 +1320,7 @@
             {
               "t": "di",
               "who": null,
-              "txt": "Gengar le lleva de la mano por delante de Jairo. Juanjo nota por primera vez lo que es no existir. Le recuerda a sus promos."
+              "txt": "Samué le lleva de la mano por delante de Jairo. Juanjo nota por primera vez lo que es no existir. Le recuerda a sus promos."
             }
           ],
           "error": [
@@ -1361,7 +1361,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "En la barra, seis chupitos en fila. Nadie los ha pedido. Gengar lleva un rato sentado encima y dice que estaban así."
+          "txt": "En la barra, seis chupitos en fila. Nadie los ha pedido. Samué lleva un rato sentado encima y dice que estaban así."
         },
         {
           "t": "tr",
@@ -1513,7 +1513,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Gengar levanta el puño. La barra se prepara. Los vasos también."
+          "txt": "Samué levanta el puño. La barra se prepara. Los vasos también."
         },
         {
           "t": "mini",
@@ -1550,7 +1550,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Gengar mira al techo y silba. Detrás de la barra hay un charco con forma de seis chupitos."
+          "txt": "Samué mira al techo y silba. Detrás de la barra hay un charco con forma de seis chupitos."
         },
         {
           "t": "hora",
@@ -1588,7 +1588,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Jairo les ve salir a todos. Apunta en una libreta que Gengar sigue dentro. Lleva tres años apuntándolo."
+          "txt": "Jairo les ve salir a todos. Apunta en una libreta que Samué sigue dentro. Lleva tres años apuntándolo."
         },
         {
           "t": "calle",
@@ -1704,7 +1704,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Gengar entra por la persiana sin subirla. El Zorro entra por debajo, con estilo. Manolo se agacha como quien paga una hipoteca."
+          "txt": "Samué entra por la persiana sin subirla. Jorge entra por debajo, con estilo. Manolo se agacha como quien paga una hipoteca."
         },
         {
           "t": "retirar",
@@ -1848,7 +1848,7 @@
 {
           "t": "di",
           "who": null,
-          "txt": "Se llena la barra. Manolo pide. El Zorro pide. Y la camarera ya está acercando algo que nadie ha pedido."
+          "txt": "Se llena la barra. Manolo pide. Jorge pide. Y la camarera ya está acercando algo que nadie ha pedido."
         },
         {
           "t": "mini",
@@ -2056,7 +2056,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "El Zorro cierra los ojos y es Edward Norton. Entero. Camisa, corbata y ojeras de no dormir. Gengar se pone al lado, chaqueta roja y un jabón en la mano, y es Brad Pitt con lo que puede."
+          "txt": "Jorge cierra los ojos y es Edward Norton. Entero. Camisa, corbata y ojeras de no dormir. Samué se pone al lado, chaqueta roja y un jabón en la mano, y es Brad Pitt con lo que puede."
         },
         {
           "t": "tr",
@@ -2116,7 +2116,7 @@
             {
               "t": "di",
               "who": null,
-              "txt": "El Zorro y Gengar cruzan dos frases en su idioma. La Froslass se levanta y se va con uno de los dos. Luego nadie recuerda con cuál. Vuelve al rato el que sea."
+              "txt": "Jorge y Samué cruzan dos frases en su idioma. La Froslass se levanta y se va con uno de los dos. Luego nadie recuerda con cuál. Vuelve al rato el que sea."
             },
             {
               "t": "colocar",
@@ -2309,7 +2309,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "El futbolín. Gengar ya está al otro lado. Nadie le ha visto llegar. La bola tampoco."
+          "txt": "El futbolín. Samué ya está al otro lado. Nadie le ha visto llegar. La bola tampoco."
         },
         {
           "t": "tr",
@@ -2352,18 +2352,18 @@
               "id": "gengar-8"
             },
 {"t":"di","who":"El locutor","txt":"Has sido derrotado."},
-{"t":"di","who":"juanjo","txt":"Es un smurf. Eso no es un Gengar de plata.","mood":"Angry"},
+{"t":"di","who":"juanjo","txt":"Es un smurf. Eso no es un Samué de plata.","mood":"Angry"},
             {
               "t": "di",
               "who": null,
-              "txt": "El marcador dice otra cosa. Nadie discute. Los muñequitos de Gengar hacen la ola. Están atornillados, pero la hacen."
+              "txt": "El marcador dice otra cosa. Nadie discute. Los muñequitos de Samué hacen la ola. Están atornillados, pero la hacen."
             }
           ],
           "error": [
             {
               "t": "di",
               "who": null,
-              "txt": "La bola se cuela por un agujero que antes no estaba. Gengar mira al techo y silba."
+              "txt": "La bola se cuela por un agujero que antes no estaba. Samué mira al techo y silba."
             }
           ]
         },
@@ -2384,7 +2384,7 @@
 {"t":"tr","id":"buitre-10"},
 {"t":"choice","shuffle":false,"prompt":"El Buitre deja una cerveza delante de Juanjo. Es una cerveza. Juanjo tiene un precio, y es ese.","opts":[{"txt":"Cantarlo todo."},{"txt":"Cantarlo todo, y lo de Manolo."},{"txt":"¿Puedo no cantar?","run":[{"t":"di","who":"La cerveza","txt":"NO."},{"t":"di","who":"La cerveza","txt":"HAHAHAHAHA."}]}]},
 {"t":"di","who":null,"txt":"Juanjo lo canta todo: quién, cuándo y con quién. Y dos cosas que nadie le había preguntado. El Buitre lo apunta con la lengüilla fuera."},
-{"t":"di","who":null,"txt":"Cuando acaba, la cerveza ya no está. Gengar mira al techo y silba."},
+{"t":"di","who":null,"txt":"Cuando acaba, la cerveza ya no está. Samué mira al techo y silba."},
 {"t":"tr","id":"manolo-24"},
 {"t":"di","who":"juanjo","txt":"Eso no es chivarse. Es visión de mapa.","mood":"Happy"},
 {"t":"retirar","who":"buitre"},
@@ -2484,7 +2484,7 @@
           "dir": "izquierda",
           "escala": 2
         },
-        {"t":"cartel","titulo":"VOTACIÓN PARA RENDIRSE","valor":"1/5","pie":"Manolo: sí. Juanjo: no. Gengar: en la pared. El Buitre: bajo ya. El Zorro tiene una idea."},
+        {"t":"cartel","titulo":"VOTACIÓN PARA RENDIRSE","valor":"1/5","pie":"Manolo: sí. Juanjo: no. Samué: en la pared. El Buitre: bajo ya. Jorge tiene una idea."},
 {
           "t": "tr",
           "id": "zorro-5"
@@ -2624,7 +2624,7 @@
 {"t":"di","who":null,"txt":"En una habitación sin puerta hay una tele enchufada a nada. Se enciende sola."},
 {"t":"di","who":null,"txt":"Sale Juanjo a cámara lenta, con música épica. Juanjo sentado en un bolso. Juanjo dándose con una persiana. Juanjo señalando un minimapa que no existe."},
 {"t":"di","who":"juanjo","txt":"¡GENGAAAAR!","mood":"Angry"},
-{"t":"di","who":null,"txt":"Gengar mira al techo y silba. La tele se apaga. Se oye reír a alguien muy cerca."},
+{"t":"di","who":null,"txt":"Samué mira al techo y silba. La tele se apaga. Se oye reír a alguien muy cerca."},
         {
           "t": "mover",
           "who": "zorro",
@@ -2743,7 +2743,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Fuera. Aire. Van saliendo todos, sacudiéndose. Gengar, ni una mota: el polvo le ha atravesado."
+          "txt": "Fuera. Aire. Van saliendo todos, sacudiéndose. Samué, ni una mota: el polvo le ha atravesado."
         },
         {
           "t": "colocar",
@@ -2970,7 +2970,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Mitjana se calla entera. Se calla hasta el Zorro."
+          "txt": "Mitjana se calla entera. Se calla hasta Jorge."
         },
         {
           "t": "colocar",
@@ -3021,7 +3021,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Nadie respira. Manolo mira al suelo. El Buitre mira a una gorra. Gengar levanta una mano, muy despacio."
+          "txt": "Nadie respira. Manolo mira al suelo. El Buitre mira a una gorra. Samué levanta una mano, muy despacio."
         },
         {
           "t": "tr",
@@ -3394,7 +3394,7 @@
         },
         {
           "t": "choice",
-          "prompt": "Hay una lata en la arena. El Zorro jura que es de ahora. Está fría, que ya es más de lo que se puede decir de la noche.",
+          "prompt": "Hay una lata en la arena. Jorge jura que es de ahora. Está fría, que ya es más de lo que se puede decir de la noche.",
           "opts": [
             {
               "txt": "Bebérsela despacio",
@@ -3635,7 +3635,7 @@
                 "coste": 1,
                 "minutos": 4,
                 "textos": {
-                  "escape": "SEGUIR A GENGAR POR EL ALTAVOZ",
+                  "escape": "SEGUIR A SAMUÉ POR EL ALTAVOZ",
                   "vueltaTitulo": "¡A DAR LA VUELTA!",
                   "vueltas": [
                     "El Growlithe señala el paseo. Juanjo da la vuelta a la palmera. La palmera no le ha preguntado nada, y lo agradece.",
@@ -3653,7 +3653,7 @@
                   "escapado": {
                     "titulo": "POR EL ALTAVOZ",
                     "lineas": [
-                      "Gengar atraviesa la pared y abre una salida de emergencia desde dentro.",
+                      "Samué atraviesa la pared y abre una salida de emergencia desde dentro.",
                       "Los Growlithe se quedan vigilando una puerta que no es."
                     ]
                   },
@@ -3661,7 +3661,7 @@
                     "titulo": "POR EL ALTAVOZ",
                     "lineas": [
                       "Los Growlithe se cansan de Juanjo. Hay que cansar mucho a un Growlithe.",
-                      "Gengar le mete por detrás de un altavoz."
+                      "Samué le mete por detrás de un altavoz."
                     ]
                   }
                 }
@@ -3801,7 +3801,7 @@
             {
               "t": "di",
               "who": null,
-              "txt": "El Zorro baila por dos, transformándose a cada golpe. Gengar baila en tres sitios a la vez. Durante un compás entero, están todos en el mismo compás."
+              "txt": "Jorge baila por dos, transformándose a cada golpe. Samué baila en tres sitios a la vez. Durante un compás entero, están todos en el mismo compás."
             },
             {
               "t": "tr",
@@ -4182,7 +4182,7 @@
             {
               "t": "di",
               "who": null,
-              "txt": "El Zorro y Gengar no dicen nada. En ningún idioma."
+              "txt": "Jorge y Samué no dicen nada. En ningún idioma."
             },
             {
               "t": "esperar",
@@ -4307,7 +4307,7 @@
           "t": "mapa",
           "de": "centro",
           "a": "zorro",
-          "rotulo": "Portal del Zorro"
+          "rotulo": "Portal de Jorge"
         },
         {
           "t": "di",
@@ -4330,7 +4330,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "El Zorro se baja. Antes de cerrar se queda mirando a Juanjo un rato largo, como quien se aprende algo de memoria."
+          "txt": "Jorge se baja. Antes de cerrar se queda mirando a Juanjo un rato largo, como quien se aprende algo de memoria."
         },
         {
           "t": "bajar",
@@ -4351,7 +4351,7 @@
           "t": "mapa",
           "de": "zorro",
           "a": "gengar",
-          "rotulo": "Portal de Gengar"
+          "rotulo": "Portal de Samué"
         },
         {
           "t": "bajar",
@@ -4360,7 +4360,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "Gengar no se baja. Simplemente, ya no está. La puerta sigue cerrada y el cinturón, abrochado."
+          "txt": "Samué no se baja. Simplemente, ya no está. La puerta sigue cerrada y el cinturón, abrochado."
         },
         {
           "t": "conducir",
@@ -4827,115 +4827,115 @@
         "q": "¿Cómo se llama el personaje de Brad Pitt?",
         "ok": "Tyler Durden.",
         "otra": "Aquiles, el de Troya.",
-        "delata": "El Zorro. Digo... eso, el Zorro."
+        "delata": "Jorge. Digo... eso, Jorge."
       },
       {
         "q": "¿Qué vende Tyler Durden?",
         "ok": "Jabón.",
         "otra": "Bombones, de caja en caja, como Forrest Gump.",
-        "delata": "Nada. Eso lo paga Manolo, que viene con el Zorro y Gengar."
+        "delata": "Nada. Eso lo paga Manolo, que viene con Jorge y Samué."
       },
       {
         "q": "¿De qué hace Tyler el jabón?",
         "ok": "De la grasa que tiran las clínicas de liposucción.",
         "otra": "De especia de Arrakis.",
-        "delata": "Eso pregúntaselo a Gengar, que lo tienes al lado."
+        "delata": "Eso pregúntaselo a Samué, que lo tienes al lado."
       },
       {
         "q": "¿En qué trabaja el narrador?",
         "ok": "Calcula si a su empresa le compensa retirar coches.",
         "otra": "Caza replicantes por Los Ángeles.",
-        "delata": "Pregúntale al Zorro. Ese, el del pelo."
+        "delata": "Pregúntale a Jorge. Ese, el del pelo."
       },
       {
         "q": "¿Dónde conoce el narrador a Tyler?",
         "ok": "En un avión, en un viaje de trabajo.",
         "otra": "En la cubierta del Titanic.",
-        "delata": "En un portal, a las once, con el Zorro y Gengar."
+        "delata": "En un portal, a las once, con Jorge y Samué."
       },
       {
         "q": "¿Qué le pasa al piso del narrador?",
         "ok": "Que explota.",
         "otra": "Que se lo lleva un tornado a Oz.",
-        "delata": "Que entraron el Zorro y Gengar."
+        "delata": "Que entraron Jorge y Samué."
       },
       {
         "q": "¿Dónde se pelean los del club al principio?",
         "ok": "En el sótano de un bar.",
         "otra": "En el Coliseo de Roma.",
-        "delata": "En el sótano del Buitre, con el Zorro y Gengar."
+        "delata": "En el sótano del Buitre, con Jorge y Samué."
       },
       {
         "q": "¿Quién es Marla Singer?",
         "ok": "La que se cuela en los grupos de apoyo.",
         "otra": "Bellatrix, la de Harry Potter.",
-        "delata": "Ni idea. Esa llévala tú, Zorro."
+        "delata": "Ni idea. Esa llévala tú, Jorge."
       },
       {
         "q": "¿Qué actriz hace de Marla?",
         "ok": "Helena Bonham Carter.",
         "otra": "Kate Winslet, la del Titanic.",
-        "delata": "Gengar con peluca."
+        "delata": "Samué con peluca."
       },
       {
         "q": "¿Cómo se llama el narrador?",
         "ok": "No se dice en toda la película.",
         "otra": "Neo, el elegido.",
-        "delata": "Gengar. Se llama Gengar. Míralo."
+        "delata": "Samué. Se llama Samué. Míralo."
       },
       {
         "q": "¿Quién dirige la película?",
         "ok": "David Fincher.",
         "otra": "Quentin Tarantino, el de Pulp Fiction.",
-        "delata": "El Zorro, que lo dirige todo desde el móvil."
+        "delata": "Jorge, que lo dirige todo desde el móvil."
       },
       {
         "q": "¿Quién escribió la novela?",
         "ok": "Chuck Palahniuk.",
         "otra": "Tolkien, entre anillo y anillo.",
-        "delata": "Gengar, en un idioma que solo entiende el Zorro."
+        "delata": "Samué, en un idioma que solo entiende Jorge."
       },
       {
         "q": "¿Quién hace de Bob, el grandullón?",
         "ok": "Meat Loaf.",
         "otra": "Russell Crowe, el de Gladiator.",
-        "delata": "Ese es Manolo. Viene con el Zorro y Gengar."
+        "delata": "Ese es Manolo. Viene con Jorge y Samué."
       },
       {
         "q": "¿Cómo se llama el plan de Tyler?",
         "ok": "Proyecto Mayhem.",
         "otra": "La Estrella de la Muerte.",
-        "delata": "Irse al centro con el Zorro y Gengar."
+        "delata": "Irse al centro con Jorge y Samué."
       },
       {
         "q": "¿Qué canción suena al final?",
         "ok": "Where Is My Mind?, de los Pixies.",
         "otra": "My Heart Will Go On, la del Titanic.",
-        "delata": "Dubstep, el del coche, con el Zorro y Gengar detrás."
+        "delata": "Dubstep, el del coche, con Jorge y Samué detrás."
       },
       {
         "q": "¿Qué ven los dos por la ventana al final?",
         "ok": "Edificios viniéndose abajo.",
         "otra": "Un barco hundiéndose.",
-        "delata": "Al Zorro y a Gengar, que han salido a fumar."
+        "delata": "A Jorge y a Samué, que han salido a fumar."
       },
       {
         "q": "¿Cuál es el gran secreto de la película?",
         "ok": "Tyler y el narrador son la misma persona.",
         "otra": "Que Bruce Willis estaba muerto.",
-        "delata": "Que este es el Zorro y ese es Gengar."
+        "delata": "Que este es Jorge y ese es Samué."
       },
       {
         "q": "¿Qué trabajo de noche tiene Tyler?",
         "ok": "Proyeccionista de cine.",
         "otra": "Piloto de cazas, como en Top Gun.",
-        "delata": "Hacer trampas al futbolín, como Gengar."
+        "delata": "Hacer trampas al futbolín, como Samué."
       },
       {
         "q": "Última. ¿Cuál es la primera regla del club?",
         "ok": "No se habla del club de la lucha.",
         "otra": "Yo soy el senado.",
-        "delata": "Que el Zorro y Gengar no pagan.",
+        "delata": "Que Jorge y Samué no pagan.",
         "final": true
       }
     ],
@@ -5524,10 +5524,10 @@
       "txt": "Manolo, Machoke"
     },
     {
-      "txt": "Samuel, Gengar"
+      "txt": "Samuel, Samué"
     },
     {
-      "txt": "Jorge, el Zorro, Zoroark"
+      "txt": "Zorro, zorro, Zoroark"
     },
     {
       "txt": "Ismael, el Buitre, Mandibuzz"

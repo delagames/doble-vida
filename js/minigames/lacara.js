@@ -26,7 +26,7 @@ const DICE = 1.1;          // lo que se queda la cara elegida antes de la tarjet
 
 export default class LaCara {
   static instruccion = '¡LA CARA!';
-  static ayuda = 'Solo una cara de Gengar cuela. Lee lo gris: es lo que dicen de verdad los Growlithe, y te dice cuál. Lo grande es Juanjo, y te lleva a otra. Cuando lo tengas, toca YA y luego toca la cara.';
+  static ayuda = 'Solo una cara de Samué cuela. Lee lo gris: es lo que dicen de verdad los Growlithe, y te dice cuál. Lo grande es Juanjo, y te lleva a otra. Cuando lo tengas, toca YA y luego toca la cara.';
   static carga = ['gengar', 'nacional1', 'nacional2', 'juanjo'];
 
   start() {
@@ -89,10 +89,10 @@ export default class LaCara {
   result() { return this.res; }
 
   tarjeta(res) {
-    if (res === 'win') return { titulo: '¡CUELA!', lineas: ['Gengar pone la cara exacta. El Growlithe duda de sí mismo por primera vez desde la oposición.'] };
+    if (res === 'win') return { titulo: '¡CUELA!', lineas: ['Samué pone la cara exacta. El Growlithe duda de sí mismo por primera vez desde la oposición.'] };
     return {
       titulo: 'NO CUELA',
-      lineas: [this.elegida ? 'Gengar pone esa cara. Los Growlithe se miran. No se ríen.' : 'Gengar se queda sin cara. Los Growlithe esperan. Saben esperar.', 'No dicen nada más. Echan a andar detrás.'],
+      lineas: [this.elegida ? 'Samué pone esa cara. Los Growlithe se miran. No se ríen.' : 'Samué se queda sin cara. Los Growlithe esperan. Saben esperar.', 'No dicen nada más. Echan a andar detrás.'],
       coste: 0,
     };
   }

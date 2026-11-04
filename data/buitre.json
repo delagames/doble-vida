@@ -95,7 +95,7 @@
   { "t": "coins", "v": 7 },
   { "t": "n", "txt": "Pides una Puleva. Mr. Mime pone un vaso invisible. Te lo bebes. Está caducada." },
   { "t": "fama", "v": -6 },
-  { "t": "n", "txt": "A tu espalda el Zorro liga sin abrir la boca. Te baja una barra. No sabes quién ha puesto esa barra ahí." },
+  { "t": "n", "txt": "A tu espalda Jorge liga sin abrir la boca. Te baja una barra. No sabes quién ha puesto esa barra ahí." },
   { "t": "n", "txt": "Nerea busca el bolso y Juanjo lo vive como cine. Tú vigilas a la Pokémon de al lado." },
   { "t": "col", "who": "amiga2", "x": 190, "y": 362, "dir": "izquierda" },
   { "t": "op", "prompt": "Está mirando el móvil. Sin saberlo, te ha elegido.", "opts": [
@@ -117,7 +117,7 @@
     "mal": [{ "t": "n", "txt": "Lo dices con el brazo extendido y sin varita. Jairo te mira el brazo." }] },
    { "txt": "«Se equivoca usted.» (50 %)", "pct": 50,
     "bien": [{ "t": "n", "txt": "Jairo se rasca la oreja. Decides que eso es respeto." }],
-    "mal": [{ "t": "n", "txt": "Te ha salido la cara de pedir perdón. Gengar te atraviesa y entra antes." }] }
+    "mal": [{ "t": "n", "txt": "Te ha salido la cara de pedir perdón. Samué te atraviesa y entra antes." }] }
   ] },
   { "t": "n", "txt": "Entras detrás de Manolo. Nadie sabe si te han dejado pasar o si es que no te han visto." },
   { "t": "bg", "id": "07-alquimia-dentro" },
@@ -125,7 +125,7 @@
   { "t": "col", "who": "amiga1", "x": 206, "y": 366, "dir": "izquierda" },
   { "t": "col", "who": "buitre", "x": 60, "y": 372, "dir": "derecha" },
   { "t": "n", "txt": "Pides un té moruno en un bar de chupitos. Llega un chupito. Te lo bebes mirando al horizonte." },
-  { "t": "n", "txt": "Pillas a Gengar tirando otro por detrás de la barra. Le retiras las chapas. Nadie está jugando a eso. Solo tú." },
+  { "t": "n", "txt": "Pillas a Samué tirando otro por detrás de la barra. Le retiras las chapas. Nadie está jugando a eso. Solo tú." },
   { "t": "n", "txt": "Entonces la ves. Una Roserade, tranquila, sin haberte hecho nada." },
   { "t": "mini", "id": "cerca" },
   { "t": "si", "res": "cerca", "bien": [], "mal": [
@@ -163,7 +163,7 @@
   { "t": "n", "txt": "Manolo liga sin querer. La barra baja otra vez. Empiezas a pensar que esa barra te tiene manía." },
   { "t": "n", "txt": "Vas al Club de la Lucha y propones jugar de verdad. Las amigas preguntan quién eres. Una ya lo sabe, y por eso pregunta." },
   { "t": "n", "txt": "Si esas dos se van, ya sabes por qué fue. Juanjo no lo sabrá nunca." },
-  { "t": "n", "txt": "Retas a Gengar al futbolín. Te deja meter un gol. Uno. Te levantas." },
+  { "t": "n", "txt": "Retas a Samué al futbolín. Te deja meter un gol. Uno. Te levantas." },
   { "t": "di", "who": "buitre", "txt": "¿No os habéis entretenido? ¿No habéis venido a esto?", "mood": "Angry" },
   { "t": "n", "txt": "Eres un emperador ecuánime. No sabías lo que significaba eso hasta antes de ayer, que salió en el Pasapalabra." },
   { "t": "logro", "id": "barra" },
@@ -173,7 +173,7 @@
   { "t": "parada", "nombre": "El hotel", "bg": "10-hotel", "hora": "02:30" },
   { "t": "col", "who": "zorro", "x": 216, "y": 344 },
   { "t": "col", "who": "buitre", "x": 100, "y": 366, "dir": "derecha" },
-  { "t": "n", "txt": "Un hotel en obras. El Zorro ha encontrado un extintor. Lo que sale de ahí es una nube." },
+  { "t": "n", "txt": "Un hotel en obras. Jorge ha encontrado un extintor. Lo que sale de ahí es una nube." },
   { "t": "nube", "on": true },
   { "t": "mov", "who": "buitre", "x": 150, "y": 340, "vel": 120 },
   { "t": "di", "who": "buitre", "txt": "¡Por Frodo!" },

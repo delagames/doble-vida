@@ -1,8 +1,8 @@
 {
   "chino-1": {
     "quien": "meowth",
-    "idioma": "Miau. Miau miau, ¿miau?",
-    "real": "Las once y ya por aquí. ¿Laura lo sabe?",
+    "idioma": "Mao. Mao mao, ¿ma?",
+    "real": "Las once y ya vienes contento. ¿Cuántas llevas?",
     "juanjo": "Dice que tengo pinta de salir mucho.",
     "loca": "Dice que soy el rey de la noche y del barrio.",
     "eco": "pinta de salir mucho"
@@ -10,7 +10,7 @@
   "chino-2": {
     "quien": "meowth",
     "mood": "Sigh",
-    "idioma": "Miau miau miau.",
+    "idioma": "Mao mao mao.",
     "real": "{pagado} euros. Y la casa no invita a nada.",
     "juanjo": "Dice que aquí soy como de la casa.",
     "loca": "Dice que el local está a mi nombre. Desde hoy.",
@@ -19,7 +19,7 @@
   "chino-3": {
     "quien": "meowth",
     "mood": "Worried",
-    "idioma": "Miau... ¿miau?",
+    "idioma": "Mao... ¿ma?",
     "real": "¿Y las llaves esas? ¿Conduces tú con eso?",
     "juanjo": "Dice que le recuerdo a un piloto.",
     "loca": "Dice que me ha visto en la Fórmula 1. Ganando.",
@@ -501,7 +501,7 @@
   "manolo-15": {
     "quien": "manolo",
     "idioma": "Macho. ¿Machoke? Macho.",
-    "real": "Hace cinco chupitos que no bebes nada, Gengar.",
+    "real": "Hace cinco chupitos que no bebes nada, Samué.",
     "juanjo": "Dice que voy ganando.",
     "loca": "Dice que me dan el trofeo cuando sepa andar.",
     "eco": "vas ganando"
@@ -562,7 +562,7 @@
     "quien": "manolo",
     "mood": "Sigh",
     "idioma": "Macho, machoke, macho.",
-    "real": "Se han sentado para hablar con el Zorro. Tú eres el subtítulo.",
+    "real": "Se han sentado para hablar con Jorge. Tú eres el subtítulo.",
     "juanjo": "Dice que sin mí esta mesa no tiene sentido.",
     "loca": "Dice que en la versión original salgo yo.",
     "eco": "sin ti la mesa no tiene sentido"
@@ -779,7 +779,7 @@
     "quien": "manolo",
     "mood": "Worried",
     "idioma": "Ma. Machoke. Ma. Choke.",
-    "real": "Zorro. No. Mírame. Zorro. No.",
+    "real": "Jorge. No. Mírame. Jorge. No.",
     "juanjo": "Dice que sí.",
     "loca": "Dice que sí. Cinco veces. Se lo noto en la calva.",
     "eco": "dice que sí"
@@ -1110,7 +1110,7 @@
   "coche-1": {"quien":"El coche","idioma":"Ping. Ping. Ping. Ping.","real":"(Es el aviso del cinturón.)","juanjo":"Dice que voy a doce de ping. Hoy no hay lag.","loca":"Dice que juego desde Corea. Y eso que estoy en Málaga."},
   "centro-1": {"quien":"manolo","mood":"Sigh","idioma":"¿Macho? Machoke.","real":"Ya estamos en el centro, Juanjo.","juanjo":"Dice que hago bien.","loca":"Dice que el centro era mío antes de que llegara yo."},
   "buitre-9": {"quien":"buitre","mood":"Happy","idioma":"Buzz. Mandi, ¿buzz?","real":"Yo una Puleva. Invitas tú, ¿no?","juanjo":"Dice que invita él.","loca":"Dice que invita él. A mí y a mi descendencia."},
-  "buitre-10": {"quien":"buitre","idioma":"Buzz, buzz. ¿Mandi?","real":"Te invito a una cerveza si me cuentas lo de Gengar.","juanjo":"Dice que soy una fuente de confianza.","loca":"Dice que soy la Wikipedia del centro.","eco":"eres una fuente de confianza"},
+  "buitre-10": {"quien":"buitre","idioma":"Buzz, buzz. ¿Mandi?","real":"Te invito a una cerveza si me cuentas lo de Samué.","juanjo":"Dice que soy una fuente de confianza.","loca":"Dice que soy la Wikipedia del centro.","eco":"eres una fuente de confianza"},
   "manolo-23": {"quien":"manolo","mood":"Sigh","idioma":"Macho. Ma, ¿machoke?","real":"Estás fatal, illo. Se te ve el botellín por la cremallera.","juanjo":"Dice que se me ve sobrado. Que lo disimule.","loca":"Dice que lo mío no cabe en un vaquero corto.","eco":"se te ve sobrado"},
   "manolo-24": {"quien":"manolo","mood":"Sad","idioma":"Machoke. Ma, ma.","real":"Por una cerveza, Juanjo. Por una.","juanjo":"Dice que me la he ganado.","loca":"Dice que me he revalorizado. Que ya valgo una y media."},
   "hotel-11": {"quien":"zorro","mood":"Happy","idioma":"Ark. Zoro.","real":"No había otra manera.","juanjo":"Dice que el blanco estiliza.","loca":"Dice que el blanco es el nuevo bronce.","eco":"el blanco estiliza"},

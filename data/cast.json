@@ -4,8 +4,8 @@
   "primo":     { "nombre": "El primo", "voz": { "f": 170, "tipo": "square" }, "retrato": null },
 
   "manolo":    { "nombre": "Manolo", "voz": { "f": 95, "tipo": "sawtooth" }, "dex": "0067", "especie": "Machoke", "retrato": "0067", "sprite": "0067", "idioma": "machoke", "boca": { "x": 11, "y": 23, "w": 20, "h": 8 } },
-  "gengar":    { "nombre": "Gengar", "voz": { "f": 250, "tipo": "square" }, "real": "Samuel", "dex": "0094", "especie": "Gengar", "retrato": "0094", "sprite": "0094", "idioma": "gengar", "boca": { "x": 15, "y": 22, "w": 20, "h": 9 } },
-  "zorro":     { "nombre": "El Zorro", "voz": { "f": 210, "tipo": "triangle" }, "real": "Jorge", "dex": "0571", "especie": "Zoroark", "retrato": "0571", "sprite": "0571", "idioma": "zoroark", "boca": { "x": 19, "y": 30, "w": 15, "h": 7 } },
+  "gengar":    { "nombre": "Samué", "voz": { "f": 250, "tipo": "square" }, "real": "Samuel", "dex": "0094", "especie": "Gengar", "retrato": "0094", "sprite": "0094", "idioma": "gengar", "boca": { "x": 15, "y": 22, "w": 20, "h": 9 } },
+  "zorro":     { "nombre": "Jorge", "voz": { "f": 210, "tipo": "triangle" }, "real": "Jorge", "dex": "0571", "especie": "Zoroark", "retrato": "0571", "sprite": "0571", "idioma": "zoroark", "boca": { "x": 19, "y": 30, "w": 15, "h": 7 } },
   "buitre":    { "nombre": "El Buitre", "voz": { "f": 300, "tipo": "sawtooth" }, "real": "Ismael", "dex": "0630", "especie": "Mandibuzz", "retrato": "0630", "sprite": "0630", "idioma": "mandibuzz" },
   "falso":     { "nombre": "¿Manolo?", "voz": { "f": 95, "tipo": "sawtooth" }, "dex": "0067", "especie": "Zoroark transformado", "retrato": "0067", "sprite": "0067", "idioma": "machoke" },
 

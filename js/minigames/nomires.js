@@ -44,7 +44,7 @@ const SOBRE_DEDO = 18;         // la mirada va por encima de la yema: el pulgar 
 const ORBITAS = [[80, 126], [70, 106], [60, 90], [52, 78], [48, 70]];
 
 const TEXTOS = {
-  escape: 'IR PEGADO A GENGAR',
+  escape: 'IR PEGADO A SAMUÉ',
   vueltaTitulo: '¡A LA MANZANA!',
   vueltas: [
     'Jairo señala la esquina con dos brazos. Con los otros dos se cruza de brazos.',
@@ -56,11 +56,11 @@ const TEXTOS = {
   winVueltas: 'VUELTAS A LA MANZANA',
   escapado: {
     titulo: 'INVISIBLE',
-    lineas: ['Jairo no ve a Gengar. Por lógica, tampoco a lo que Gengar lleva de la mano.', 'Juanjo entra tarde y flotando.'],
+    lineas: ['Jairo no ve a Samué. Por lógica, tampoco a lo que Samué lleva de la mano.', 'Juanjo entra tarde y flotando.'],
   },
   harto: {
     titulo: 'INVISIBLE',
-    lineas: ['Jairo se ha olvidado de quién es Juanjo. Y de quién es él.', 'Gengar se lo lleva dentro de la mano, como a un niño.'],
+    lineas: ['Jairo se ha olvidado de quién es Juanjo. Y de quién es él.', 'Samué se lo lleva dentro de la mano, como a un niño.'],
   },
 };
 
