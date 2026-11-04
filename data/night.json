@@ -2038,7 +2038,7 @@
           "y": 322,
           "dir": "derecha",
           "escala": 2,
-          "rotulo": "BRAD PITT"
+          "rotulo": "EDWARD NORTON"
         },
         {
           "t": "colocar",
@@ -2047,12 +2047,12 @@
           "y": 342,
           "dir": "abajo",
           "escala": 2,
-          "rotulo": "NORTON, CASI"
+          "rotulo": "BRAD PITT, CASI"
         },
         {
           "t": "di",
           "who": null,
-          "txt": "El Zorro cierra los ojos y es Brad Pitt. Entero. Chaqueta roja, un jabón en la mano. Gengar se pone al lado y hace de lo que puede."
+          "txt": "El Zorro cierra los ojos y es Edward Norton. Entero. Camisa, corbata y ojeras de no dormir. Gengar se pone al lado, chaqueta roja y un jabón en la mano, y es Brad Pitt con lo que puede."
         },
         {
           "t": "tr",

@@ -1,4 +1,4 @@
-// ¡NO LA CAGUES!: el Zorro hace de Brad Pitt, Gengar de lo que puede y las amigas preguntan
+// ¡NO LA CAGUES!: el Zorro es Edward Norton, Gengar es Brad Pitt con lo que puede y las amigas preguntan
 // por la película. Tres respuestas y 4 s: la buena, una de otra película y una que delata al
 // dúo. Fallar por tiempo también cuenta. El Buitre se acerca con cada fallo, y al tercero las
 // amigas se van. Sin fallos, dos tejos; con uno o dos, uno. El fallo se paga en tejos: coste 0.
@@ -25,7 +25,7 @@ const BUITRE_X = [300, 252, 226];   // se acerca con cada fallo; al tercero ya e
 const REACCIONES = {
   ok: ['BIEN. PITT ASIENTE COMO SI LO SUPIERA.', 'LA FROSLASS SE ACERCA UN POCO. A PITT.', 'JUANJO SE CRECE. SE LE NOTA EN LA FRENTE.'],
   otra: ['ESO ES DE OTRA PELÍCULA.', 'LA ROSERADE ARRUGA UN PÉTALO.', 'GENGAR MIRA AL TECHO Y SILBA.'],
-  delata: ['PITT SE PONE ROJO. SE LE VE UN POCO DE COLA.', 'LA FROSLASS MIRA A GENGAR. GENGAR NO ESTÁ.', 'SILENCIO EN LA MESA. HASTA EL FUTBOLÍN CALLA.'],
+  delata: ['NORTON SE PONE ROJO. SE LE VE UN POCO DE COLA.', 'LA FROSLASS MIRA A PITT. PITT NO ESTÁ.', 'SILENCIO EN LA MESA. HASTA EL FUTBOLÍN CALLA.'],
   tiempo: ['JUANJO SE HA QUEDADO EN BLANCO. Y SIGUE SONRIENDO.', 'SE LE HA PASADO. ESTABA MIRANDO LA BARRA.'],
 };
 const FINAL_OK = 'JUANJO LA DICE EN VOZ ALTA. DOS VECES.';
@@ -132,7 +132,7 @@ export default class NoLaCagues {
   draw(ctx) {
     fondoTenue(ctx, '09-modernicolas-dentro', 2);
     const suelo = 136;
-    const fila = [['0571', 52, 'BRAD PITT'], ['0094', 104, 'NORTON, CASI'], ['0407', 162, null], ['0478', 200, null]];
+    const fila = [['0571', 52, 'EDWARD NORTON'], ['0094', 104, 'BRAD PITT, CASI'], ['0407', 162, null], ['0478', 200, null]];
     const delata = this.reaccion?.tipo === 'delata';
     for (const [id, x, rot] of fila) {
       const dx = delata && rot ? Math.round(Math.sin(this.g * 40) * 2) : 0;

@@ -74,14 +74,22 @@ export function initAudio() {
 
 // Música --------------------------------------------------------------------------------------
 
-// Mientras se averigua por qué NUEVA NOCHE no arranca en iPhone: allí no se monta la música.
+// En iPhone no se monta la música por código: se usan los mismos temas ya renderizados
+// (tools/render_musica.mjs). Sin red o sin audio, simplemente no suena.
 const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
 
+async function desdeArchivo(id) {
+  if (!ctx) return null;
+  const datos = await (await fetch(`assets/audio/${id}.wav`)).arrayBuffer();
+  return new Promise((ok, mal) => { ctx.decodeAudioData(datos, ok, mal); });
+}
+
 function conseguir(id) {
-  if (IOS) return Promise.resolve(null);
   if (bucles.has(id)) return Promise.resolve(bucles.get(id));
   if (!pendientes.has(id)) {
-    const p = renderTema(id).then((b) => {
+    const p = (IOS ? desdeArchivo(id) : renderTema(id)).then((b) => {
+      pendientes.delete(id);
+      if (!b) return null;
       bucles.delete(id);
       bucles.set(id, b);
       pendientes.delete(id);
