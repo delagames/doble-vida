@@ -33,7 +33,7 @@ const MEZCLA = [0, 1, 0, 2, 1, 3, 2, 4, 3, 4];   // presenta y repasa, como ¡PI
 
 export default class Barra extends Pide {
   static instruccion = '¡PIDE! II';
-  static ayuda = 'Dos Pokémon piden a la vez y hay cinco bebidas. Lo aprendido en Siglo XXI vale aquí. La camarera te acercará copas: aceptar es tejo y coherencia; rechazar te hace perder tiempo. Tres fallos seguidos y te cierra la barra.';
+  static ayuda = 'Arrastra cada nota a su grifo, como en Siglo XXI, con dos Pokémon a la vez y cinco bebidas. Si la camarera te acerca una copa, toca ACEPTAR (tejo, pero bebes) o RECHAZAR (pierdes tiempo). Tres fallos seguidos y te cierra la barra.';
   static carga = ['manolo', 'zorro', 'buitre', 'camarera'];
 
   start({ coh: c, params }) {

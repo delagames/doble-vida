@@ -27,7 +27,7 @@ const azar = (a, b) => a + Math.random() * (b - a);
 
 export default class Sal {
   static instruccion = '¡SAL!';
-  static ayuda = 'El Zorro ha disparado el extintor. Arrastra a Juanjo: el dedo puede ir donde quieras. La salida no se ve, pero late: el borde y un anillo laten más rápido cuanto más cerca estás. Tienes 40 segundos. Lo que choca contigo te empuja.';
+  static ayuda = 'Arrastra el dedo, donde quieras, y Juanjo camina. La salida no se ve, pero late: cuanto más rápido laten el borde y el anillo, más cerca estás. Llega en 40 segundos. Lo que choca contigo te empuja.';
   static carga = ['juanjo', 'manolo', 'gengar', 'zorro', 'buitre', 'jairo'];
   static musica = null;        // dentro de la nube solo se oye el faro de la salida
 

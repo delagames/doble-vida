@@ -118,7 +118,7 @@
         {
           "t": "di",
           "who": null,
-          "txt": "El chino de la esquina. Persiana a medio bajar. No cierra nunca."
+          "txt": "El chino de la esquina. Persiana a medio bajar. No cierra nunca. Esta noche, sí."
         },
         {
           "t": "di",
@@ -147,10 +147,10 @@
           "txt": "Juanjo abre la nevera. Primera mentira de la noche hecha con las manos."
         },
 {"t":"choice","shuffle":false,"prompt":"La nevera zumba. ¿Qué vas a hacer?","opts":[{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"¿Puedo no coger litrona?","run":[{"t":"di","who":"La nevera","txt":"NO."},{"t":"di","who":"La nevera","txt":"HAHAHAHAHA."},{"t":"choice","shuffle":false,"prompt":"La nevera sigue zumbando. ¿Qué vas a hacer?","opts":[{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"Coger una litrona."},{"txt":"¿Puedo no coger litrona?","run":[{"t":"di","who":"La nevera","txt":"NO."},{"t":"di","who":"La nevera","txt":"HAHAHAHAHA."},{"t":"di","who":null,"txt":"Juanjo se ríe también, por no quedar mal. Es una risa muy aguda. En Ciudad Jardín ladra un perro."}]}]}]}]},
-{"t":"cartel","titulo":"NOTAS DEL PARCHE 23.10","valor":"+1 L","pie":"Las ofertas han cambiado. Juanjo no lee las notas. Juanjo las intuye."},
+{"t":"cartel","titulo":"NOTAS DEL PARCHE 23.10","valor":"+1 L","pie":"Cierre a las 23:11. Juanjo no lee las notas. Juanjo las intuye."},
         {
           "t": "mini",
-          "id": "calcula",
+          "id": "regatea",
           "win": [
             {
               "t": "di",
@@ -163,7 +163,7 @@
             {
               "t": "di",
               "who": null,
-              "txt": "Meowth se guarda la vuelta sin pestañear. Lleva toda la vida haciéndolo."
+              "txt": "Meowth cobra lo que dijo al principio, sin pestañear. Lleva toda la vida haciéndolo."
             }
           ]
         },

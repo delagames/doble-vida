@@ -44,7 +44,7 @@ const celda = (c, f) => f * COLS + c;
 
 export default class Esquiva {
   static instruccion = '¡ESQUIVA!';
-  static ayuda = 'Todos tienen dientes. Todos. Arrastra a Juanjo con el dedo, que puede ir donde quieras, y aguanta un minuto. Vienen de los bordes y cada vez son más. Tres toques y Juanjo sale corriendo del after.';
+  static ayuda = 'Arrastra el dedo, donde quieras, y Juanjo huye. Aguanta un minuto sin que te toquen los dientes. Vienen de los bordes y cada vez son más. Tres toques y sale corriendo del after.';
   static carga = ['juanjo', 'manolo', 'gengar', 'zorro', 'jynx', 'nacional1', 'sandrita', 'camarera', 'mrmime', 'amiga1', 'meowth'];
 
   start() {

@@ -1,7 +1,7 @@
 // Service worker: primero la red y, si no hay, la caché. Así en casa siempre se juega lo último y
 // en un sótano se juega igual. La lista la escribe tools/precache.py: no se toca a mano.
 // Cada commit que cambie el juego sube CACHE; al activarse, borra las versiones anteriores.
-const CACHE = 'doble-vida-v04';
+const CACHE = 'doble-vida-v05';
 const ESPERA_RED = 3000;     // con mala cobertura no se espera más: se tira de caché
 
 const PRECACHE = [
@@ -21,6 +21,7 @@ const PRECACHE = [
   'js/calle.js',
   'js/coche.js',
   'js/cortinilla.js',
+  'js/demo.js',
   'js/diag.js',
   'js/dialog.js',
   'js/draw.js',
@@ -37,7 +38,6 @@ const PRECACHE = [
   'js/minigames/alritmo.js',
   'js/minigames/baila.js',
   'js/minigames/barra.js',
-  'js/minigames/calcula.js',
   'js/minigames/callate.js',
   'js/minigames/dedo.js',
   'js/minigames/dibujo.js',
@@ -48,6 +48,7 @@ const PRECACHE = [
   'js/minigames/nolacagues.js',
   'js/minigames/nomires.js',
   'js/minigames/pide.js',
+  'js/minigames/regatea.js',
   'js/minigames/sal.js',
   'js/minigames/viabuena.js',
   'js/musica.js',

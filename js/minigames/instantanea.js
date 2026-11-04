@@ -21,8 +21,9 @@ const BOTON_B = { x: 6, y: 386, w: W - 12, h: 80 };
 
 export default class Instantanea {
   static instruccion = '¡PATATA!';
-  static ayuda = 'Sandrita ha hecho una foto. Elige el pie de foto. Tranquilo: no se puede hacer mal.';
+  static ayuda = 'Sandrita ha hecho una foto. Toca un pie de foto. Tranquilo: no se puede hacer mal.';
   static carga = ['sandrita', 'juanjo', 'buitre'];
+  static sinRepetir = true;   // gag: no se puede hacer mal
 
   start({ params }) {
     this.p = params;

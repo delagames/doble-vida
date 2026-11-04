@@ -32,7 +32,7 @@ const FINAL_OK = 'JUANJO LA DICE EN VOZ ALTA. DOS VECES.';
 
 export default class NoLaCagues {
   static instruccion = '¡NO LA CAGUES!';
-  static ayuda = 'Juanjo traduce para el falso Brad Pitt. Toca la respuesta buena en 4 segundos. Una es de otra película y otra os delata. Si no contestas, también cuenta. Tres fallos y las amigas se van.';
+  static ayuda = 'Toca la respuesta buena en 4 segundos. Una es de otra película y otra os delata; no contestar también es fallo. Tres fallos y las amigas se van.';
   static carga = ['zorro', 'gengar', 'amiga1', 'amiga2', 'buitre'];
 
   start({ params }) {

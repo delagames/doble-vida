@@ -45,7 +45,7 @@ const azar = (a, b) => a + Math.random() * (b - a);
 
 export default class Marca {
   static instruccion = '¡MARCA!';
-  static ayuda = 'Arrastra tu barra. Según dónde pegue la bola, sale hacia un lado u otro: da con el borde para pillar a Gengar. A tres goles. Si Laura escribe, contestar es gol de Gengar.';
+  static ayuda = 'Arrastra el dedo a los lados y tu barra lo sigue. Da a la bola con el borde de la barra y sale torcida: así pillas a Gengar. Gana quien marque tres. Si Laura escribe, tocar el aviso y contestar es gol de Gengar.';
   static carga = ['gengar', 'juanjo'];
 
   start({ coh, params }) {

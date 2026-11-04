@@ -14,10 +14,13 @@ export const G = {
   sober: true,     // título y resultados no se tambalean
   inclina: null,   // inclinación forzada, en píxeles: la vía buena
 
+  salida: null,    // botón de salir de la demo, por encima de todo: { r, draw, accion }
+
   setScene(s) { this.scene = s; },
 
   update(dt) {
     this.time += dt;
+    if (this.salida && input.tapIn(this.salida.r)) { this.salida.accion(); input.consume(); return; }
     const e = this.sober ? 0 : ebriedad();
     // Se queda un rato en cada lado, para que se note inclinada y no solo meciéndose.
     const lado = Math.max(-1, Math.min(1, Math.sin(this.time * 0.6) * 1.7));
@@ -43,5 +46,6 @@ export const G = {
     this.aviso?.draw(ctx);
     this.overlay?.draw(ctx);
     this.efectos.forEach((f) => f.draw(ctx));
+    this.salida?.draw(ctx);
   },
 };

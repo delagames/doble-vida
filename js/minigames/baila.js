@@ -32,7 +32,7 @@ const MENSAJE = 0.35;
 
 export default class Baila {
   static instruccion = '¡BAILA!';
-  static ayuda = 'Jynx canta en su idioma y cada palabra es una flecha. Al principio te las enseña; luego no. Toca la flecha cuando la palabra llegue a la línea. Canta de dos en dos: si algo rompe la repetición, es que Juanjo lo ha traducido mal.';
+  static ayuda = 'Toca la flecha cuando su palabra llegue a la línea. Al principio Jynx te enseña qué flecha es cada palabra; luego no. Canta de dos en dos: si algo rompe la repetición, Juanjo lo ha traducido mal.';
   static carga = ['jynx', 'juanjo'];
   static musica = null;        // la música sale del Pulso, golpe a golpe, para no desfasarse
 

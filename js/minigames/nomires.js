@@ -84,7 +84,7 @@ export function sumaMinutos(hora, min) {
 
 export default class NoMires {
   static instruccion = '¡NO MIRES!';
-  static ayuda = 'Tu dedo es la mirada. Ponlo en tus zapatos, abajo, y arrástralo hasta la respuesta buena. Sin cruzar sus ojos. Lo que Juanjo traduce en grande no es lo que preguntan: lo de verdad va en gris.';
+  static ayuda = 'Tu dedo es la mirada. Apóyalo en tus zapatos, abajo, y arrástralo hasta la respuesta buena sin cruzar sus ojos. Lee lo gris: es lo que preguntan de verdad. Lo grande es Juanjo. Acierta todas y entras.';
   static carga = ['jairo', 'juanjo', 'gengar'];
 
   start({ params }) {

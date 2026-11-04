@@ -74,7 +74,11 @@ export function initAudio() {
 
 // Música --------------------------------------------------------------------------------------
 
+// Mientras se averigua por qué NUEVA NOCHE no arranca en iPhone: allí no se monta la música.
+const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+
 function conseguir(id) {
+  if (IOS) return Promise.resolve(null);
   if (bucles.has(id)) return Promise.resolve(bucles.get(id));
   if (!pendientes.has(id)) {
     const p = renderTema(id).then((b) => {

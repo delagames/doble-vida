@@ -19,31 +19,45 @@ window.addEventListener('unhandledrejection', (ev) => avisaError(ev.reason));
 
 // ?diag: rastro de lo que hace el juego, guardado al momento para que sobreviva a un cierre de pestaña.
 const DIAG = new URLSearchParams(location.search).has('diag');
+const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+const ACTIVO = DIAG || IOS;
+let visible = DIAG;
 const CLAVE = 'doble-vida.migas';
 let migas = [];
 let panel = null;
 
 function pinta(estado = '') {
+  if (!visible) { if (panel) panel.style.display = 'none'; return; }
   if (!panel) {
     panel = document.createElement('pre');
     panel.style.cssText = 'position:fixed;left:0;right:0;bottom:0;margin:0;padding:6px;z-index:9;max-height:55%;overflow:hidden;'
       + 'background:#15111F;color:#4FD8E8;font:12px monospace;white-space:pre-wrap;pointer-events:none';
     document.body.appendChild(panel);
   }
+  panel.style.display = 'block';
   panel.textContent = `${estado}\n${migas.join('\n')}`;
 }
 
 export function miga(t) {
-  if (!DIAG) return;
+  if (!ACTIVO) return;
   migas.push(`${(performance.now() / 1000).toFixed(1)} ${t}`);
   migas = migas.slice(-14);
   try { localStorage.setItem(CLAVE, JSON.stringify(migas)); } catch { /* sin almacenamiento */ }
   pinta();
 }
 
+/** En iPhone el rastro sale solo unos segundos al empezar la noche, sin hacer nada más. */
+export function muestraRastro(ms) {
+  if (!IOS || DIAG) return;
+  visible = true;
+  setTimeout(() => { visible = false; pinta(); }, ms);
+}
+
 export function vigilaDiag(estado) {
-  if (!DIAG) return;
+  if (!ACTIVO) return;
   try { migas = (JSON.parse(localStorage.getItem(CLAVE)) ?? []).slice(-6).map((m) => `ANTES ${m}`); } catch { migas = []; }
+  // Si la última vez se cortó a mitad de arrancar (pestaña caída), se enseña al volver.
+  if (migas.length && !migas.some((m) => m.includes('enter hecho'))) visible = true;
   miga('página cargada');
   setInterval(() => pinta(estado()), 500);
 }

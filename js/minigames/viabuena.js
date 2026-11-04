@@ -25,8 +25,9 @@ const chocan = (a, b, m = 4) => a.x < b.x + b.w + m && b.x < a.x + a.w + m && a.
 
 export default class ViaBuena {
   static instruccion = '¡LA VÍA BUENA!';
-  static ayuda = 'Solo hay una respuesta buena y está quieta. Las otras tres se le están ocurriendo a Juanjo. Que no salgan.';
+  static ayuda = 'Toca la respuesta que está quieta. Las otras tres se le están ocurriendo a Juanjo. Que no salgan.';
   static carga = ['control', 'juanjo'];
+  static sinRepetir = true;   // gag: no se puede hacer mal
 
   start({ params }) {
     this.p = params;

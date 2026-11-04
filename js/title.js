@@ -6,18 +6,20 @@ import { text, wrap, lineHeight } from './text.js';
 import { button, panel } from './draw.js';
 import { S, hayPartida, cargar, reiniciar, borrar, nocheTerminada } from './state.js';
 import { G } from './game.js';
-import { miga } from './diag.js';
+import { miga, muestraRastro } from './diag.js';
 import { audio } from './audio.js';
 import { apagarImagen, pintaAmbiente } from './ambiente.js';
 import { DIR, drawSprite, preload } from './sprites.js';
 import { NightRunner } from './night.js';
 import { ModoBuitre } from './buitre.js';
+import { Demo } from './demo.js';
 import { cerrarConsejoIphone, hayConsejoIphone, pantallaCompleta } from './pwa.js';
 
 const LOGO = 'assets/logo/title-doble-vida-270x140.png';
 const MUSICA = { x: 6, y: H - 124, w: 86, h: 24 };
 const EFECTOS = { x: W - 92, y: H - 124, w: 86, h: 24 };
 const BUITRE = { x: 94, y: H - 128, w: 82, h: 30 };   // entre música y efectos: el premio
+const DEMO = { x: 94, y: H - 156, w: 82, h: 24 };
 const CONSEJO_Y = 146;
 const ARMADO = 3;              // segundos para confirmar que se borra la partida guardada
 const PACIENCIA = 30;          // segundos sin tocar nada hasta que Juanjo pone lo suyo
@@ -63,6 +65,7 @@ export class Title {
     miga('creando noche');
     const noche = new NightRunner(S.stop);
     miga('noche creada');
+    muestraRastro(6000);
     G.setScene(noche);
   }
 
@@ -101,6 +104,7 @@ export class Title {
     this.paciencia(dt);
     if (input.tapIn(MUSICA)) { audio.alternarMusica(); return; }
     if (input.tapIn(EFECTOS)) { audio.alternarEfectos(); return; }
+    if (input.tapIn(DEMO)) { audio.opcion(); G.setScene(new Demo('historia', 0, () => G.setScene(new Title()))); return; }
     if (this.buitre && input.tapIn(BUITRE)) { audio.opcion(); G.setScene(new ModoBuitre(() => G.setScene(new Title()))); return; }
     if (this.consejo && input.tap && inRect(input.tap, { x: 2, y: CONSEJO_Y, w: W - 4, h: this.consejoH })) {
       cerrarConsejoIphone();
@@ -144,6 +148,7 @@ export class Title {
     const m = G.data.night.movil;
     button(ctx, MUSICA, audio.musicaOn ? m.musica_si : m.musica_no, { font: 'label' });
     button(ctx, EFECTOS, audio.efectosOn ? m.efectos_si : m.efectos_no, { font: 'label' });
+    button(ctx, DEMO, 'DEMO', { font: 'label', color: C.cian_neon, edge: C.cian_neon });
     if (this.buitre) button(ctx, BUITRE, 'MODO BUITRE', { font: 'label', color: C.rosa_claro, edge: C.rosa_neon });
     text(ctx, G.data.night.textos.aviso_inicio, W / 2, H - 14, { font: 'label', color: C.gris, align: 'center' });
   }

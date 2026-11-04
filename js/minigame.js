@@ -1,12 +1,13 @@
 // Marco común de los minijuegos. night.json los lanza con el paso
-//   {"t":"mini","id":"calcula","params":{...},"win":[...],"lose":[...],"error":[...]}
+//   {"t":"mini","id":"regatea","params":{...},"win":[...],"lose":[...],"error":[...]}
 // `win` y `lose` son pasos que siguen la noche; `error` (si falta, `win`) es la rama de
 // cuando el módulo no carga o se rompe: nunca se bloquea y nunca se cobra nada.
 //
 // Un minijuego es js/minigames/<id>.js y exporta por defecto una clase:
-//   static instruccion   '¡CALCULA!'. Pixelify Bold 32 rosa neón, un segundo.
+//   static instruccion   '¡REGATEA!'. Pixelify Bold 32 rosa neón, un segundo.
 //   static ayuda         explicación corta; sale la primera vez, antes de empezar.
 //   static carga         personajes a precargar (claves de cast.json).
+//   static sinRepetir    true en los gags: la tarjeta no ofrece REPETIR.
 //   static musica        opcional: tema mientras se juega; null, sin tema. Si no está, sigue el de la parada.
 //   start({ coh, params })  prepara la partida. Aún no corre el tiempo.
 //   update(dt)           lee `input`; solo se llama mientras se juega.
@@ -18,7 +19,11 @@
 //                        (dinero...), porque se llama una sola vez, también con un
 //                        resultado forzado. coste es la coherencia del fallo; sin él,
 //                        COSTE.fallo; 0 si el fallo se paga de otra manera.
-//   parar()              opcional: se llama siempre al cerrar.
+//   parar()              opcional: se llama siempre al cerrar, y al repetir antes de restaurar.
+// REPETIR: `foto` es S justo antes de start(). La tarjeta cobra como siempre y REPETIR lo deshace
+// todo: restaura la foto, tira lo vivo del intento (aviso de SMS, efectos) y monta un módulo nuevo.
+// Lo definitivo es SEGUIR. Nada se guarda en localStorage durante un minijuego: recargar a mitad
+// de una repetición vuelve al último guardado de la parada, como en cualquier otro intento.
 // La dificultad sale de `endurece(sereno, borracho)` y `ebriedad()`, de medidores.js.
 import { C } from './assets.js';
 import { input, inRect } from './input.js';
@@ -26,17 +31,20 @@ import { W, H } from './screen.js';
 import { text, wrap, measure, lineHeight } from './text.js';
 import { button, cifras, dither, panel, rect } from './draw.js';
 import { drawHud } from './hud.js';
-import { S } from './state.js';
+import { S, restaurar } from './state.js';
 import { fallarMinijuego } from './medidores.js';
 import { registrarOps } from './night.js';
 import { preload } from './sprites.js';
 import { audio } from './audio.js';
+import { G } from './game.js';
 
 const INSTRUCCION = 1;      // segundos a pantalla completa
 const CARGA_MAX = 12;       // lo que se espera a un módulo antes de darlo por perdido
 const JUEGO_MAX = 180;      // ningún minijuego dura esto: si pasa, se ha quedado colgado
 const GRACIA = 0.5;         // el toque frenético del final no pasa la tarjeta
 const BOTON = { x: 40, y: 366, w: 190, h: 40 };
+const REPETIR = { x: 6, y: 406, w: 126, h: 68 };     // en la banda del pulgar, con SEGUIR a mano derecha
+const SEGUIR = { x: 138, y: 406, w: 126, h: 68 };
 const FILA = 19;           // alto de una fila de `datos` en la tarjeta
 
 export class Minijuego {
@@ -56,6 +64,10 @@ export class Minijuego {
     this.resultado = null;     // 'win' | 'lose' | 'error'
     this.forzado = null;
     this.cartel = null;
+    this.foto = null;          // S justo antes de empezar, en JSON
+    this.efectos = [];         // los efectos que ya había: esos no son de este intento
+    this.repetido = false;
+    this.roto = false;         // la tarjeta del módulo ha fallado: no se le da otra
     Minijuego.activo = this;
     this.cargar();
   }
@@ -69,10 +81,32 @@ export class Minijuego {
       ]);
       if (this.done) return;
       this.clase = m.default;
-      this.mod = new m.default();
-      this.mod.start({ coh: S.coherencia, params: this.params });
-      this.preparaInstruccion();
+      this.foto = JSON.stringify(S);
+      this.efectos = [...G.efectos];
+      this.monta();
     } catch (e) { this.romper(e); }
+  }
+
+  monta() {
+    this.mod = new this.clase();
+    this.mod.start({ coh: S.coherencia, params: this.params });
+    this.preparaInstruccion();
+  }
+
+  get puedeRepetir() { return !!this.foto && !this.clase.sinRepetir && !this.roto; }
+
+  /** Deshace todo lo del intento y vuelve a la instrucción, con la ayuda aunque ya se haya visto. */
+  repetir() {
+    try { this.mod.parar?.(); } catch (e) { console.error(e); }
+    G.aviso = null;
+    G.overlay = null;
+    restaurar(this.foto);
+    G.efectos = G.efectos.filter((f) => this.efectos.includes(f));
+    audio.mandaMini(undefined);
+    this.resultado = null;
+    this.cartel = null;
+    this.repetido = true;
+    this.monta();
   }
 
   preparaInstruccion() {
@@ -114,7 +148,7 @@ export class Minijuego {
 
   terminar(res) {
     let c = {};
-    try { c = this.mod.tarjeta?.(res) ?? {}; } catch (e) { console.error(e); }
+    try { c = this.mod.tarjeta?.(res) ?? {}; } catch (e) { this.roto = true; console.error(e); }
     const coste = c.coste ?? this.params.coste;
     if (res === 'lose') { fallarMinijuego(coste); audio.fallo(); } else audio.acierto();
     this.resultado = res;
@@ -149,14 +183,14 @@ export class Minijuego {
         this.t -= dt;
         if (this.t > 0) break;
         input.soltarTodo();
-        if (this.clase.ayuda && !S.minisVistos[this.id]) {
+        if (this.clase.ayuda && (this.repetido || !S.minisVistos[this.id])) {
           this.fase = 'ayuda';
           this.t = GRACIA;
           this.ayuda = wrap(this.clase.ayuda, 'dialog', W - 44);
         } else this.empezar();
         break;
       case 'ayuda':
-        if (this.t > 0) { this.t -= dt; input.consume(); break; }
+        if (this.t > 0) { this.t -= dt; input.consume(); if (this.t <= 0) input.soltarTodo(); break; }
         if (input.tapIn(BOTON) || input.hit('Enter', 'Space')) this.empezar();
         break;
       case 'juego': {
@@ -168,8 +202,11 @@ export class Minijuego {
         break;
       }
       case 'tarjeta':
-        if (this.t > 0) { this.t -= dt; input.consume(); break; }
-        if (input.confirm()) this.cerrar(this.resultado);
+        // Un dedo que se apoyó durante la gracia no vale: al acabar se olvida y no pulsa al levantarse.
+        if (this.t > 0) { this.t -= dt; input.consume(); if (this.t <= 0) input.soltarTodo(); break; }
+        if (!this.puedeRepetir) { if (input.confirm()) this.cerrar(this.resultado); break; }
+        if (input.tapIn(SEGUIR) || input.hit('Enter', 'Space')) this.cerrar(this.resultado);
+        else if (input.tapIn(REPETIR) || input.hit('KeyR')) this.repetir();
         break;
       default:
     }
@@ -206,8 +243,9 @@ export class Minijuego {
     const { titulo, lineas, datos } = this.cartel;
     const grande = measure(titulo, 'huge') <= W - 36;
     const lh = lineHeight('dialog');
-    const h = (grande ? 56 : 36) + lineas.length * lh + datos.length * FILA + 26;
-    const y = (H - h) >> 1;
+    const botones = this.puedeRepetir;
+    const h = (grande ? 56 : 36) + lineas.length * lh + datos.length * FILA + (botones ? 10 : 26);
+    const y = botones ? 25 + Math.max(2, (REPETIR.y - 25 - h) >> 1) : (H - h) >> 1;
     const color = this.resultado === 'win' ? C.cian_neon : C.rosa_neon;
     panel(ctx, 12, y, W - 24, h, { edge: color });
     text(ctx, titulo, W >> 1, y + 12, { font: grande ? 'huge' : 'bold', color, align: 'center' });
@@ -218,7 +256,11 @@ export class Minijuego {
       text(ctx, k, 24, y2 + i * FILA + 4, { font: 'label', color: C.gris });
       cifras(ctx, v, W - 24, y2 + i * FILA, { escala: 3, color: C.marfil, align: 'right' });
     });
-    if (this.t <= 0) text(ctx, 'TOCA PARA SEGUIR', W >> 1, y + h - 15, { font: 'label', color: C.gris, align: 'center' });
+    if (botones) {
+      const listo = this.t <= 0;
+      button(ctx, REPETIR, 'REPETIR', { color: listo ? C.marfil : C.gris, edge: listo ? C.morado : C.carbon });
+      button(ctx, SEGUIR, 'SEGUIR', { color: listo ? C.marfil : C.gris, edge: listo ? color : C.carbon });
+    } else if (this.t <= 0) text(ctx, 'TOCA PARA SEGUIR', W >> 1, y + h - 15, { font: 'label', color: C.gris, align: 'center' });
   }
 }
 

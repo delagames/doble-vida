@@ -177,7 +177,11 @@ export class NightRunner {
   pump() {
     while (!this.wait && !G.overlay && !this.finished && !this.cargando) {
       const fr = this.frames[this.frames.length - 1];
-      if (!fr) { this.enter(S.stop + 1); continue; }
+      if (!fr) {
+        if (this.alAcabarParada) { this.alAcabarParada(); return; }
+        this.enter(S.stop + 1);
+        continue;
+      }
       if (fr.i >= fr.steps.length) { this.frames.pop(); continue; }
       const s = fr.steps[fr.i++];
       if (s.when && !cumple(s.when)) continue;

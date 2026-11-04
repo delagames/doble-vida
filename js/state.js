@@ -55,7 +55,19 @@ export let S = nuevaPartida();
 
 export function reiniciar() { S = nuevaPartida(); return S; }
 
+/** Vuelve a una foto (JSON.stringify de S) sobre el mismo objeto: S sigue siendo el que era. */
+export function restaurar(foto) {
+  const p = JSON.parse(foto);
+  for (const k of Object.keys(S)) delete S[k];
+  Object.assign(S, p);
+}
+
+/** En la demo se juega sobre una partida de mentira: nada se guarda ni se borra. */
+let enDemo = false;
+export function modoDemo(v) { enDemo = v; }
+
 export function guardar() {
+  if (enDemo) return;
   try { localStorage.setItem(KEY, JSON.stringify(S)); } catch { /* sin almacenamiento: se juega igual */ }
 }
 
@@ -91,6 +103,7 @@ export function cargar() {
 }
 
 export function borrar() {
+  if (enDemo) return;
   try { localStorage.removeItem(KEY); } catch { /* nada que borrar */ }
 }
 
@@ -110,6 +123,7 @@ export function finalesVistos() {
 export function terminarNoche(final) {
   borrar();
   try {
+    if (enDemo) return;
     localStorage.setItem(KEY_TERMINADA, '1');
     localStorage.setItem(KEY_FINALES, JSON.stringify([...new Set([...finalesVistos(), final])]));
   } catch { /* sin almacenamiento: se juega igual */ }

@@ -26,7 +26,7 @@ const DICE = 1.1;          // lo que se queda la cara elegida antes de la tarjet
 
 export default class LaCara {
   static instruccion = '¡LA CARA!';
-  static ayuda = 'Gengar dirá «Se equivoca usted». Solo una cara cuela, y los Growlithe acaban de decir cuál. Lee lo gris: es lo que dicen de verdad. Lo que traduce Juanjo en grande te lleva a otra. Cuando lo tengas, toca YA y elige.';
+  static ayuda = 'Solo una cara de Gengar cuela. Lee lo gris: es lo que dicen de verdad los Growlithe, y te dice cuál. Lo grande es Juanjo, y te lleva a otra. Cuando lo tengas, toca YA y luego toca la cara.';
   static carga = ['gengar', 'nacional1', 'nacional2', 'juanjo'];
 
   start() {

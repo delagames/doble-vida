@@ -40,7 +40,7 @@ const CUADROS_Y = 54, CUADRO = 24;
 
 export default class AlRitmo {
   static instruccion = '¡AL RITMO!';
-  static ayuda = 'Mira a Gengar: cuando el compás cambia, lo marca él solo. Luego te toca: toca la pantalla cuando cada golpe llega a la marca. El chupito fallado va dos veces. El último es de Jäger y va al doble.';
+  static ayuda = 'Gengar marca cada compás él solo; luego te toca a ti. Toca la pantalla cuando cada golpe llegue a la marca. El chupito fallado va dos veces. El último es de Jäger y va al doble.';
   static carga = ['gengar'];
   static musica = null;          // aquí la música es la barra: pistaChupitos, golpe a golpe
 

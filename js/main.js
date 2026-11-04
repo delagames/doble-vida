@@ -50,7 +50,7 @@ async function boot() {
       G, state, input, movil, medidores, audio, medida: { atlasTexto, muestras: new Float32Array(4096), n: 0 },
       get S() { return state.S; },
       ir: (n) => { G.sober = false; G.setScene(new NightRunner(n)); },
-      // DV.mini('calcula', { coh: 25, params: {...} }): minijuego suelto, sin tocar la noche.
+      // DV.mini('regatea', { coh: 25, params: {...} }): minijuego suelto, sin tocar la noche.
       mini: (id, { coh, params } = {}) => {
         if (coh !== undefined) state.S.coherencia = coh;
         G.sober = false;
