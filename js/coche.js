@@ -367,7 +367,9 @@ export class Conducir {
   }
 
   volumen(dt) {
-    if (!this.manolo || this.c.vol < VOL_MOLESTA) { this.mira = 1.7 + Math.random() * 0.8; return; }
+    // Al llegar, Manolo deja de protestar: cada queja tapa el aviso anterior y, con el volumen
+    // otra vez a tope, el coche no llegaba nunca.
+    if (!this.manolo || this.fin || this.c.vol < VOL_MOLESTA) { this.mira = 1.7 + Math.random() * 0.8; return; }
     this.mira -= dt;
     if (this.mira > 0) return;
     // Manolo baja el volumen. Siempre. No sirve de nada. Se cuenta igual.
